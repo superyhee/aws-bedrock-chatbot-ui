@@ -311,7 +311,7 @@ class BaseLLMModel:
 
     def get_answer_stream_iter(self):
         """Implement stream prediction.
-        Conversations are stored in self.history, with the most recent question in OpenAI format.
+        Conversations are stored in self.history, with the most recent question .
         Should return a generator that yields the next word (str) in the answer.
         """
         logging.warning(
@@ -322,7 +322,7 @@ class BaseLLMModel:
 
     def get_answer_at_once(self):
         """predict at once, need to be implemented
-        conversations are stored in self.history, with the most recent question, in OpenAI format
+        conversations are stored in self.history, with the most recent question
         Should return:
         the answer (str)
         total token count (int)
@@ -366,16 +366,27 @@ class BaseLLMModel:
             )
         partial_text = ""
         token_increment = 1
-        for partial_text in stream_iter:
-            if type(partial_text) == tuple:
-                partial_text, token_increment = partial_text
-            chatbot[-1] = (chatbot[-1][0], partial_text + display_append)
+        stream_iter = iter(stream_iter)  # 获取迭代器
+        print(display_append)
+        while True:
+            try:
+                partial_text = next(stream_iter)
+            except StopIteration:
+                print(display_append)
+                chatbot[-1] = (chatbot[-1][0], partial_text+display_append)
+                yield get_return_value()
+                break
+
+            chatbot[-1] = (chatbot[-1][0], partial_text)
             self.all_token_counts[-1] += token_increment
             status_text = self.token_message()
             yield get_return_value()
+
             if self.interrupted:
                 self.recover()
                 break
+        
+    
         self.history.append(construct_assistant(partial_text))
 
     def next_chatbot_at_once(self, inputs, chatbot, fake_input=None, display_append=""):
@@ -495,7 +506,7 @@ class BaseLLMModel:
             logging.info(msg)
             with retrieve_proxy():
                 retriever = VectorStoreRetriever(
-                    vectorstore=index, search_type="similarity", search_kwargs={"k": 6}
+                    vectorstore=index, search_type="similarity", search_kwargs={"k": 5}
                 )
                 # retriever = VectorStoreRetriever(vectorstore=index, search_type="similarity_score_threshold", search_kwargs={
                 #                                  "k": 6, "score_threshold": 0.2})
@@ -588,61 +599,49 @@ class BaseLLMModel:
         files=None,
         reply_language="中文",
         should_check_token_count=True,
-    ):  # repetition_penalty, top_k
-        status_text = "开始生成回答……"
-        if type(inputs) == list:
-            logging.info(
-                "用户"
-                + f"{self.user_name}"
-                + "的输入为："
-                + colorama.Fore.BLUE
-                + "("
-                + str(len(inputs) - 1)
-                + " images) "
-                + f"{inputs[0]['text']}"
-                + colorama.Style.RESET_ALL
-            )
-        else:
-            logging.info(
-                "用户"
-                + f"{self.user_name}"
-                + "的输入为："
-                + colorama.Fore.BLUE
-                + f"{inputs}"
-                + colorama.Style.RESET_ALL
-            )
+    ):
+        """
+        根据输入生成回答。
+
+        Args:
+            inputs (str or list): 用户输入的文本或包含文本和图像的列表。
+            chatbot (list): 当前的聊天记录列表。
+            stream (bool, optional): 是否使用流式传输模式。默认为 False。
+            use_websearch (bool, optional): 是否使用网络搜索结果作为上下文。默认为 False。
+            files (list, optional): 上传的文件列表,用于构建本地索引。
+            reply_language (str, optional): 回答的语言。默认为 "中文"。
+            should_check_token_count (bool, optional): 是否检查 token 数量。默认为 True。
+
+        Yields:
+            tuple: 包含更新后的聊天记录列表和状态文本的元组。
+        """
+        status_text = "开始生成回答..."
+        logging.info(f"用户 {self.user_name} 的输入为: {inputs}")
+
         if should_check_token_count:
-            if type(inputs) == list:
-                yield chatbot + [(inputs[0]["text"], "")], status_text
-            else:
-                yield chatbot + [(inputs, "")], status_text
+            yield chatbot + [(inputs, "")], status_text
+
         if reply_language == "跟随问题语言（不稳定）":
             reply_language = "the same language as the question, such as English, 中文, 日本語, Español, Français, or Deutsch."
 
-        (
-            limited_context,
-            fake_inputs,
-            display_append,
-            inputs,
-            chatbot,
-        ) = self.prepare_inputs(
-            real_inputs=inputs,
-            use_websearch=use_websearch,
-            files=files,
-            reply_language=reply_language,
-            chatbot=chatbot,
-        )
+        with retrieve_proxy() as proxy:
+            limited_context, fake_inputs, display_append, inputs, chatbot = (
+                self.prepare_inputs(
+                    real_inputs=inputs,
+                    use_websearch=use_websearch,
+                    files=files,
+                    reply_language=reply_language,
+                    chatbot=chatbot,
+                )
+            )
+
         yield chatbot + [(fake_inputs, "")], status_text
 
-        if (
-            self.need_api_key
-            and self.api_key is None
-            and not shared.state.multi_api_key
-        ):
+        if self.need_api_key and self.api_key is None and not shared.state.multi_api_key:
             status_text = STANDARD_ERROR_MSG + NO_APIKEY_MSG
             logging.info(status_text)
             chatbot.append((fake_inputs, ""))
-            if len(self.history) == 0:
+            if not self.history:
                 self.history.append(construct_user(fake_inputs))
                 self.history.append("")
                 self.all_token_counts.append(0)
@@ -650,21 +649,19 @@ class BaseLLMModel:
                 self.history[-2] = construct_user(fake_inputs)
             yield chatbot + [(fake_inputs, "")], status_text
             return
-        elif len(fake_inputs.strip()) == 0:
+
+        if not fake_inputs.strip():
             status_text = STANDARD_ERROR_MSG + NO_INPUT_MSG
             logging.info(status_text)
             yield chatbot + [(fake_inputs, "")], status_text
             return
 
         if self.single_turn:
-            self.history = []
-            self.all_token_counts = []
-        if type(inputs) == list:
-            self.history.append(inputs)
-        else:
-            self.history.append(construct_user(inputs))
+            self.history.clear()
+            self.all_token_counts.clear()
 
-        start_time = time.time()
+        self.history.append(construct_user(inputs))
+
         try:
             if stream:
                 logging.debug("使用流式传输")
@@ -674,8 +671,7 @@ class BaseLLMModel:
                     fake_input=fake_inputs,
                     display_append=display_append,
                 )
-                for chatbot, status_text in iter:
-                    yield chatbot, status_text
+                yield from ((chat, status) for chat, status in iter)
             else:
                 logging.debug("不使用流式传输")
                 chatbot, status_text = self.next_chatbot_at_once(
@@ -689,36 +685,19 @@ class BaseLLMModel:
             traceback.print_exc()
             status_text = STANDARD_ERROR_MSG + beautify_err_msg(str(e))
             yield chatbot, status_text
-        end_time = time.time()
-        if len(self.history) > 1 and self.history[-1]["content"] != fake_inputs:
-            logging.info(
-                "回答为："
-                + colorama.Fore.BLUE
-                + f"{self.history[-1]['content']}"
-                + colorama.Style.RESET_ALL
-            )
-            logging.info(i18n("Tokens per second：{token_generation_speed}").format(token_generation_speed=str(self.all_token_counts[-1] / (end_time - start_time))))
 
         if limited_context:
-            # self.history = self.history[-4:]
-            # self.all_token_counts = self.all_token_counts[-2:]
-            self.history = []
-            self.all_token_counts = []
+            self.history.clear()
+            self.all_token_counts.clear()
 
         max_token = self.token_upper_limit - TOKEN_OFFSET
-
         if sum(self.all_token_counts) > max_token and should_check_token_count:
             count = 0
-            while (
-                sum(self.all_token_counts)
-                > self.token_upper_limit * REDUCE_TOKEN_FACTOR
-                and sum(self.all_token_counts) > 0
-            ):
+            while sum(self.all_token_counts) > self.token_upper_limit * REDUCE_TOKEN_FACTOR:
                 count += 1
-                del self.all_token_counts[0]
-                del self.history[:2]
-            logging.info(status_text)
-            status_text = f"为了防止token超限，模型忘记了早期的 {count} 轮对话"
+                self.all_token_counts.pop(0)
+                self.history = self.history[2:]
+            status_text = f"为了防止 token 超限,模型忘记了早期的 {count} 轮对话"
             yield chatbot, status_text
 
         self.chatbot = chatbot

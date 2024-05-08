@@ -19,8 +19,8 @@ from modules.utils import *
 # 配置参数
 MAX_INPUT_SIZE = 4096
 NUM_OUTPUTS = 5
-MAX_CHUNK_OVERLAP = 20
-CHUNK_SIZE_LIMIT = 600
+MAX_CHUNK_OVERLAP = 50
+CHUNK_SIZE_LIMIT = 3000
 EMBEDDING_LIMIT = None
 SEPARATOR = " "
 LOAD_FROM_CACHE_IF_POSSIBLE = True
@@ -122,7 +122,7 @@ def construct_index(
     if local_embedding:
         embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/distiluse-base-multilingual-cased-v2")
     else:
-        embeddings = BedrockEmbeddings(model_id="amazon.titan-embed-text-v1", client=bedrock_client)
+        embeddings = BedrockEmbeddings(model_id="amazon.titan-embed-text-v2:0", client=bedrock_client)
 
     if os.path.exists(index_path) and load_from_cache_if_possible:
         logging.info("Found cached index, loading...")

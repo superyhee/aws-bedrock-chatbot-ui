@@ -728,7 +728,7 @@ def add_details(lst):
     nodes = []
     for index, txt in enumerate(lst):
         brief = txt[:25].replace("\n", "")
-        nodes.append(f"<details><summary>{brief}...</summary><p>{txt}</p></details>")
+        nodes.append(f"<details><summary>{brief}...</summary><p style='max-height: 300px; overflow-y: auto;'>{txt}</p></details>")
     return nodes
 
 
