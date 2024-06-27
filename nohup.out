@@ -1,0 +1,3766 @@
+2024-06-27 20:45:46,022 [INFO] [_client.py:1026] HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+2024-06-27 20:45:46,120 [ERROR] [config.py:313] 你填写的默认模型GPT3.5 Turbo不存在！请从下面的列表中挑一个填写：['Claude 3 Haiku', 'Claude 3 Sonnet', 'Claude 3 Opus']
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/langchain/embeddings/__init__.py:29: LangChainDeprecationWarning: Importing embeddings from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.embeddings import BedrockEmbeddings`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+2024-06-27 20:45:47,052 [INFO] [utils.py:148] Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-06-27 20:45:47,052 [INFO] [utils.py:160] NumExpr defaulting to 8 threads.
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/langchain/llms/__init__.py:548: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.llms import Bedrock`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+2024-06-27 20:45:48,237 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-27 20:45:52,485 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:45:52,486 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-45.json
+2024-06-27 20:45:52,586 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-45
+2024-06-27 20:45:57,784 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:45:57,851 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 412, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 689, in __call__
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 257, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 254, in stream_response
+    |     await send({"type": "http.response.body", "body": b"", "more_body": False})
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 465, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+2024-06-27 20:46:32,022 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:46:32,026 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-46.json
+2024-06-27 20:46:32,131 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-46
+2024-06-27 20:46:45,450 [INFO] [index_func.py:128] Found cached index, loading...
+2024-06-27 20:46:45,499 [INFO] [loader.py:64] Loading faiss.
+2024-06-27 20:46:45,679 [INFO] [loader.py:66] Successfully loaded faiss.
+2024-06-27 20:46:54,849 [INFO] [base_model.py:619] 用户  的输入为: 如何创建eks
+2024-06-27 20:46:54,855 [INFO] [base_model.py:498] 加载索引中……
+2024-06-27 20:46:54,885 [INFO] [index_func.py:128] Found cached index, loading...
+2024-06-27 20:46:54,891 [INFO] [base_model.py:506] 索引获取成功，生成回答中……
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/langchain_core/_api/deprecation.py:119: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 0.3.0. Use invoke instead.
+  warn_deprecated(
+Running on local URL:  http://127.0.0.1:7860
+IMPORTANT: You are using gradio version 4.26.0, however version 4.29.0 is available, please upgrade.
+--------
+
+To create a public link, set `share=True` in `launch()`.
+anthropic.claude-3-haiku-20240307-v1:0
+Claude 3 Haiku
+
+call bedrock get_answer_stream_iter 
+
+anthropic.claude-3-haiku-20240307-v1:0
+Claude 3 Haiku
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 " EKS – eksctl此指南可帮...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 " EKS – eksctl
+此指南可帮助您使用 eksctl （用于在 Amazon EKS 上创建和管理 Kubernetes 集群的简单命令行实
+用程序）来安装开始使用 Amazon Elastic Kubernetes Service (Amazon EKS) 所需的所有资源。在本
+教程的最后，将为您提供一个运行中的 Amazon EKS 集群，您可向其部署应用程序。
+本指南中的程序可自动为您创建在您使用 AWS Management Console 创建集群时必须手动创建的一些
+资源。如果您希望手动创建大多数资源并更好地了解它们之间的交互方式，请使用 AWS Management 
+Console 创建集群和执行计算。有关更多信息，请参阅 开始使用 Amazon EKS – AWS Management 
+Console 和 AWS CLI 。
+先决条件
+在开始使用本教程之前，您必须安装并配置创建和管理 Amazon EKS 集群所需的以下工具和资源。
+•kubectl  – 用于与 Kubernetes 集群一起使用的命令行工具。有关更多信息，请参阅 安装或更新
+kubectl 。
+创建您的第一个集群 – eksctl 22Amazon EKS 用户指南
+•eksctl  – 用于处理 EKS 集群的命令行工具，该工具可自动执行许多单独任务。有关更多信息，请
+参阅 eksctl  文档中的 Installation 。
+•所需的 IAM 权限  – 您正在使用的 IAM 安全主体必须具有使用 Amazon EKS IAM 角色、服务相关角
+色、AWS CloudFormation、VPC 和相关资源的权限。有关更多信息，请参阅 IAM 用户指南中的 用
+于 Amazon Elastic Container Service for Kubernetes 的操作、资源和条件键 和使用服务相关角色 。
+您必须以同一用户身份完成本指南中的所有步骤。要查看当前用户，请运行以下命令：
+aws sts get-caller-identity
+第 1 步：创建 Amazon EKS 集群和节点
+Important
+为了尽可能简单快速地入门，本主题包括创建具有原定设置的集群和节点的步骤。在创建用于
+生产使用的集群和节点之前，我们建议您熟悉所有设置，并使用符合您要求的设置部署集群和
+节点。有关更多信息，请参阅 创建 Amazon EKS 集群  和 Amazon EKS 节点 。一些设置仅在
+创建集群和节点时可以启用。
+您可以使用下列节点类型之一创建集群。要了解有关各个类型的更多信息，请参阅 Amazon EKS 节
+点。部署集群后，您可以添加其他节点类型。
+•Fargate - Linux  - 如果要在 AWS Fargate  上运行 Linux 应用程序，请选择此类型的节点。Fargate 是
+一种无服务器计算引擎，允许部署 Kubernetes Pods，而不管理 Amazon EC2 实例。
+•托管式节点 – Linux  – 如果要在 Amazon EC2 实例上运行Amazon Linux 应用程序，请选择此类型
+的节点。虽然本指南中未作介绍，但您还可以向集群添加 Windows 自行管理 节点和 Bottlerocket  节
+点。
+使用以下命令创建 Amazon EKS 集群。您可以将 my-cluster  替换为自己的值。名称只能包含字
+母数字字符（区分大小写）和连字符。该名称必须以字母字符开头，且不得超过 100 个字符。将
+region-code  替换为 Amazon EKS 支持的任一 AWS 区域。有关 AWS 区域列表，请参阅 AWS 一般
+参考中的 Amazon EKS 端点和配额 。
+Fargate – Linux
+eksctl create cluster --name my-cluster  --region region-code  --fargate
+第 1 步：创建集群和节点 23Amazon EKS 用户指南
+Managed nodes – Linux
+eksctl create cluster --name my-cluster  --region region-code
+创建集群需要几分钟时间。在创建过程中，您将看到几行输出。输出的最后一行类似于以下示例行。
+[...]
+[#]  EKS cluster "my-cluster" in " region-code " region is ready
+eksctl  在 ~/.kube  中创建了一个 kubectl  config  文件，或在计算机上的 ~/.kube  中的现有
+config  文件添加了新集群的配置。
+完成集群创建后，在 AWS CloudFormation 控制台 https://console.aws.amazon.com/cloudformation
+中查看名为 eksctl-my-cluster -cluster  的 AWS CloudFormation 堆栈，查看创建的所有资源。
+第 2 步：查看 Kubernetes 资源
+1.查看您的集群节点。
+kubectl get nodes -o wide
+示例输出如下。
+Fargate – Linux
+NAME                                                STATUS   ROLES    AGE   
+   VERSION              INTERNAL-IP   EXTERNAL-IP   OS-IMAGE         KERNEL-
+VERSION                  CONTAINER-RUNTIME
+fargate-ip- 192-0-2-0 .region-code .compute.internal   Ready    <none>  
+   8m3s    v1.2.3-eks-1234567   192.0.2.0      <none>        Amazon Linux 2  
+   1.23.456-789.012.amzn2.x86_64    containerd:// 1.2.3
+fargate-ip- 192-0-2-1 .region-code .compute.internal   Ready    <none>  
+   7m30s   v1.2.3-eks-1234567   192-0-2-1      <none>        Amazon Linux 2  
+   1.23.456-789.012.amzn2.x86_64    containerd:// 1.2.3
+Managed nodes – Linux
+NAME                                        STATUS   ROL"
+Source: eks-ug.pdf</p></details><details><summary>[2]	 " 主体访问您的集群  和 所需的权限 ...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 " 主体访问您的集群  和 所需的权限 ：
+•将示例应用程序 部署到您的集群。
+•在部署集群用于生产用途前，我们建议您熟悉 集群和节点的所有设置。创建集群时必须进行一些设置
+（例如启用 SSH 访问 Amazon EC2 节点）。
+后续步骤 37Amazon EKS 用户指南
+•为了提高集群的安全性，请 配置 Amazon VPC 容器网络接口插件以将 IAM 角色用于服务账户 。
+后续步骤 38Amazon EKS 用户指南
+Amazon EKS 集群
+一个 Amazon EKS 集群包含两个主要组件：
+•Amazon EKS 控制层面
+•向控制层面注册的 Amazon EKS 节点
+Amazon EKS 控制面板由运行 Kubernetes 软件（如 etcd ）的控制面板节点和 Kubernetes API 服务
+器组成。控制面板在由 AWS 管理的账户中运行，并且 Kubernetes API 将通过与集群关联的 Amazon 
+EKS 端点公开。每个 Amazon EKS 集群控制层面都是单一租户而且是唯一的，它们在其自己的一组 
+Amazon EC2 实例上运行。
+etcd  节点和关联 Amazon EBS 卷存储的所有数据均使用 AWS KMS 加密。集群控制面板已跨多个
+可用区进行预置，其前面配置了一个 Elastic Load Balancing Network Load Balancer。Amazon EKS 
+还在 VPC 子网中预置了弹性网络接口，以便在控制面板实例与节点之间建立连接（例如，为了支持
+kubectl exec  logs  proxy  数据流）。
+Important
+在 Amazon EKS 环境中，根据 上游指导，etcd  存储限制为 8GiB。通过运行以下命令，
+可以监控当前数据库大小的指标。如果您的集群有低于 1.28  的 Kubernetes 版本，请将
+apiserver_storage_size_bytes  替换为以下版本：
+•Kubernetes 版本 1.27  和 1.26  – apiserver_storage_db_total_size_in_bytes
+•Kubernetes 版本 1.25  及以下 – etcd_db_total_size_in_bytes
+kubectl get --raw=/metrics | grep " apiserver_storage_size_bytes "
+Amazon EKS 节点在AWS账户中运行并通过 API 服务器端点和为集群创建的证书文件连接到集群的控
+制层面。
+Note
+•您可以了解 Amazon EKS 的不同组件在 Amazon EKS 联网  中的工作方式。
+39Amazon EKS 用户指南
+•有关互联的集群，请参阅 Amazon EKS Connector 。
+主题
+•创建 Amazon EKS 集群
+•集群见解
+•更新 Amazon EKS 集群 Kubernetes 版本
+•删除 Amazon EKS 集群
+•Amazon EKS 集群端点访问控制
+•在现有集群中启用密钥加密
+•为 Amazon EKS 集群启用 Windows 支持
+•私有集群要求
+•Amazon EKS Kubernetes 版本
+•Amazon EKS 平台版本
+•Autoscaling
+创建 Amazon EKS 集群
+本主题概述了可用选项，并介绍了创建 Amazon EKS 集群时需要考虑的内容。如果您需要在 AWS 
+Outpost 上创建集群，请参阅 AWS Outposts 上的 Amazon EKS 的本地集群 。如果您是首次创建 
+Amazon EKS 集群，我们建议您按照我们的 开始使用 Amazon EKS  指南之一操作。这些指南可帮助您
+创建一个简单的默认集群，而无需扩展到所有可用选项。
+先决条件
+•满足 Amazon EKS 要求 的现有 VPC 和子网。在部署集群用于生产用途前，我们建议您彻底
+了解 VPC 和子网要求。如果您没有 VPC 和子网，则可以使用 Amazon EKS 提供的 AWS 
+CloudFormation 模板 创建它们。
+•您的设备或 AWS CloudShell 上安装了 kubectl  命令行工具。该版本可以与集群的 Kubernetes 版
+本相同，或者最多早于或晚于该版本一个次要版本。例如，如果您的集群版本为 1.28 ，则可以将
+kubectl  的 1.27 、1.28  或 1.29  版本与之配合使用。要安装或升级 kubectl ，请参阅 安装或更
+新 kubectl 。
+•在您的设备或 AWS CloudShell 上安装和配置了 AWS Command Line Interface（AWS CLI）的
+版本 2.12.3  或更高版本，或版本 1.27.160  或更高版本。要查看当前版本，请使用 aws --
+创建集群 40Amazon EKS 用户指南
+version | cut -d / -f2 | cut -d ' ' -f1 。软件包管理器（如 yum、apt-get  或适
+用于 macOS 的 Homebrew）通常比 AWS CLI 的最新版本落后几个版本。要安装最新版本，请参
+阅《AWS Command Line Interface 用户指南》 中的安装、更新和卸载 AWS CLI ，以及 使用 aws 
+configure 快速配置 。AWS CloudShell 中安装的 AWS CLI 版本也可能比最新版本落后几个版本。如
+需更新，请参阅《AWS CloudShell 用户指南》 中的将 AWS CLI 安装到主目录 。
+•具有 create  和 describe  Amazon EKS 集群权限的 IAM 主体 。有关更多信息，请参阅 在 
+Outpost 上创建本地 Kubernetes 集群 和 列出或描述所有集群 。
+创建 Amazon EKS 集群后，创建集群的 IAM 主体 将作为管理员永久添加到 Kubernetes RBAC 授权
+表中。该主体拥有 system:masters  权限。该主体在您的集群配置中不可见。"
+Source: eks-ug.pdf</p></details><details><summary>[3]	 "，请参阅 Amazon EKS 附加组...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 "，请参阅 Amazon EKS 附加组件 。
+9.在配置选定的附加组件设置 页面上，选择 下一个 。
+10.请在 Review and create （审核和创建）页面上，选择 Create （创建）。
+集群名称右侧的集群状态会保持为 Creating（正在创建） 几分钟，直至集群调配过程完成。在该
+状态变为 Active（有效） 之前，请勿继续执行下一步。
+第 1 步：创建集群 29Amazon EKS 用户指南
+Note
+您可能会收到一个错误，指示请求中的可用区之一没有足够容量来创建 Amazon EKS 集
+群。如果发生这种情况，错误输出将包含可支持新集群的可用区。再次尝试使用至少两个
+位于您账户中支持的可用区的子网创建集群。有关更多信息，请参阅 容量不足 。
+第 2 步：将计算机配置为与您的集群通信
+在本部分中，您将为集群创建一个 kubeconfig  文件。此文件中的设置会启用 kubectl  CLI 与您的
+集群进行通信。
+将计算机配置为与您的集群通信的步骤
+1.为集群创建或更新 kubeconfig  文件。 将 region-code  替换为您要在其中创建集群的 AWS 区
+域。将 my-cluster  替换为您的集群名称。
+aws eks update-kubeconfig --region region-code  --name my-cluster
+预设情况下， config  文件创建在 ~/.kube  中或者新集群的配置已添加到 ~/.kube  的现有
+config  文件中。
+2.测试配置。
+kubectl get svc
+Note
+如果您收到任何授权或资源类型错误，请参阅故障排除主题中的 未经授权或访问被拒绝 
+(kubectl )。
+示例输出如下。
+NAME             TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+svc/kubernetes   ClusterIP   10.100.0.1   <none>        443/TCP    1m
+第 2 步：配置集群通信 30Amazon EKS 用户指南
+第 3 步：创建节点
+Important
+为了尽可能简单快速地入门，本主题包括创建具有原定设置的节点的步骤。在创建用于生产
+用途的节点之前，我们建议您熟悉所有设置，并使用符合您要求的设置部署节点。有关更多信
+息，请参阅 Amazon EKS 节点 。一些设置仅在创建节点时可以启用。
+您可以使用下列节点类型之一创建集群。要了解有关各个类型的更多信息，请参阅 Amazon EKS 节
+点。部署集群后，您可以添加其他节点类型。
+•Fargate - Linux  - 如果要在 AWS Fargate  上运行 Linux 应用程序，请选择此类型的节点。Fargate 是
+一种无服务器计算引擎，允许部署 Kubernetes Pods，而不管理 Amazon EC2 实例。
+•托管节点 – Linux  – 如果要运行，请选择此类型的节点  Amazon Linux 应用程序。 虽然本指南中未作
+介绍，但您还可以向集群添加 Windows 自行管理 节点和 Bottlerocket  节点。
+Fargate – Linux
+创建 Fargate 配置文件。当部署 Kubernetes Pods 时使用的条件符合配置文件中定义的条件时，这
+些 Pods 将会部署到 Fargate。
+创建 Fargate 配置文件的步骤
+1.创建 IAM 角色并向其附加所需的 Amazon EKS IAM 托管策略。当您的集群在 Fargate 基础
+设施上创建 Pods 时，在 Fargate 基础设施上运行的组件必须代表您调用 AWS API。这是为
+了他们可以执行诸如从 Amazon ECR 中拉取容器镜像或将日志路由到其他 AWS 服务的操
+作。Amazon EKS Pod 执行角色提供执行此操作的 IAM 权限。
+a.将以下内容复制到名为 pod-execution-role-trust-policy .json  的文件中。请将
+region-code  替换为集群所在的 AWS 区域。如果您希望在账户中在所有 AWS 区域 使
+用相同角色，请将 region-code  替换为 *。请将 111122223333  替换为账户 ID，并将
+my-cluster  替换为您的集群名称。如果您希望在账户中对所有集群使用相同角色，请将
+my-cluster  替换为 *。
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+第 3 步：创建节点 31Amazon EKS 用户指南
+      "Effect": "Allow", 
+      "Condition": { 
+         "ArnLike": { 
+            "aws:SourceArn": "arn:aws:eks: region-
+code:111122223333 :fargateprofile/ my-cluster /*" 
+         } 
+      }, 
+      "Principal": { 
+        "Service": "eks-fargate-pods.amazonaws.com" 
+      }, 
+      "Action": "sts:AssumeRole" 
+    } 
+  ]
+}
+b.创建 Pod 执行 IAM 角色。
+aws iam create-role \ 
+  --role-name AmazonEKSFargatePodExecutionRole  \ 
+  --assume-role-policy-document file://" pod-execution-role-trust-
+policy.json"
+c.将所需的 Amazon EKS 托管 IAM policy 附加到角色。
+aws iam attach-role-policy \ 
+  --policy-arn arn:aws:iam::aws:policy/
+AmazonEKSFargatePodExecutionRolePolicy \ 
+  --role-name AmazonEKSFargatePodExecutionRole
+2.访问 https://console.aws.amazon.com/eks/home#/clusters  "
+Source: eks-ug.pdf</p></details><details><summary>[4]	 "。•AWS CLI  – 与AWS服...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "。
+•AWS CLI  – 与AWS服务（包括 Amazon EKS）一起使用的命令行工具。有关更多信息，请参阅 
+AWS Command Line Interface 用户指南中的 安装、更新和卸载 AWS CLI 。在安装 AWS CLI 后，建
+议您还要对其进行配置。有关更多信息，请参阅 AWS Command Line Interface 用户指南中的 如何
+使用 aws configure  快速配置 。
+•kubectl  – 用于与 Kubernetes 集群一起使用的命令行工具。有关更多信息，请参阅 安装或更新
+kubectl 。
+•所需的 IAM 权限  – 您正在使用的 IAM 安全主体必须具有使用 Amazon EKS IAM 角色、服务相关角
+色、AWS CloudFormation、VPC 和相关资源的权限。有关更多信息，请参阅 IAM 用户指南中的 用
+于 Amazon Elastic Kubernetes Service 的操作、资源和条件密钥 和使用服务相关角色 。您必须以同
+一用户身份完成本指南中的所有步骤。要查看当前用户，请运行以下命令：
+aws sts get-caller-identity
+•我们建议您在 Bash shell 中完成本主题中的步骤。如果您没有使用 Bash shell，则某些脚本命令
+（例如行延续字符以及变量的设置和使用方式）需要调整 shell。此外，您的 Shell 的引用和转义规
+则可能有所不同。有关更多信息，请参阅《AWS Command Line Interface 用户指南》中的 在 AWS 
+CLI 中将引号和字符串结合使用 。
+第 1 步：创建 Amazon EKS 集群
+Important
+为了尽可能简单快速地入门，本主题包括创建具有原定设置的集群的步骤。创建用于生产用途
+的集群前，我们建议您熟悉所有设置，并使用符合您要求的设置部署集群。有关更多信息，请
+参阅创建 Amazon EKS 集群 。一些设置仅在创建集群时可以启用。
+先决条件 27Amazon EKS 用户指南
+创建集群的步骤
+1.创建具有公有和私有子网且符合 Amazon EKS 要求的 Amazon VPC。 将 region-code  替换为 
+Amazon EKS 支持的任何 AWS 区域。有关 AWS 区域 列表，请参阅 AWS 一般参考指南中的
+Amazon EKS 端点和配额 。您可以将 my-eks-vpc-stack  替换为您选择的任何名称。
+aws cloudformation create-stack \ 
+  --region region-code  \ 
+  --stack-name my-eks-vpc-stack  \ 
+  --template-url https://s3.us-west-2.amazonaws.com/amazon-
+eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml
+Tip
+如需查看上一个命令创建的所有资源的列表，请前往 https://console.aws.amazon.com/
+cloudformation  打开 AWS CloudFormation 控制台。选择 my-eks-vpc-stack  堆栈，然
+后选择 Resources （资源）选项卡。
+2.创建集群 IAM 角色并向其附加所需的 Amazon EKS IAM 托管策略。Amazon EKS 托管的 
+Kubernetes 集群会代表您调用其他 AWS 服务，以管理您用于该服务的资源。
+a.将以下内容复制到名为 eks-cluster-role-trust-policy.json  的文件中。
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+      "Effect": "Allow", 
+      "Principal": { 
+        "Service": "eks.amazonaws.com" 
+      }, 
+      "Action": "sts:AssumeRole" 
+    } 
+  ]
+}
+b.创建角色。
+aws iam create-role \ 
+  --role-name myAmazonEKSClusterRole  \ 
+第 1 步：创建集群 28Amazon EKS 用户指南
+  --assume-role-policy-document file://" eks-cluster-role-trust-policy.json "
+c.将所需的 Amazon EKS 托管 IAM policy 附加到角色。
+aws iam attach-role-policy \ 
+  --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy \ 
+  --role-name myAmazonEKSClusterRole
+3.访问 https://console.aws.amazon.com/eks/home#/clusters  打开 Amazon EKS 控制台。
+确保控制台右上角显示的 AWS 区域 是您要在其中创建集群的AWS 区域。如果不是，请选择 
+AWS 区域名称旁边的下拉菜单，然后选择要使用的 AWS 区域。
+4.请选择 Add cluster （添加集群），然后选择 Create （创建）。如果没有看到此选项，请先选择左
+侧导航面板中的 Clusters （集群）。
+5.在 Configure cluster （配置集群）页面上，请执行以下操作：
+a.输入集群的 Name （名称），例如 my-cluster 。名称只能包含字母数字字符（区分大小
+写）和连字符。该名称必须以字母字符开头，且不得超过 100 个字符。
+b.对于 Cluster Service Role （集群服务角色），请选择 myAmazonEKSClusterRole 。
+c.其余设置保留为默认值，然后选择 Next（下一步）。
+6.在 Specify networking （指定联网）页面中，请执行以下操作：
+a.请从 VPC 下拉列表中选择在上一步创建的 VPC ID。此 ID 形如 vpc-00x0000x000x0x000
+| my-eks-vpc-stack-VPC 。
+b.其余设置保留为默认值，然后选择 Next（下一步）。
+7.在配置可观测性 页面上，选择 下一步 。
+8.在选择附加组件 页中，选择 下一个 。
+有关附加组件的更多信息，请参阅 Amazon EKS 附加组件 。
+9.在配置选定的附加组件"
+Source: eks-ug.pdf</p></details><details><summary>[5]	 "体拥有 system:masters ...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "体拥有 system:masters  权限。该主体在您的集群配置中不可见。因此，重要的是要注
+意创建集群的主体并确保永远不会删除它。最初，仅创建服务器的 IAM 主体 可以使用 kubectl  调用 
+Kubernetes API 服务器。如果使用控制台创建集群，则必须确保在集群上运行 kubectl  命令时，相
+同的 IAM 凭证位于 AWS 开发工具包凭证链中。创建集群后，您可以向其他 IAM 主体 授予对集群的访
+问权限。
+创建 Amazon EKS 集群
+1.如果您已经拥有集群 IAM 角色，或者您将使用 eksctl  创建集群，则可以跳过此步骤。默认情况
+下，eksctl  会为您创建角色。
+创建 Amazon EKS 集群 IAM 角色
+1.运行以下命令以创建 IAM 信任策略 JSON 文件。
+cat >eks-cluster-role-trust-policy.json  <<EOF
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+      "Effect": "Allow", 
+      "Principal": { 
+        "Service": "eks.amazonaws.com" 
+      }, 
+      "Action": "sts:AssumeRole" 
+    } 
+  ]
+}
+EOF
+创建集群 41Amazon EKS 用户指南
+2.创建 Amazon EKS 集群 IAM 角色。如有必要，使用您在上一步中将文件写入到的计算机
+上的路径为 eks-cluster-role-trust-policy.json  添加前言。该命令将您在上一
+步中创建的信任策略与角色关联。要创建 IAM 角色，必须为正在创建角色的 IAM 主体 分配
+iam:CreateRole  操作（权限）。
+aws iam create-role --role-name myAmazonEKSClusterRole  --assume-role-policy-
+document file://" eks-cluster-role-trust-policy.json "
+3.您可以分配 Amazon EKS 托管策略或创建自己的自定义策略。有关必须在自定义策略中使用的
+最低权限，请参阅 Amazon EKS 集群 IAM 角色 。
+将名为 AmazonEKSClusterPolicy  的 Amazon EKS 托管 IAM policy 附加到角色。要将 
+IAM policy 附加到某个 IAM 主体 ，必须为附加该策略的主体分配以下 IAM 操作（权限）之
+一：iam:AttachUserPolicy  或 iam:AttachRolePolicy 。
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/
+AmazonEKSClusterPolicy --role-name myAmazonEKSClusterRole
+2.创建 Amazon EKS 集群。
+您可以使用 eksctl 、AWS Management Console 或 AWS CLI 创建集群。
+eksctl
+先决条件
+您的设备或 AWS CloudShell 上安装了 0.172.0  版或更高版本的 eksctl  命令行工具。要安
+装或更新 eksctl ，请参阅 eksctl  文档中的 Installation 。
+创建集群的步骤
+在您的默认 AWS 区域 中，使用 Amazon EKS 默认 Kubernetes 版本创建 Amazon EKS IPv4
+集群。在运行命令之前，进行以下替换：
+•将 region-code  替换为您要在其中创建集群的 AWS 区域。
+•将 my-cluster  替换为您的集群名称。名称只能包含字母数字字符（区分大小写）和连字
+符。该名称必须以字母字符开头，且不得超过 100 个字符。对于您在其中创建集群的 AWS 
+区域 和 AWS 账户，该名称必须在其内具有唯一性。
+•将 1.28  替换为 Amazon EKS 支持的版本 。
+创建集群 42Amazon EKS 用户指南
+•更改 vpc-private-subnets  的值以满足您的要求。您还可以添加其他 ID。您必须指定至
+少两个子网 ID。如果您宁愿指定公有子网，您可以将 --vpc-private-subnets  更改为
+--vpc-public-subnets 。公有子网有一个与互联网网关的路由相关联的路由，但私有子
+网没有关联的路由表。我们建议尽可能使用私有子网。
+您选择的子网必须符合 Amazon EKS 子网要求 。在选择子网之前，我们建议您熟悉所有的
+Amazon EKS VPC 以及子网要求和考虑因素 。
+eksctl create cluster --name my-cluster  --region region-code  --version 1.28 --
+vpc-private-subnets subnet-ExampleID1 ,subnet-ExampleID2  --without-nodegroup
+集群预配置需要几分钟时间。在创建集群时，将显示几行输出。输出的最后一行类似于以下示
+例行。
+[#]  EKS cluster " my-cluster " in "region-code " region is ready
+Tip
+要查看在使用 eksctl  创建集群时可指定的大多数选项，请使用 eksctl create 
+cluster --help  命令。要查看所有可用的选项，请使用 config  文件。有关更多
+信息，请参阅 eksctl  文档中的 使用配置文件 和配置文件架构 。您可以在 GitHub 上查
+找配置文件示例 。
+可选设置
+以下是可选设置，如果需要，必须将这些设置添加到上一个命令中。您只能在创建集群时启用
+这些选项，而不能在创建集群后启用。如果您需要指定这些选项，则必须使用 eksctl  配置文
+件创建集群，然后指定设置，而不是使用上一个命令。
+•如果您想指定 Amazon EKS 分配给它创建的网络接口的一个或多个安全组，请指定
+securityGroup  选项。
+无论您是否选择任何安全组，Amazon EKS 都会创建一"
+Source: eks-ug.pdf</p></details>2024-06-27 20:46:56,607 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+
+call bedrock get_answer_stream_iter 
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 " EKS – eksctl此指南可帮...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 " EKS – eksctl
+此指南可帮助您使用 eksctl （用于在 Amazon EKS 上创建和管理 Kubernetes 集群的简单命令行实
+用程序）来安装开始使用 Amazon Elastic Kubernetes Service (Amazon EKS) 所需的所有资源。在本
+教程的最后，将为您提供一个运行中的 Amazon EKS 集群，您可向其部署应用程序。
+本指南中的程序可自动为您创建在您使用 AWS Management Console 创建集群时必须手动创建的一些
+资源。如果您希望手动创建大多数资源并更好地了解它们之间的交互方式，请使用 AWS Management 
+Console 创建集群和执行计算。有关更多信息，请参阅 开始使用 Amazon EKS – AWS Management 
+Console 和 AWS CLI 。
+先决条件
+在开始使用本教程之前，您必须安装并配置创建和管理 Amazon EKS 集群所需的以下工具和资源。
+•kubectl  – 用于与 Kubernetes 集群一起使用的命令行工具。有关更多信息，请参阅 安装或更新
+kubectl 。
+创建您的第一个集群 – eksctl 22Amazon EKS 用户指南
+•eksctl  – 用于处理 EKS 集群的命令行工具，该工具可自动执行许多单独任务。有关更多信息，请
+参阅 eksctl  文档中的 Installation 。
+•所需的 IAM 权限  – 您正在使用的 IAM 安全主体必须具有使用 Amazon EKS IAM 角色、服务相关角
+色、AWS CloudFormation、VPC 和相关资源的权限。有关更多信息，请参阅 IAM 用户指南中的 用
+于 Amazon Elastic Container Service for Kubernetes 的操作、资源和条件键 和使用服务相关角色 。
+您必须以同一用户身份完成本指南中的所有步骤。要查看当前用户，请运行以下命令：
+aws sts get-caller-identity
+第 1 步：创建 Amazon EKS 集群和节点
+Important
+为了尽可能简单快速地入门，本主题包括创建具有原定设置的集群和节点的步骤。在创建用于
+生产使用的集群和节点之前，我们建议您熟悉所有设置，并使用符合您要求的设置部署集群和
+节点。有关更多信息，请参阅 创建 Amazon EKS 集群  和 Amazon EKS 节点 。一些设置仅在
+创建集群和节点时可以启用。
+您可以使用下列节点类型之一创建集群。要了解有关各个类型的更多信息，请参阅 Amazon EKS 节
+点。部署集群后，您可以添加其他节点类型。
+•Fargate - Linux  - 如果要在 AWS Fargate  上运行 Linux 应用程序，请选择此类型的节点。Fargate 是
+一种无服务器计算引擎，允许部署 Kubernetes Pods，而不管理 Amazon EC2 实例。
+•托管式节点 – Linux  – 如果要在 Amazon EC2 实例上运行Amazon Linux 应用程序，请选择此类型
+的节点。虽然本指南中未作介绍，但您还可以向集群添加 Windows 自行管理 节点和 Bottlerocket  节
+点。
+使用以下命令创建 Amazon EKS 集群。您可以将 my-cluster  替换为自己的值。名称只能包含字
+母数字字符（区分大小写）和连字符。该名称必须以字母字符开头，且不得超过 100 个字符。将
+region-code  替换为 Amazon EKS 支持的任一 AWS 区域。有关 AWS 区域列表，请参阅 AWS 一般
+参考中的 Amazon EKS 端点和配额 。
+Fargate – Linux
+eksctl create cluster --name my-cluster  --region region-code  --fargate
+第 1 步：创建集群和节点 23Amazon EKS 用户指南
+Managed nodes – Linux
+eksctl create cluster --name my-cluster  --region region-code
+创建集群需要几分钟时间。在创建过程中，您将看到几行输出。输出的最后一行类似于以下示例行。
+[...]
+[#]  EKS cluster "my-cluster" in " region-code " region is ready
+eksctl  在 ~/.kube  中创建了一个 kubectl  config  文件，或在计算机上的 ~/.kube  中的现有
+config  文件添加了新集群的配置。
+完成集群创建后，在 AWS CloudFormation 控制台 https://console.aws.amazon.com/cloudformation
+中查看名为 eksctl-my-cluster -cluster  的 AWS CloudFormation 堆栈，查看创建的所有资源。
+第 2 步：查看 Kubernetes 资源
+1.查看您的集群节点。
+kubectl get nodes -o wide
+示例输出如下。
+Fargate – Linux
+NAME                                                STATUS   ROLES    AGE   
+   VERSION              INTERNAL-IP   EXTERNAL-IP   OS-IMAGE         KERNEL-
+VERSION                  CONTAINER-RUNTIME
+fargate-ip- 192-0-2-0 .region-code .compute.internal   Ready    <none>  
+   8m3s    v1.2.3-eks-1234567   192.0.2.0      <none>        Amazon Linux 2  
+   1.23.456-789.012.amzn2.x86_64    containerd:// 1.2.3
+fargate-ip- 192-0-2-1 .region-code .compute.internal   Ready    <none>  
+   7m30s   v1.2.3-eks-1234567   192-0-2-1      <none>        Amazon Linux 2  
+   1.23.456-789.012.amzn2.x86_64    containerd:// 1.2.3
+Managed nodes – Linux
+NAME                                        STATUS   ROL"
+Source: eks-ug.pdf</p></details><details><summary>[2]	 " 主体访问您的集群  和 所需的权限 ...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 " 主体访问您的集群  和 所需的权限 ：
+•将示例应用程序 部署到您的集群。
+•在部署集群用于生产用途前，我们建议您熟悉 集群和节点的所有设置。创建集群时必须进行一些设置
+（例如启用 SSH 访问 Amazon EC2 节点）。
+后续步骤 37Amazon EKS 用户指南
+•为了提高集群的安全性，请 配置 Amazon VPC 容器网络接口插件以将 IAM 角色用于服务账户 。
+后续步骤 38Amazon EKS 用户指南
+Amazon EKS 集群
+一个 Amazon EKS 集群包含两个主要组件：
+•Amazon EKS 控制层面
+•向控制层面注册的 Amazon EKS 节点
+Amazon EKS 控制面板由运行 Kubernetes 软件（如 etcd ）的控制面板节点和 Kubernetes API 服务
+器组成。控制面板在由 AWS 管理的账户中运行，并且 Kubernetes API 将通过与集群关联的 Amazon 
+EKS 端点公开。每个 Amazon EKS 集群控制层面都是单一租户而且是唯一的，它们在其自己的一组 
+Amazon EC2 实例上运行。
+etcd  节点和关联 Amazon EBS 卷存储的所有数据均使用 AWS KMS 加密。集群控制面板已跨多个
+可用区进行预置，其前面配置了一个 Elastic Load Balancing Network Load Balancer。Amazon EKS 
+还在 VPC 子网中预置了弹性网络接口，以便在控制面板实例与节点之间建立连接（例如，为了支持
+kubectl exec  logs  proxy  数据流）。
+Important
+在 Amazon EKS 环境中，根据 上游指导，etcd  存储限制为 8GiB。通过运行以下命令，
+可以监控当前数据库大小的指标。如果您的集群有低于 1.28  的 Kubernetes 版本，请将
+apiserver_storage_size_bytes  替换为以下版本：
+•Kubernetes 版本 1.27  和 1.26  – apiserver_storage_db_total_size_in_bytes
+•Kubernetes 版本 1.25  及以下 – etcd_db_total_size_in_bytes
+kubectl get --raw=/metrics | grep " apiserver_storage_size_bytes "
+Amazon EKS 节点在AWS账户中运行并通过 API 服务器端点和为集群创建的证书文件连接到集群的控
+制层面。
+Note
+•您可以了解 Amazon EKS 的不同组件在 Amazon EKS 联网  中的工作方式。
+39Amazon EKS 用户指南
+•有关互联的集群，请参阅 Amazon EKS Connector 。
+主题
+•创建 Amazon EKS 集群
+•集群见解
+•更新 Amazon EKS 集群 Kubernetes 版本
+•删除 Amazon EKS 集群
+•Amazon EKS 集群端点访问控制
+•在现有集群中启用密钥加密
+•为 Amazon EKS 集群启用 Windows 支持
+•私有集群要求
+•Amazon EKS Kubernetes 版本
+•Amazon EKS 平台版本
+•Autoscaling
+创建 Amazon EKS 集群
+本主题概述了可用选项，并介绍了创建 Amazon EKS 集群时需要考虑的内容。如果您需要在 AWS 
+Outpost 上创建集群，请参阅 AWS Outposts 上的 Amazon EKS 的本地集群 。如果您是首次创建 
+Amazon EKS 集群，我们建议您按照我们的 开始使用 Amazon EKS  指南之一操作。这些指南可帮助您
+创建一个简单的默认集群，而无需扩展到所有可用选项。
+先决条件
+•满足 Amazon EKS 要求 的现有 VPC 和子网。在部署集群用于生产用途前，我们建议您彻底
+了解 VPC 和子网要求。如果您没有 VPC 和子网，则可以使用 Amazon EKS 提供的 AWS 
+CloudFormation 模板 创建它们。
+•您的设备或 AWS CloudShell 上安装了 kubectl  命令行工具。该版本可以与集群的 Kubernetes 版
+本相同，或者最多早于或晚于该版本一个次要版本。例如，如果您的集群版本为 1.28 ，则可以将
+kubectl  的 1.27 、1.28  或 1.29  版本与之配合使用。要安装或升级 kubectl ，请参阅 安装或更
+新 kubectl 。
+•在您的设备或 AWS CloudShell 上安装和配置了 AWS Command Line Interface（AWS CLI）的
+版本 2.12.3  或更高版本，或版本 1.27.160  或更高版本。要查看当前版本，请使用 aws --
+创建集群 40Amazon EKS 用户指南
+version | cut -d / -f2 | cut -d ' ' -f1 。软件包管理器（如 yum、apt-get  或适
+用于 macOS 的 Homebrew）通常比 AWS CLI 的最新版本落后几个版本。要安装最新版本，请参
+阅《AWS Command Line Interface 用户指南》 中的安装、更新和卸载 AWS CLI ，以及 使用 aws 
+configure 快速配置 。AWS CloudShell 中安装的 AWS CLI 版本也可能比最新版本落后几个版本。如
+需更新，请参阅《AWS CloudShell 用户指南》 中的将 AWS CLI 安装到主目录 。
+•具有 create  和 describe  Amazon EKS 集群权限的 IAM 主体 。有关更多信息，请参阅 在 
+Outpost 上创建本地 Kubernetes 集群 和 列出或描述所有集群 。
+创建 Amazon EKS 集群后，创建集群的 IAM 主体 将作为管理员永久添加到 Kubernetes RBAC 授权
+表中。该主体拥有 system:masters  权限。该主体在您的集群配置中不可见。"
+Source: eks-ug.pdf</p></details><details><summary>[3]	 "，请参阅 Amazon EKS 附加组...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 "，请参阅 Amazon EKS 附加组件 。
+9.在配置选定的附加组件设置 页面上，选择 下一个 。
+10.请在 Review and create （审核和创建）页面上，选择 Create （创建）。
+集群名称右侧的集群状态会保持为 Creating（正在创建） 几分钟，直至集群调配过程完成。在该
+状态变为 Active（有效） 之前，请勿继续执行下一步。
+第 1 步：创建集群 29Amazon EKS 用户指南
+Note
+您可能会收到一个错误，指示请求中的可用区之一没有足够容量来创建 Amazon EKS 集
+群。如果发生这种情况，错误输出将包含可支持新集群的可用区。再次尝试使用至少两个
+位于您账户中支持的可用区的子网创建集群。有关更多信息，请参阅 容量不足 。
+第 2 步：将计算机配置为与您的集群通信
+在本部分中，您将为集群创建一个 kubeconfig  文件。此文件中的设置会启用 kubectl  CLI 与您的
+集群进行通信。
+将计算机配置为与您的集群通信的步骤
+1.为集群创建或更新 kubeconfig  文件。 将 region-code  替换为您要在其中创建集群的 AWS 区
+域。将 my-cluster  替换为您的集群名称。
+aws eks update-kubeconfig --region region-code  --name my-cluster
+预设情况下， config  文件创建在 ~/.kube  中或者新集群的配置已添加到 ~/.kube  的现有
+config  文件中。
+2.测试配置。
+kubectl get svc
+Note
+如果您收到任何授权或资源类型错误，请参阅故障排除主题中的 未经授权或访问被拒绝 
+(kubectl )。
+示例输出如下。
+NAME             TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+svc/kubernetes   ClusterIP   10.100.0.1   <none>        443/TCP    1m
+第 2 步：配置集群通信 30Amazon EKS 用户指南
+第 3 步：创建节点
+Important
+为了尽可能简单快速地入门，本主题包括创建具有原定设置的节点的步骤。在创建用于生产
+用途的节点之前，我们建议您熟悉所有设置，并使用符合您要求的设置部署节点。有关更多信
+息，请参阅 Amazon EKS 节点 。一些设置仅在创建节点时可以启用。
+您可以使用下列节点类型之一创建集群。要了解有关各个类型的更多信息，请参阅 Amazon EKS 节
+点。部署集群后，您可以添加其他节点类型。
+•Fargate - Linux  - 如果要在 AWS Fargate  上运行 Linux 应用程序，请选择此类型的节点。Fargate 是
+一种无服务器计算引擎，允许部署 Kubernetes Pods，而不管理 Amazon EC2 实例。
+•托管节点 – Linux  – 如果要运行，请选择此类型的节点  Amazon Linux 应用程序。 虽然本指南中未作
+介绍，但您还可以向集群添加 Windows 自行管理 节点和 Bottlerocket  节点。
+Fargate – Linux
+创建 Fargate 配置文件。当部署 Kubernetes Pods 时使用的条件符合配置文件中定义的条件时，这
+些 Pods 将会部署到 Fargate。
+创建 Fargate 配置文件的步骤
+1.创建 IAM 角色并向其附加所需的 Amazon EKS IAM 托管策略。当您的集群在 Fargate 基础
+设施上创建 Pods 时，在 Fargate 基础设施上运行的组件必须代表您调用 AWS API。这是为
+了他们可以执行诸如从 Amazon ECR 中拉取容器镜像或将日志路由到其他 AWS 服务的操
+作。Amazon EKS Pod 执行角色提供执行此操作的 IAM 权限。
+a.将以下内容复制到名为 pod-execution-role-trust-policy .json  的文件中。请将
+region-code  替换为集群所在的 AWS 区域。如果您希望在账户中在所有 AWS 区域 使
+用相同角色，请将 region-code  替换为 *。请将 111122223333  替换为账户 ID，并将
+my-cluster  替换为您的集群名称。如果您希望在账户中对所有集群使用相同角色，请将
+my-cluster  替换为 *。
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+第 3 步：创建节点 31Amazon EKS 用户指南
+      "Effect": "Allow", 
+      "Condition": { 
+         "ArnLike": { 
+            "aws:SourceArn": "arn:aws:eks: region-
+code:111122223333 :fargateprofile/ my-cluster /*" 
+         } 
+      }, 
+      "Principal": { 
+        "Service": "eks-fargate-pods.amazonaws.com" 
+      }, 
+      "Action": "sts:AssumeRole" 
+    } 
+  ]
+}
+b.创建 Pod 执行 IAM 角色。
+aws iam create-role \ 
+  --role-name AmazonEKSFargatePodExecutionRole  \ 
+  --assume-role-policy-document file://" pod-execution-role-trust-
+policy.json"
+c.将所需的 Amazon EKS 托管 IAM policy 附加到角色。
+aws iam attach-role-policy \ 
+  --policy-arn arn:aws:iam::aws:policy/
+AmazonEKSFargatePodExecutionRolePolicy \ 
+  --role-name AmazonEKSFargatePodExecutionRole
+2.访问 https://console.aws.amazon.com/eks/home#/clusters  "
+Source: eks-ug.pdf</p></details><details><summary>[4]	 "。•AWS CLI  – 与AWS服...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "。
+•AWS CLI  – 与AWS服务（包括 Amazon EKS）一起使用的命令行工具。有关更多信息，请参阅 
+AWS Command Line Interface 用户指南中的 安装、更新和卸载 AWS CLI 。在安装 AWS CLI 后，建
+议您还要对其进行配置。有关更多信息，请参阅 AWS Command Line Interface 用户指南中的 如何
+使用 aws configure  快速配置 。
+•kubectl  – 用于与 Kubernetes 集群一起使用的命令行工具。有关更多信息，请参阅 安装或更新
+kubectl 。
+•所需的 IAM 权限  – 您正在使用的 IAM 安全主体必须具有使用 Amazon EKS IAM 角色、服务相关角
+色、AWS CloudFormation、VPC 和相关资源的权限。有关更多信息，请参阅 IAM 用户指南中的 用
+于 Amazon Elastic Kubernetes Service 的操作、资源和条件密钥 和使用服务相关角色 。您必须以同
+一用户身份完成本指南中的所有步骤。要查看当前用户，请运行以下命令：
+aws sts get-caller-identity
+•我们建议您在 Bash shell 中完成本主题中的步骤。如果您没有使用 Bash shell，则某些脚本命令
+（例如行延续字符以及变量的设置和使用方式）需要调整 shell。此外，您的 Shell 的引用和转义规
+则可能有所不同。有关更多信息，请参阅《AWS Command Line Interface 用户指南》中的 在 AWS 
+CLI 中将引号和字符串结合使用 。
+第 1 步：创建 Amazon EKS 集群
+Important
+为了尽可能简单快速地入门，本主题包括创建具有原定设置的集群的步骤。创建用于生产用途
+的集群前，我们建议您熟悉所有设置，并使用符合您要求的设置部署集群。有关更多信息，请
+参阅创建 Amazon EKS 集群 。一些设置仅在创建集群时可以启用。
+先决条件 27Amazon EKS 用户指南
+创建集群的步骤
+1.创建具有公有和私有子网且符合 Amazon EKS 要求的 Amazon VPC。 将 region-code  替换为 
+Amazon EKS 支持的任何 AWS 区域。有关 AWS 区域 列表，请参阅 AWS 一般参考指南中的
+Amazon EKS 端点和配额 。您可以将 my-eks-vpc-stack  替换为您选择的任何名称。
+aws cloudformation create-stack \ 
+  --region region-code  \ 
+  --stack-name my-eks-vpc-stack  \ 
+  --template-url https://s3.us-west-2.amazonaws.com/amazon-
+eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml
+Tip
+如需查看上一个命令创建的所有资源的列表，请前往 https://console.aws.amazon.com/
+cloudformation  打开 AWS CloudFormation 控制台。选择 my-eks-vpc-stack  堆栈，然
+后选择 Resources （资源）选项卡。
+2.创建集群 IAM 角色并向其附加所需的 Amazon EKS IAM 托管策略。Amazon EKS 托管的 
+Kubernetes 集群会代表您调用其他 AWS 服务，以管理您用于该服务的资源。
+a.将以下内容复制到名为 eks-cluster-role-trust-policy.json  的文件中。
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+      "Effect": "Allow", 
+      "Principal": { 
+        "Service": "eks.amazonaws.com" 
+      }, 
+      "Action": "sts:AssumeRole" 
+    } 
+  ]
+}
+b.创建角色。
+aws iam create-role \ 
+  --role-name myAmazonEKSClusterRole  \ 
+第 1 步：创建集群 28Amazon EKS 用户指南
+  --assume-role-policy-document file://" eks-cluster-role-trust-policy.json "
+c.将所需的 Amazon EKS 托管 IAM policy 附加到角色。
+aws iam attach-role-policy \ 
+  --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy \ 
+  --role-name myAmazonEKSClusterRole
+3.访问 https://console.aws.amazon.com/eks/home#/clusters  打开 Amazon EKS 控制台。
+确保控制台右上角显示的 AWS 区域 是您要在其中创建集群的AWS 区域。如果不是，请选择 
+AWS 区域名称旁边的下拉菜单，然后选择要使用的 AWS 区域。
+4.请选择 Add cluster （添加集群），然后选择 Create （创建）。如果没有看到此选项，请先选择左
+侧导航面板中的 Clusters （集群）。
+5.在 Configure cluster （配置集群）页面上，请执行以下操作：
+a.输入集群的 Name （名称），例如 my-cluster 。名称只能包含字母数字字符（区分大小
+写）和连字符。该名称必须以字母字符开头，且不得超过 100 个字符。
+b.对于 Cluster Service Role （集群服务角色），请选择 myAmazonEKSClusterRole 。
+c.其余设置保留为默认值，然后选择 Next（下一步）。
+6.在 Specify networking （指定联网）页面中，请执行以下操作：
+a.请从 VPC 下拉列表中选择在上一步创建的 VPC ID。此 ID 形如 vpc-00x0000x000x0x000
+| my-eks-vpc-stack-VPC 。
+b.其余设置保留为默认值，然后选择 Next（下一步）。
+7.在配置可观测性 页面上，选择 下一步 。
+8.在选择附加组件 页中，选择 下一个 。
+有关附加组件的更多信息，请参阅 Amazon EKS 附加组件 。
+9.在配置选定的附加组件"
+Source: eks-ug.pdf</p></details><details><summary>[5]	 "体拥有 system:masters ...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "体拥有 system:masters  权限。该主体在您的集群配置中不可见。因此，重要的是要注
+意创建集群的主体并确保永远不会删除它。最初，仅创建服务器的 IAM 主体 可以使用 kubectl  调用 
+Kubernetes API 服务器。如果使用控制台创建集群，则必须确保在集群上运行 kubectl  命令时，相
+同的 IAM 凭证位于 AWS 开发工具包凭证链中。创建集群后，您可以向其他 IAM 主体 授予对集群的访
+问权限。
+创建 Amazon EKS 集群
+1.如果您已经拥有集群 IAM 角色，或者您将使用 eksctl  创建集群，则可以跳过此步骤。默认情况
+下，eksctl  会为您创建角色。
+创建 Amazon EKS 集群 IAM 角色
+1.运行以下命令以创建 IAM 信任策略 JSON 文件。
+cat >eks-cluster-role-trust-policy.json  <<EOF
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+      "Effect": "Allow", 
+      "Principal": { 
+        "Service": "eks.amazonaws.com" 
+      }, 
+      "Action": "sts:AssumeRole" 
+    } 
+  ]
+}
+EOF
+创建集群 41Amazon EKS 用户指南
+2.创建 Amazon EKS 集群 IAM 角色。如有必要，使用您在上一步中将文件写入到的计算机
+上的路径为 eks-cluster-role-trust-policy.json  添加前言。该命令将您在上一
+步中创建的信任策略与角色关联。要创建 IAM 角色，必须为正在创建角色的 IAM 主体 分配
+iam:CreateRole  操作（权限）。
+aws iam create-role --role-name myAmazonEKSClusterRole  --assume-role-policy-
+document file://" eks-cluster-role-trust-policy.json "
+3.您可以分配 Amazon EKS 托管策略或创建自己的自定义策略。有关必须在自定义策略中使用的
+最低权限，请参阅 Amazon EKS 集群 IAM 角色 。
+将名为 AmazonEKSClusterPolicy  的 Amazon EKS 托管 IAM policy 附加到角色。要将 
+IAM policy 附加到某个 IAM 主体 ，必须为附加该策略的主体分配以下 IAM 操作（权限）之
+一：iam:AttachUserPolicy  或 iam:AttachRolePolicy 。
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/
+AmazonEKSClusterPolicy --role-name myAmazonEKSClusterRole
+2.创建 Amazon EKS 集群。
+您可以使用 eksctl 、AWS Management Console 或 AWS CLI 创建集群。
+eksctl
+先决条件
+您的设备或 AWS CloudShell 上安装了 0.172.0  版或更高版本的 eksctl  命令行工具。要安
+装或更新 eksctl ，请参阅 eksctl  文档中的 Installation 。
+创建集群的步骤
+在您的默认 AWS 区域 中，使用 Amazon EKS 默认 Kubernetes 版本创建 Amazon EKS IPv4
+集群。在运行命令之前，进行以下替换：
+•将 region-code  替换为您要在其中创建集群的 AWS 区域。
+•将 my-cluster  替换为您的集群名称。名称只能包含字母数字字符（区分大小写）和连字
+符。该名称必须以字母字符开头，且不得超过 100 个字符。对于您在其中创建集群的 AWS 
+区域 和 AWS 账户，该名称必须在其内具有唯一性。
+•将 1.28  替换为 Amazon EKS 支持的版本 。
+创建集群 42Amazon EKS 用户指南
+•更改 vpc-private-subnets  的值以满足您的要求。您还可以添加其他 ID。您必须指定至
+少两个子网 ID。如果您宁愿指定公有子网，您可以将 --vpc-private-subnets  更改为
+--vpc-public-subnets 。公有子网有一个与互联网网关的路由相关联的路由，但私有子
+网没有关联的路由表。我们建议尽可能使用私有子网。
+您选择的子网必须符合 Amazon EKS 子网要求 。在选择子网之前，我们建议您熟悉所有的
+Amazon EKS VPC 以及子网要求和考虑因素 。
+eksctl create cluster --name my-cluster  --region region-code  --version 1.28 --
+vpc-private-subnets subnet-ExampleID1 ,subnet-ExampleID2  --without-nodegroup
+集群预配置需要几分钟时间。在创建集群时，将显示几行输出。输出的最后一行类似于以下示
+例行。
+[#]  EKS cluster " my-cluster " in "region-code " region is ready
+Tip
+要查看在使用 eksctl  创建集群时可指定的大多数选项，请使用 eksctl create 
+cluster --help  命令。要查看所有可用的选项，请使用 config  文件。有关更多
+信息，请参阅 eksctl  文档中的 使用配置文件 和配置文件架构 。您可以在 GitHub 上查
+找配置文件示例 。
+可选设置
+以下是可选设置，如果需要，必须将这些设置添加到上一个命令中。您只能在创建集群时启用
+这些选项，而不能在创建集群后启用。如果您需要指定这些选项，则必须使用 eksctl  配置文
+件创建集群，然后指定设置，而不是使用上一个命令。
+•如果您想指定 Amazon EKS 分配给它创建的网络接口的一个或多个安全组，请指定
+securityGroup  选项。
+无论您是否选择任何安全组，Amazon EKS 都会创建一"
+Source: eks-ug.pdf</p></details>ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 412, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 689, in __call__
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 257, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 254, in stream_response
+    |     await send({"type": "http.response.body", "body": b"", "more_body": False})
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 465, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+2024-06-27 20:47:59,494 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:47:59,496 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-47.json
+2024-06-27 20:47:59,579 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-47
+2024-06-27 20:48:06,816 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:48:06,830 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-27 20:48:13,949 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:48:13,963 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-27 20:48:58,636 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:48:58,650 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-27 20:49:12,457 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:49:12,471 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-27 20:49:20,203 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:49:20,218 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-27 20:49:36,921 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-49
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 412, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 689, in __call__
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 257, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 254, in stream_response
+    |     await send({"type": "http.response.body", "body": b"", "more_body": False})
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 465, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+2024-06-27 20:50:07,191 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:50:07,192 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-50.json
+2024-06-27 20:50:07,282 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-50
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 412, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 689, in __call__
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 257, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 254, in stream_response
+    |     await send({"type": "http.response.body", "body": b"", "more_body": False})
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 465, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+2024-06-27 20:50:14,948 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:50:14,952 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-50.json
+2024-06-27 20:50:15,018 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-50
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 412, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 689, in __call__
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 257, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 254, in stream_response
+    |     await send({"type": "http.response.body", "body": b"", "more_body": False})
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 465, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+2024-06-27 20:50:36,927 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:50:36,929 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-50.json
+2024-06-27 20:50:36,989 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-50
+2024-06-27 20:55:09,826 [INFO] [index_func.py:128] Found cached index, loading...
+2024-06-27 20:55:17,751 [INFO] [base_model.py:619] 用户  的输入为: 如何配置spf
+2024-06-27 20:55:17,751 [INFO] [base_model.py:498] 加载索引中……
+2024-06-27 20:55:17,782 [INFO] [index_func.py:128] Found cached index, loading...
+2024-06-27 20:55:17,786 [INFO] [base_model.py:506] 索引获取成功，生成回答中……
+
+anthropic.claude-3-haiku-20240307-v1:0
+Claude 3 Haiku
+
+call bedrock get_answer_stream_iter 
+
+
+call bedrock get_answer_stream_iter 
+
+
+call bedrock get_answer_stream_iter 
+
+
+call bedrock get_answer_stream_iter 
+
+
+call bedrock get_answer_stream_iter 
+
+anthropic.claude-3-haiku-20240307-v1:0
+Claude 3 Haiku
+anthropic.claude-3-haiku-20240307-v1:0
+Claude 3 Haiku
+anthropic.claude-3-haiku-20240307-v1:0
+Claude 3 Haiku
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 "端可能会自动对邮件进行 DKIM 签...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 "端可
+能会自动对邮件进行 DKIM 签名。某些客户端可能会对其中一些字段进行签名。有关预设情
+况下对哪些字段进行签名的信息，请参阅您的电子邮件客户端文档。
+在 Amazon SES 中使用 SPF 对电子邮件进行身份验证
+发件人策略框架  (SPF) 是一种电子邮件验证标准，旨在防止电子邮件欺骗。域所有者使用 SPF 来告知
+电子邮件提供商，允许哪些服务器从其域发送电子邮件。SPF 是在 RFC 7208  中定义的。
+您通过 Amazon SES 发送的邮件将自动使用 amazonses.com  的子域作为原定设置的 MAIL FROM 
+域。SPF 身份验证成功验证这些邮件，因为原定设置的 MAIL FROM 域与发送电子邮件的应用程序
+（在这种情况下为 SES）相匹配。因此，在 SES 中，SPF 是为你隐式设置的。
+但是，如果您不想使用 SES 的默认 MAIL FROM 域，而宁愿使用自己拥有的域的子域，则在 SES 中
+将其称为使用自 定义 MAIL FROM 域。为此，它要求您为您的自定义 MAIL FROM 域发布您自己的 
+SPF 记录。此外，SES 还要求您设置 MX 记录，以便您的自定义 MAIL FROM 域可以接收电子邮件提
+供商向您发送的退回邮件和投诉通知。
+了解如何设置 SPF 身份验证
+提供了使用 SPF 配置域名以及如何在中发布 MX 和 SPF（类型 TXT）记录的说明 the section called 
+“使用自定义 MAIL FROM 域” 。
+使用自定义 MAIL FROM 域
+当您发送电子邮件时，它具有两个指示其来源的地址：一个显示给邮件收件人的 From 地址，以及
+一个指示邮件来源的 MAIL FROM 地址。MAIL FROM 地址有时称作 envelope sender 、envelope 
+电子邮件身份验证方法 220Amazon Simple Email Service 开发人员指南
+from、bounce address  或 Return Path  地址。邮件服务器使用 MAIL FROM 地址返回退回邮件和其他
+错误通知。通常，收件人只有在查看邮件的源代码时才能查看 MAIL FROM 地址。
+Amazon SES 将您发送的邮件的 MAIL FROM 域设置为原定设置值，除非您指定自己的（自定义）
+域。本部分讨论设置自定义 MAIL FROM 域的好处，并包括设置过程。
+为什么使用自定义 MAIL FROM 域？
+您通过 Amazon SES 发送的邮件将自动使用 amazonses.com  的子域作为原定设置的 MAIL FROM 
+域。发件人策略框架（SPF）身份验证成功验证这些邮件，因为原定设置的 MAIL FROM 域与发送电
+子邮件的应用程序（在这种情况下为 SES）相匹配。
+如果您不想使用 SES 原定设置 MAIL FROM 域，而是希望使用您拥有的域的子域，则在 SES 中称为
+使用自定义  MAIL FROM 域。为此，它要求您为您的自定义 MAIL FROM 域发布您自己的 SPF 记录。
+此外，SES 还要求您设置 MX 记录，以便您的域可以接收电子邮件提供商向您发送的退回邮件和投诉
+通知。
+通过使用自定义 MAIL FROM 域，您可以灵活地使用 SPF 和/或 DKIM 来实现 基于域的消息身份验证、
+报告和一致性（DMARC） 验证。DMARC 使发件人的域能够指示从该域发送的电子邮件受一个或多
+个身份验证系统的保护。可通过以下两种方法实现 DMARC 验证： the section called “通过 SPF 遵守 
+DMARC” 和the section called “通过 DKIM 遵守 DMARC” 。
+选择自定义 MAIL FROM 域
+在下文中， MAIL FROM 域 一词始终指您拥有的域的子域名——您用于自定义 MAIL FROM 域的子域不
+得用于其他任何用途，并且符合以下要求：
+•MAIL FROM 域必须是经过验证的身份（电子邮件地址或域名）的父域的子域。
+•MAIL FROM 域不应是您也用来从中发送电子邮件的子域。
+•MAIL FROM 域不应是您用于接收电子邮件的子域。
+将 SPF 与自定义 MAIL FROM 域结合使用
+发件人策略框架  (SPF) 是一种电子邮件验证标准，旨在防止电子邮件欺骗。您可以使用 SPF 配置您的
+自定义 MAIL FROM 域，以告诉电子邮件提供商允许哪些服务器从您的自定义 MAIL FROM 域发送电
+子邮件。SPF 是在 RFC 7208  中定义的。
+要设置 SPF，您要将 TXT 记录发布到您的自定义 MAIL FROM 域的 DNS 配置。此记录包含您授权使
+用您的自定义 MAIL FROM 域发送电子邮件的服务器的列表。当电子邮件提供商从您的自定义 MAIL 
+FROM 域接收到邮件时，它将检查该域的 DNS 记录，以确保电子邮件是从授权服务器发送的。
+电子邮件身"
+Source: ses-dg.pdf</p></details><details><summary>[2]	 "F 强制执行 SPF 所有预选赛缺失...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 "F 强制执行 SPF 所有预选赛缺
+失。~all SPF TXT 记录中
+缺失。配置您的自定义 MAIL 
+FROM 域
+顾问在找什么 380Amazon Simple Email Service 开发人员指南
+支票类型 顾问留言 为什么顾问会提醒你 了解更多信息
+SPF 强制执行验证 发现一个 SPF 配置问
+题。尝试在 72 小时内检测
+到所需的 SPF MX 记
+录失败。来自域名的自定义邮 
+件设置状态
+BIMI 配置了 如果没有默认选择器 
+，则找不到或配置 
+BIMI 记录。BIMI TXT 记录缺失或
+缺少选择器属性。设置 BIMI
+BIMI 格式验证 BIMI 的 TXT 记录格式
+不正确。在检查版本、证书 
+URL 和徽标网址的存
+在和有效格式后，BIM 
+I TXT 记录被确定为配
+置错误。设置 BIMI
+在 Amazon SES 控制台中使用 Virtual Deliverability Manager advisor
+以下过程演示了如何在 Amazon SES 控制台中使用 Virtual Deliverability Manager advisor 来解决已发
+现的送达问题。
+要使用 Virtual Deliverability Manager advisor 来解决送达和声誉问题，请执行以下操作：
+1.登录 AWS Management Console 并打开 Amazon SES 控制台， 网址为 https://
+console.aws.amazon.com/ses/ 。
+2.在左侧导航窗格中，在 Virtual Deliverability Manager  下，选择 Advisor 。
+Note
+如果您尚未为账户启用 Virtual Deliverability Manager ，则无法看到 Advisor 。有关更多信
+息，请参阅 the section called “开始使用” 。
+3.默认情况下，将显示 Open recommendations （待处理的建议）表。建议按 Impact （影响）（高/
+低）、 Identity name （身份名称）（发送域）、（警报的） Age（时长）和 Recommendation/
+Description （建议/描述）（已发现的问题）进行分类。在搜索栏中，按 Impact （影响）级别、基
+础架构问题的 Category （类别）或发送域的 Identity name （身份名称）进行筛选。
+使用 advisor（控制台） 381Amazon Simple Email Service 开发人员指南
+4.要修复 Recommendation/Description （建议/描述）列中描述的问题，请选择该行的 Resolve 
+issue （解决问题）列中的链接，然后实施建议的解决方案。
+Note
+实施解决方案后，已解决的问题最多可能需要六个小时即可得到反映。您可以在 Resolved 
+recommendations （已处理建议）选项卡上查看已解决的问题。
+使用 AWS CLI访问 Virtual Deliverability Manager 建议
+以下示例演示了如何使用 AWS CLI访问 Virtual Deliverability Manager 建议。
+要访问您的虚拟可交付性管理器推荐，请使用 AWS CLI
+您可以使用 Amazon SES API v2 中的 ListRecommendations  操作来列出您的送达建议。您可以从 
+AWS CLI调用此操作，如以下示例所示。
+•列出建议以查看送达问题：
+aws --region us-east-1 sesv2 list-recommendations
+•应用筛选器，检索针对您拥有的特定域提供的建议：
+aws --region us-east-1 sesv2 list-recommendations --cli-input-json file://list-
+recommendations.json
+•输入文件如下所示：
+{ 
+  "PageSize":100, 
+  "Filter":{ 
+    "RESOURCE_ARN": "arn:aws:ses:us-east-1:123456789012:identity/example.com" 
+   }   
+}
+访问建议 (AWS CLI) 382Amazon Simple Email Service 开发人员指南
+使用 Amazon 集成虚拟可交付性管理器顾问事件 EventBridge
+EventBridge 是一项无服务器服务，它使用事件将应用程序组件连接在一起，使您可以更轻松地构建可
+扩展的事件驱动应用程序。事件驱动型架构是一种构建松耦合软件系统的风格，这些系统通过发出和响
+应事件来协同工作。事件是 JSON 格式的消息，通常表示资源或环境的变化，或是其他管理事件。
+Virtual Deliverability Manager 顾问生成推荐状态更改事件并将其发送到 EventBridge默认事件总线。
+事件总线是接收事件并将其传送到零个或多个目的地或 目标的路由器。与事件总线关联的规则会在事
+件到达时进行评估。每条规则都会检查事件是否与规则的模式相匹配。如果事件确实匹配，则将事件 
+EventBridge 发送到指定的目标。
+EventBridge 只要虚拟交付能力管理器顾问的建议状态处于打开或已解决状态，SES 就会向发送事件。
+您可以使用 EventBridge 规则将事件路由到您定义的目标。这些事件将尽最大努力传输，可能会不按顺
+序传输。
+主题
+•SES 事件
+•SES 事件架构参考
+•与 SES 事件 EventBridge 配合使用
+•其他 EventBridge 资源
+SES 事件
+以下事件由 SES 生成并发送到中的默认事件总线 EventBridge。有关更多信息，请参阅 ???。
+事件类型 说明
+Advisor 推荐状态打开 每当虚拟可交付性管理器 Advisor 中打开新推荐时都会生成事
+件。
+要查看此类型的详细事件，请参阅 ???。
+Advisor 推荐状态已解"
+Source: ses-dg.pdf</p></details><details><summary>[3]	 "协议（TLS） – 若要求 SES 与...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 "协议（TLS） – 若要求 SES 与接收邮件服务器建立安全连接，并使用 TLS 协议
+发送电子邮件，请选中 必选复选框。
+创建配置集 316Amazon Simple Email Service 开发人员指南
+Note
+SES 支持 TLS 1.2，但建议使用 TLS 1.3。要了解更多信息，请参阅 SES 中的基础设
+施安全性 。
+5.在声誉选项 部分输入以下详细信息：
+•信誉指标  — 用于跟踪使用此配置集发送 CloudWatch 的电子邮件的退回和投诉指标。 （需支付
+额外费用，请参阅 每个指标的价格 CloudWatch 。）
+•已启用  – 选中此复选框可为配置集启用声誉指标。
+6.
+Suppression list options （抑制名单选项）部分提供了定义自定义禁止的决策集，首先是使用此配
+置集来覆盖您的账户级别禁止的选项。 configuration set-level suppression logic map （配置集级别
+抑制逻辑映射）将帮助您了解覆盖组合的影响。这些多层次的覆盖选择可以组合起来实现三种不同
+级别的抑制：
+a.使用账户级别抑制： 不要覆盖您的账户级别抑制，也不要实施任何配置集级别的抑制 - 基本
+上，使用此配置集发送的任何电子邮件都将使用您的账户级别抑制。要实现此目的，应按照以
+下步骤进行：
+•在 Suppression list settings （抑制列表设置）中，取消选中 Override account level 
+settings （覆盖账户级别设置）的复选框。
+b.请勿使用任何抑制： 在不启用任何配置集级别抑制的情况下覆盖您的账户级别抑制 - 这意味着
+使用此配置集发送的任何电子邮件都不会使用任何账户级别的抑制；换句话说，所有抑制都将
+被取消。要实现此目的，应按照以下步骤进行：
+i.在抑制列表设置 中，勾选 覆盖账户级别设置 复选框。
+ii.在抑制列表设置 中，取消勾选 Enabled (已启用) 复选框。
+c.使用配置集级别抑制： 使用此配置集中定义的自定义黑名单设置覆盖您的账户级别抑制 - 这意
+味着使用此配置集发送的任何电子邮件将仅使用自己的隐藏设置并忽略任何账户级别的抑制设
+置。要实现此目的，应按照以下步骤进行：
+i.在黑名单设置 中，勾选 覆盖账户级别设置 复选框。
+ii.在黑名单 中，勾选 已启用 。
+iii.在指定原因… 中，选择要使用此配置集的抑制原因之一。
+7.
+创建配置集 317Amazon Simple Email Service 开发人员指南
+Virtual Deliverability Manager 选项 部分提供了一种使您可以定义自定义设置以确定此配置集
+将如何使用互动跟踪和优化共享送达的方法，即，通过在账户级别覆盖自定义设置在 Virtual 
+Deliverability Manager 设置中的定义方式：
+a.要针对此配置集禁用互动跟踪和优化共享送达，请执行以下操作：
+i.选中 Override account level settings （覆盖账户级设置）复选框。
+ii.确保针对 互动跟踪 和优化共享送达 取消选中 Enabled （启用），然后选择 Save 
+changes （保存更改）。
+b.要针对此配置集启用或禁用“互动跟踪”和/或“优化共享送达”，请执行以下操作：
+i.选中 Override account level settings （覆盖账户级设置）复选框。
+ii.针对互动跟踪 和/或 优化共享送达 ，选中或取消选中 Enabled （启用），然后选择 Save 
+changes （保存更改）。
+c.要恢复到 Virtual Deliverability Manager 账户级设置，以针对此配置集启用互动跟踪和优化共
+享送达，请执行以下操作：
+•取消选中 Override account level settings （覆盖账户级设置）复选框，然后选择 Save 
+changes （保存更改）。
+8.您可以选择在 标签部分添加一个或多个标签。对要添加到配置集中的每个标签重复以下步骤。
+a.选择添加新标签 。
+b.输入标签 键。
+c.输入标签 值（可选）。
+要删除您输入的标签，请为该标签选择 删除。您最多可输入 50 个标签。
+9.选择创建集 可创建配置集。
+现在已创建配置集，您可以选择为配置集定义事件目标，以支持根据您为事件目标指定的事件类型触发
+的事件发布。配置集可以具有已定义多个事件类型的多个事件目标。请参阅 创建 Amazon SES 事件目
+标。
+创建一个配置集 (AWS CLI)
+可以使用 JSON 文件作为 AWS CLI中 aw"
+Source: ses-dg.pdf</p></details><details><summary>[4]	 "目标。创建一个配置集 (AWS C...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "目
+标。
+创建一个配置集 (AWS CLI)
+可以使用 JSON 文件作为 AWS CLI中 aws sesv2 create-configuration-set  命令的输入来创
+建配置集。
+创建一个配置集 (AWS CLI) 318Amazon Simple Email Service 开发人员指南
+1.创建 CLI 输入 JSON 文件
+使用您常用的文件编辑工具创建包含以下键，以及对您的环境有效的值的 JSON 文件，或使用 
+SES API v2 aws sesv2 create-configuration-set  命令及未指定值的 --generate-
+cli-skeleton  选项，将示例 JSON 结构打印到标准输出。
+此示例使用名为 create-configuration-set.json  的文件：
+{ 
+    "ConfigurationSetName": " sample-configuration-set ", 
+    "TrackingOptions": { 
+        "CustomRedirectDomain": " some.domain.com " 
+    }, 
+    "DeliveryOptions": { 
+        "TlsPolicy": " REQUIRE", 
+        "SendingPoolName": " sending pool " 
+    }, 
+    "ReputationOptions": { 
+        "ReputationMetricsEnabled": true, 
+        "LastFreshStart": timestamp
+    }, 
+    "SendingOptions": { 
+        "SendingEnabled": true
+    }, 
+    "Tags": [ 
+        { 
+            "Key": " tag key", 
+            "Value": " tag value " 
+        } 
+    ], 
+    "SuppressionOptions": { 
+        "SuppressedReasons": [ "BOUNCE","COMPLAINT"]
+    }
+}
+Note
+•JSON 文件路径开头必须包含 file://  符号。
+•JSON 文件的路径应遵循运行命令的基本操作系统的相应约定。例如，Windows 使用反
+斜杠 (\) 引用目录路径，Linux 则使用正斜杠 (/)。
+创建一个配置集 (AWS CLI) 319Amazon Simple Email Service 开发人员指南
+2.使用创建的文件作为输入，运行以下命令。
+aws sesv2 create-configuration-set --cli-input-json file:// create-configuration-
+set.json
+Note
+要查看此命令的 AWS CLI 参考资料，请参阅 create-configuration-set 。
+在 Amazon SES 中管理配置集
+创建完配置集后，您可以使用 Amazon SES 控制台、Amazon SES API v2 和 Amazon SES CLI v2 通
+过查看、更新和删除选项进行管理。还可以将配置集作为每次从身份发送电子邮件时应用的默认配置集
+分配给已验证的身份。
+本节中的主题：
+•查看、编辑和删除配置集（控制台）
+•列出配置集 (AWS CLI)
+•获取配置集详细信息 (AWS CLI)
+•删除配置集 (AWS CLI)
+•停止从配置集 (AWS CLI) 发送电子邮件
+•了解默认配置集
+•创建 Amazon SES 事件目标
+•在 Amazon SES 中分配 IP 池
+•配置自定义域以处理打开和单击跟踪
+查看、编辑和删除配置集（控制台）
+访问现有配置集的详细信息页面
+1.登录 AWS Management Console 并打开 Amazon SES 控制台， 网址为 https://
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下，选择 配置集 。
+管理配置集 320Amazon Simple Email Service 开发人员指南
+3.要查看配置集的详细信息，请从配置集列表中选择 名称。这会将您带到详细信息页面。
+配置集 详细信息页面有两个配置集详细信息选项卡，每个选项卡中都有面板，您可以在其中查看、编辑
+或删除，如下所示：
+•“Overview”(概述) 选项卡
+•一般详细信息  – 此面板可显示配置集的一般详细信息：
+•发送状态 （当前是否启用）
+•配置集名称
+•发送 IP 池
+•传输层安全性 (TLS)
+•自定义重新导向域
+•声誉选项  – 此面板显示与发送声誉相关的详细信息：
+•声誉指标 （表示您是否在跟踪指标）
+•上次刷新开始时间 （上次重置配置集的声誉指标的日期和时间）。
+•黑名单选项  – 此面板显示您是否使用配置集覆盖了账户级黑名单，如果是，覆盖的详细信息是什
+么：
+•黑名单设置 （指明覆盖账户级设置，如果不覆盖，则为面板中显示的唯一项目）
+•黑名单 （指明您如何覆盖账户级设置，是启用还是禁用了黑名单）
+•列入黑名单的原因 （指明退信和/或投诉是否是将收件人电子邮件地址添加到黑名单中的原因）
+•Virtual Deliverability Manager 选项  – 此面板显示您是否正在覆盖 Virtual Deliverability Manager 账
+户设置，以便使用配置集启用互动跟踪和优化共享送达，如果是，覆盖详细信息是什么：
+•互动跟踪 （指明是启用还是禁用了互动跟踪）
+•优化共享送达 （指明是启用还是禁用了优化共享送达）
+•标签 – 此面板显示已附上配置集的所有标签。
+•密钥
+•值
+您可以从这些面板执行以下操作：
+•选择编辑按钮，或者对于“标签”面板，选择 管理标签 按钮，以编辑每个面板的相应详细信息。
+•有关字段的更多信息"
+Source: ses-dg.pdf</p></details><details><summary>[5]	 "上述过程发送的电子邮件）将被计入您的每...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "上述过程发送的电子邮件）将被计入您的每日发送配额中。我
+们将向您发送的每封邮件收费，包括被拒绝的邮件。
+要了解有关 EICAR 测试文件的更多信息，请参阅 Wikipedia 上的 EICAR 测试文件页面 。
+手动使用邮箱模拟器 314Amazon Simple Email Service 开发人员指南
+在 SES 中使用配置集
+配置集是可以应用于已验证身份的规则组。已验证身份是您用于通过 Amazon SES 发送电子邮件的
+域、子域或电子邮件地址。当您对电子邮件应用配置集时，该配置集中的所有规则将应用至该电子邮
+件。
+您可以使用配置集对您的电子邮件发送应用以下类型的规则，并可以包含其中一种或两种规则：
+•活动目的地  — 允许您发布电子邮件发送指标，包括您发送的每封电子邮件的发送次数、送达次数、
+打开次数、点击次数、退回次数以及向其他 AWS 产品投诉的次数。例如，您可以将电子邮件指标
+发送到亚马逊 Data Firehose 目的地，然后使用适用于 Apache Flink 的亚马逊托管服务对其进行分
+析。此外，您也可以将退信和投诉信息发送到 Amazon SNS，并在这些事件发生时立即收到通知。
+•IP 池管理  – 如果您租赁专用 IP 地址在 Amazon SES 中使用，可以使用这些地址创建组（称为 专用 
+IP 池 ）以用来发送特定类型的电子邮件。例如，您可以将这些专用 IP 池与配置集关联，并使用其中
+一个池发送营销通讯，并使用另一个池发送事务电子邮件。这样，您的事务性电子邮件的发件人信誉
+就会与营销电子邮件的信誉隔离。
+要使用以下方法将配置集与经过验证的身份相关联，可通过以下方式完成：
+•在电子邮件的标头中包含对该配置集的引用。有关在电子邮件中指定配置集的更多信息，请参阅 在您
+发送电子邮件时指定配置集 。
+•指定要用作身份的现有配置集 默认配置集 ，无论是在身份创建时，还是稍后在编辑经验证的身份时。
+请参阅 了解默认配置集 。
+内容
+•在 SES 中创建配置集
+•在 Amazon SES 中管理配置集
+•在您发送电子邮件时指定配置集
+•查看和导出声誉指标
+在 SES 中创建配置集
+您可以使用 SES 控制台、Amazon SES API v2 中的 CreateConfigurationSet  操作或 SES CLI 
+v2 中的 aws sesv2 create-configuration-set  命令来创建新的配置集。本节介绍如何使用 
+SES 控制台和 Amazon SES CLI v2 创建配置集。
+创建配置集 315Amazon Simple Email Service 开发人员指南
+创建配置集 (控制台)
+要使用 SES 控制台创建配置集，请执行以下步骤：
+1.登录 AWS Management Console 并打开 Amazon SES 控制台， 网址为 https://
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下，选择 配置集 。
+3.选择创建集 。
+4.在一般详细信息 部分中输入以下详细信息：
+•配置集名称  – 配置集的名称。名称最多可包含 64 个字母数字字符，仅包括字母、数字、连字符 
+(-) 和下划线 (_)。
+•发送 IP 池  – 当您使用此配置集发送电子邮件时，将从指定池中的专用 IP 地址发送消息。从列
+表中选择一个 IP 池。
+Note
+默认 (ses-default-dedicated-pool) 包含尚未分配给任何其他地址池的专用 IP 地址。要了
+解有关管理 IP 池详情，请参阅 分配 IP 池 。
+•跟踪选项  – 选中 使用自定义重定向域 复选框可使用自定义重定向域来处理此配置集的打开和单
+击跟踪，而不是使用其中一个 SES 域。
+•自定义重新导向域  – 使用自定义重新导向域，您可以在框中输入自定义子域（可选），或从
+列表中选择已验证的域。
+Note
+可以按如下方式指定自定义重新导向域：
+•在选择此选项之前，必须设置重新导向域。有关选择自定义域以处理打开和单击跟踪
+的说明，请参阅 配置自定义域以处理打开和单击跟踪 。
+•然后，若要选择使用自定义重新导向域，您必须在创建配置集时指定，或稍后通过编
+辑配置集的跟踪选项进行指定。
+•高级交付选项  – 选择左侧的箭头可展开高级交付选项部分。
+•传输层安全性协议（TLS） – 若要求 SES 与接收邮件服务器建立"
+Source: ses-dg.pdf</p></details>2024-06-27 20:55:19,371 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+
+call bedrock get_answer_stream_iter 
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 "端可能会自动对邮件进行 DKIM 签...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 "端可
+能会自动对邮件进行 DKIM 签名。某些客户端可能会对其中一些字段进行签名。有关预设情
+况下对哪些字段进行签名的信息，请参阅您的电子邮件客户端文档。
+在 Amazon SES 中使用 SPF 对电子邮件进行身份验证
+发件人策略框架  (SPF) 是一种电子邮件验证标准，旨在防止电子邮件欺骗。域所有者使用 SPF 来告知
+电子邮件提供商，允许哪些服务器从其域发送电子邮件。SPF 是在 RFC 7208  中定义的。
+您通过 Amazon SES 发送的邮件将自动使用 amazonses.com  的子域作为原定设置的 MAIL FROM 
+域。SPF 身份验证成功验证这些邮件，因为原定设置的 MAIL FROM 域与发送电子邮件的应用程序
+（在这种情况下为 SES）相匹配。因此，在 SES 中，SPF 是为你隐式设置的。
+但是，如果您不想使用 SES 的默认 MAIL FROM 域，而宁愿使用自己拥有的域的子域，则在 SES 中
+将其称为使用自 定义 MAIL FROM 域。为此，它要求您为您的自定义 MAIL FROM 域发布您自己的 
+SPF 记录。此外，SES 还要求您设置 MX 记录，以便您的自定义 MAIL FROM 域可以接收电子邮件提
+供商向您发送的退回邮件和投诉通知。
+了解如何设置 SPF 身份验证
+提供了使用 SPF 配置域名以及如何在中发布 MX 和 SPF（类型 TXT）记录的说明 the section called 
+“使用自定义 MAIL FROM 域” 。
+使用自定义 MAIL FROM 域
+当您发送电子邮件时，它具有两个指示其来源的地址：一个显示给邮件收件人的 From 地址，以及
+一个指示邮件来源的 MAIL FROM 地址。MAIL FROM 地址有时称作 envelope sender 、envelope 
+电子邮件身份验证方法 220Amazon Simple Email Service 开发人员指南
+from、bounce address  或 Return Path  地址。邮件服务器使用 MAIL FROM 地址返回退回邮件和其他
+错误通知。通常，收件人只有在查看邮件的源代码时才能查看 MAIL FROM 地址。
+Amazon SES 将您发送的邮件的 MAIL FROM 域设置为原定设置值，除非您指定自己的（自定义）
+域。本部分讨论设置自定义 MAIL FROM 域的好处，并包括设置过程。
+为什么使用自定义 MAIL FROM 域？
+您通过 Amazon SES 发送的邮件将自动使用 amazonses.com  的子域作为原定设置的 MAIL FROM 
+域。发件人策略框架（SPF）身份验证成功验证这些邮件，因为原定设置的 MAIL FROM 域与发送电
+子邮件的应用程序（在这种情况下为 SES）相匹配。
+如果您不想使用 SES 原定设置 MAIL FROM 域，而是希望使用您拥有的域的子域，则在 SES 中称为
+使用自定义  MAIL FROM 域。为此，它要求您为您的自定义 MAIL FROM 域发布您自己的 SPF 记录。
+此外，SES 还要求您设置 MX 记录，以便您的域可以接收电子邮件提供商向您发送的退回邮件和投诉
+通知。
+通过使用自定义 MAIL FROM 域，您可以灵活地使用 SPF 和/或 DKIM 来实现 基于域的消息身份验证、
+报告和一致性（DMARC） 验证。DMARC 使发件人的域能够指示从该域发送的电子邮件受一个或多
+个身份验证系统的保护。可通过以下两种方法实现 DMARC 验证： the section called “通过 SPF 遵守 
+DMARC” 和the section called “通过 DKIM 遵守 DMARC” 。
+选择自定义 MAIL FROM 域
+在下文中， MAIL FROM 域 一词始终指您拥有的域的子域名——您用于自定义 MAIL FROM 域的子域不
+得用于其他任何用途，并且符合以下要求：
+•MAIL FROM 域必须是经过验证的身份（电子邮件地址或域名）的父域的子域。
+•MAIL FROM 域不应是您也用来从中发送电子邮件的子域。
+•MAIL FROM 域不应是您用于接收电子邮件的子域。
+将 SPF 与自定义 MAIL FROM 域结合使用
+发件人策略框架  (SPF) 是一种电子邮件验证标准，旨在防止电子邮件欺骗。您可以使用 SPF 配置您的
+自定义 MAIL FROM 域，以告诉电子邮件提供商允许哪些服务器从您的自定义 MAIL FROM 域发送电
+子邮件。SPF 是在 RFC 7208  中定义的。
+要设置 SPF，您要将 TXT 记录发布到您的自定义 MAIL FROM 域的 DNS 配置。此记录包含您授权使
+用您的自定义 MAIL FROM 域发送电子邮件的服务器的列表。当电子邮件提供商从您的自定义 MAIL 
+FROM 域接收到邮件时，它将检查该域的 DNS 记录，以确保电子邮件是从授权服务器发送的。
+电子邮件身"
+Source: ses-dg.pdf</p></details><details><summary>[2]	 "F 强制执行 SPF 所有预选赛缺失...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 "F 强制执行 SPF 所有预选赛缺
+失。~all SPF TXT 记录中
+缺失。配置您的自定义 MAIL 
+FROM 域
+顾问在找什么 380Amazon Simple Email Service 开发人员指南
+支票类型 顾问留言 为什么顾问会提醒你 了解更多信息
+SPF 强制执行验证 发现一个 SPF 配置问
+题。尝试在 72 小时内检测
+到所需的 SPF MX 记
+录失败。来自域名的自定义邮 
+件设置状态
+BIMI 配置了 如果没有默认选择器 
+，则找不到或配置 
+BIMI 记录。BIMI TXT 记录缺失或
+缺少选择器属性。设置 BIMI
+BIMI 格式验证 BIMI 的 TXT 记录格式
+不正确。在检查版本、证书 
+URL 和徽标网址的存
+在和有效格式后，BIM 
+I TXT 记录被确定为配
+置错误。设置 BIMI
+在 Amazon SES 控制台中使用 Virtual Deliverability Manager advisor
+以下过程演示了如何在 Amazon SES 控制台中使用 Virtual Deliverability Manager advisor 来解决已发
+现的送达问题。
+要使用 Virtual Deliverability Manager advisor 来解决送达和声誉问题，请执行以下操作：
+1.登录 AWS Management Console 并打开 Amazon SES 控制台， 网址为 https://
+console.aws.amazon.com/ses/ 。
+2.在左侧导航窗格中，在 Virtual Deliverability Manager  下，选择 Advisor 。
+Note
+如果您尚未为账户启用 Virtual Deliverability Manager ，则无法看到 Advisor 。有关更多信
+息，请参阅 the section called “开始使用” 。
+3.默认情况下，将显示 Open recommendations （待处理的建议）表。建议按 Impact （影响）（高/
+低）、 Identity name （身份名称）（发送域）、（警报的） Age（时长）和 Recommendation/
+Description （建议/描述）（已发现的问题）进行分类。在搜索栏中，按 Impact （影响）级别、基
+础架构问题的 Category （类别）或发送域的 Identity name （身份名称）进行筛选。
+使用 advisor（控制台） 381Amazon Simple Email Service 开发人员指南
+4.要修复 Recommendation/Description （建议/描述）列中描述的问题，请选择该行的 Resolve 
+issue （解决问题）列中的链接，然后实施建议的解决方案。
+Note
+实施解决方案后，已解决的问题最多可能需要六个小时即可得到反映。您可以在 Resolved 
+recommendations （已处理建议）选项卡上查看已解决的问题。
+使用 AWS CLI访问 Virtual Deliverability Manager 建议
+以下示例演示了如何使用 AWS CLI访问 Virtual Deliverability Manager 建议。
+要访问您的虚拟可交付性管理器推荐，请使用 AWS CLI
+您可以使用 Amazon SES API v2 中的 ListRecommendations  操作来列出您的送达建议。您可以从 
+AWS CLI调用此操作，如以下示例所示。
+•列出建议以查看送达问题：
+aws --region us-east-1 sesv2 list-recommendations
+•应用筛选器，检索针对您拥有的特定域提供的建议：
+aws --region us-east-1 sesv2 list-recommendations --cli-input-json file://list-
+recommendations.json
+•输入文件如下所示：
+{ 
+  "PageSize":100, 
+  "Filter":{ 
+    "RESOURCE_ARN": "arn:aws:ses:us-east-1:123456789012:identity/example.com" 
+   }   
+}
+访问建议 (AWS CLI) 382Amazon Simple Email Service 开发人员指南
+使用 Amazon 集成虚拟可交付性管理器顾问事件 EventBridge
+EventBridge 是一项无服务器服务，它使用事件将应用程序组件连接在一起，使您可以更轻松地构建可
+扩展的事件驱动应用程序。事件驱动型架构是一种构建松耦合软件系统的风格，这些系统通过发出和响
+应事件来协同工作。事件是 JSON 格式的消息，通常表示资源或环境的变化，或是其他管理事件。
+Virtual Deliverability Manager 顾问生成推荐状态更改事件并将其发送到 EventBridge默认事件总线。
+事件总线是接收事件并将其传送到零个或多个目的地或 目标的路由器。与事件总线关联的规则会在事
+件到达时进行评估。每条规则都会检查事件是否与规则的模式相匹配。如果事件确实匹配，则将事件 
+EventBridge 发送到指定的目标。
+EventBridge 只要虚拟交付能力管理器顾问的建议状态处于打开或已解决状态，SES 就会向发送事件。
+您可以使用 EventBridge 规则将事件路由到您定义的目标。这些事件将尽最大努力传输，可能会不按顺
+序传输。
+主题
+•SES 事件
+•SES 事件架构参考
+•与 SES 事件 EventBridge 配合使用
+•其他 EventBridge 资源
+SES 事件
+以下事件由 SES 生成并发送到中的默认事件总线 EventBridge。有关更多信息，请参阅 ???。
+事件类型 说明
+Advisor 推荐状态打开 每当虚拟可交付性管理器 Advisor 中打开新推荐时都会生成事
+件。
+要查看此类型的详细事件，请参阅 ???。
+Advisor 推荐状态已解"
+Source: ses-dg.pdf</p></details><details><summary>[3]	 "协议（TLS） – 若要求 SES 与...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 "协议（TLS） – 若要求 SES 与接收邮件服务器建立安全连接，并使用 TLS 协议
+发送电子邮件，请选中 必选复选框。
+创建配置集 316Amazon Simple Email Service 开发人员指南
+Note
+SES 支持 TLS 1.2，但建议使用 TLS 1.3。要了解更多信息，请参阅 SES 中的基础设
+施安全性 。
+5.在声誉选项 部分输入以下详细信息：
+•信誉指标  — 用于跟踪使用此配置集发送 CloudWatch 的电子邮件的退回和投诉指标。 （需支付
+额外费用，请参阅 每个指标的价格 CloudWatch 。）
+•已启用  – 选中此复选框可为配置集启用声誉指标。
+6.
+Suppression list options （抑制名单选项）部分提供了定义自定义禁止的决策集，首先是使用此配
+置集来覆盖您的账户级别禁止的选项。 configuration set-level suppression logic map （配置集级别
+抑制逻辑映射）将帮助您了解覆盖组合的影响。这些多层次的覆盖选择可以组合起来实现三种不同
+级别的抑制：
+a.使用账户级别抑制： 不要覆盖您的账户级别抑制，也不要实施任何配置集级别的抑制 - 基本
+上，使用此配置集发送的任何电子邮件都将使用您的账户级别抑制。要实现此目的，应按照以
+下步骤进行：
+•在 Suppression list settings （抑制列表设置）中，取消选中 Override account level 
+settings （覆盖账户级别设置）的复选框。
+b.请勿使用任何抑制： 在不启用任何配置集级别抑制的情况下覆盖您的账户级别抑制 - 这意味着
+使用此配置集发送的任何电子邮件都不会使用任何账户级别的抑制；换句话说，所有抑制都将
+被取消。要实现此目的，应按照以下步骤进行：
+i.在抑制列表设置 中，勾选 覆盖账户级别设置 复选框。
+ii.在抑制列表设置 中，取消勾选 Enabled (已启用) 复选框。
+c.使用配置集级别抑制： 使用此配置集中定义的自定义黑名单设置覆盖您的账户级别抑制 - 这意
+味着使用此配置集发送的任何电子邮件将仅使用自己的隐藏设置并忽略任何账户级别的抑制设
+置。要实现此目的，应按照以下步骤进行：
+i.在黑名单设置 中，勾选 覆盖账户级别设置 复选框。
+ii.在黑名单 中，勾选 已启用 。
+iii.在指定原因… 中，选择要使用此配置集的抑制原因之一。
+7.
+创建配置集 317Amazon Simple Email Service 开发人员指南
+Virtual Deliverability Manager 选项 部分提供了一种使您可以定义自定义设置以确定此配置集
+将如何使用互动跟踪和优化共享送达的方法，即，通过在账户级别覆盖自定义设置在 Virtual 
+Deliverability Manager 设置中的定义方式：
+a.要针对此配置集禁用互动跟踪和优化共享送达，请执行以下操作：
+i.选中 Override account level settings （覆盖账户级设置）复选框。
+ii.确保针对 互动跟踪 和优化共享送达 取消选中 Enabled （启用），然后选择 Save 
+changes （保存更改）。
+b.要针对此配置集启用或禁用“互动跟踪”和/或“优化共享送达”，请执行以下操作：
+i.选中 Override account level settings （覆盖账户级设置）复选框。
+ii.针对互动跟踪 和/或 优化共享送达 ，选中或取消选中 Enabled （启用），然后选择 Save 
+changes （保存更改）。
+c.要恢复到 Virtual Deliverability Manager 账户级设置，以针对此配置集启用互动跟踪和优化共
+享送达，请执行以下操作：
+•取消选中 Override account level settings （覆盖账户级设置）复选框，然后选择 Save 
+changes （保存更改）。
+8.您可以选择在 标签部分添加一个或多个标签。对要添加到配置集中的每个标签重复以下步骤。
+a.选择添加新标签 。
+b.输入标签 键。
+c.输入标签 值（可选）。
+要删除您输入的标签，请为该标签选择 删除。您最多可输入 50 个标签。
+9.选择创建集 可创建配置集。
+现在已创建配置集，您可以选择为配置集定义事件目标，以支持根据您为事件目标指定的事件类型触发
+的事件发布。配置集可以具有已定义多个事件类型的多个事件目标。请参阅 创建 Amazon SES 事件目
+标。
+创建一个配置集 (AWS CLI)
+可以使用 JSON 文件作为 AWS CLI中 aw"
+Source: ses-dg.pdf</p></details><details><summary>[4]	 "目标。创建一个配置集 (AWS C...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "目
+标。
+创建一个配置集 (AWS CLI)
+可以使用 JSON 文件作为 AWS CLI中 aws sesv2 create-configuration-set  命令的输入来创
+建配置集。
+创建一个配置集 (AWS CLI) 318Amazon Simple Email Service 开发人员指南
+1.创建 CLI 输入 JSON 文件
+使用您常用的文件编辑工具创建包含以下键，以及对您的环境有效的值的 JSON 文件，或使用 
+SES API v2 aws sesv2 create-configuration-set  命令及未指定值的 --generate-
+cli-skeleton  选项，将示例 JSON 结构打印到标准输出。
+此示例使用名为 create-configuration-set.json  的文件：
+{ 
+    "ConfigurationSetName": " sample-configuration-set ", 
+    "TrackingOptions": { 
+        "CustomRedirectDomain": " some.domain.com " 
+    }, 
+    "DeliveryOptions": { 
+        "TlsPolicy": " REQUIRE", 
+        "SendingPoolName": " sending pool " 
+    }, 
+    "ReputationOptions": { 
+        "ReputationMetricsEnabled": true, 
+        "LastFreshStart": timestamp
+    }, 
+    "SendingOptions": { 
+        "SendingEnabled": true
+    }, 
+    "Tags": [ 
+        { 
+            "Key": " tag key", 
+            "Value": " tag value " 
+        } 
+    ], 
+    "SuppressionOptions": { 
+        "SuppressedReasons": [ "BOUNCE","COMPLAINT"]
+    }
+}
+Note
+•JSON 文件路径开头必须包含 file://  符号。
+•JSON 文件的路径应遵循运行命令的基本操作系统的相应约定。例如，Windows 使用反
+斜杠 (\) 引用目录路径，Linux 则使用正斜杠 (/)。
+创建一个配置集 (AWS CLI) 319Amazon Simple Email Service 开发人员指南
+2.使用创建的文件作为输入，运行以下命令。
+aws sesv2 create-configuration-set --cli-input-json file:// create-configuration-
+set.json
+Note
+要查看此命令的 AWS CLI 参考资料，请参阅 create-configuration-set 。
+在 Amazon SES 中管理配置集
+创建完配置集后，您可以使用 Amazon SES 控制台、Amazon SES API v2 和 Amazon SES CLI v2 通
+过查看、更新和删除选项进行管理。还可以将配置集作为每次从身份发送电子邮件时应用的默认配置集
+分配给已验证的身份。
+本节中的主题：
+•查看、编辑和删除配置集（控制台）
+•列出配置集 (AWS CLI)
+•获取配置集详细信息 (AWS CLI)
+•删除配置集 (AWS CLI)
+•停止从配置集 (AWS CLI) 发送电子邮件
+•了解默认配置集
+•创建 Amazon SES 事件目标
+•在 Amazon SES 中分配 IP 池
+•配置自定义域以处理打开和单击跟踪
+查看、编辑和删除配置集（控制台）
+访问现有配置集的详细信息页面
+1.登录 AWS Management Console 并打开 Amazon SES 控制台， 网址为 https://
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下，选择 配置集 。
+管理配置集 320Amazon Simple Email Service 开发人员指南
+3.要查看配置集的详细信息，请从配置集列表中选择 名称。这会将您带到详细信息页面。
+配置集 详细信息页面有两个配置集详细信息选项卡，每个选项卡中都有面板，您可以在其中查看、编辑
+或删除，如下所示：
+•“Overview”(概述) 选项卡
+•一般详细信息  – 此面板可显示配置集的一般详细信息：
+•发送状态 （当前是否启用）
+•配置集名称
+•发送 IP 池
+•传输层安全性 (TLS)
+•自定义重新导向域
+•声誉选项  – 此面板显示与发送声誉相关的详细信息：
+•声誉指标 （表示您是否在跟踪指标）
+•上次刷新开始时间 （上次重置配置集的声誉指标的日期和时间）。
+•黑名单选项  – 此面板显示您是否使用配置集覆盖了账户级黑名单，如果是，覆盖的详细信息是什
+么：
+•黑名单设置 （指明覆盖账户级设置，如果不覆盖，则为面板中显示的唯一项目）
+•黑名单 （指明您如何覆盖账户级设置，是启用还是禁用了黑名单）
+•列入黑名单的原因 （指明退信和/或投诉是否是将收件人电子邮件地址添加到黑名单中的原因）
+•Virtual Deliverability Manager 选项  – 此面板显示您是否正在覆盖 Virtual Deliverability Manager 账
+户设置，以便使用配置集启用互动跟踪和优化共享送达，如果是，覆盖详细信息是什么：
+•互动跟踪 （指明是启用还是禁用了互动跟踪）
+•优化共享送达 （指明是启用还是禁用了优化共享送达）
+•标签 – 此面板显示已附上配置集的所有标签。
+•密钥
+•值
+您可以从这些面板执行以下操作：
+•选择编辑按钮，或者对于“标签”面板，选择 管理标签 按钮，以编辑每个面板的相应详细信息。
+•有关字段的更多信息"
+Source: ses-dg.pdf</p></details><details><summary>[5]	 "上述过程发送的电子邮件）将被计入您的每...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "上述过程发送的电子邮件）将被计入您的每日发送配额中。我
+们将向您发送的每封邮件收费，包括被拒绝的邮件。
+要了解有关 EICAR 测试文件的更多信息，请参阅 Wikipedia 上的 EICAR 测试文件页面 。
+手动使用邮箱模拟器 314Amazon Simple Email Service 开发人员指南
+在 SES 中使用配置集
+配置集是可以应用于已验证身份的规则组。已验证身份是您用于通过 Amazon SES 发送电子邮件的
+域、子域或电子邮件地址。当您对电子邮件应用配置集时，该配置集中的所有规则将应用至该电子邮
+件。
+您可以使用配置集对您的电子邮件发送应用以下类型的规则，并可以包含其中一种或两种规则：
+•活动目的地  — 允许您发布电子邮件发送指标，包括您发送的每封电子邮件的发送次数、送达次数、
+打开次数、点击次数、退回次数以及向其他 AWS 产品投诉的次数。例如，您可以将电子邮件指标
+发送到亚马逊 Data Firehose 目的地，然后使用适用于 Apache Flink 的亚马逊托管服务对其进行分
+析。此外，您也可以将退信和投诉信息发送到 Amazon SNS，并在这些事件发生时立即收到通知。
+•IP 池管理  – 如果您租赁专用 IP 地址在 Amazon SES 中使用，可以使用这些地址创建组（称为 专用 
+IP 池 ）以用来发送特定类型的电子邮件。例如，您可以将这些专用 IP 池与配置集关联，并使用其中
+一个池发送营销通讯，并使用另一个池发送事务电子邮件。这样，您的事务性电子邮件的发件人信誉
+就会与营销电子邮件的信誉隔离。
+要使用以下方法将配置集与经过验证的身份相关联，可通过以下方式完成：
+•在电子邮件的标头中包含对该配置集的引用。有关在电子邮件中指定配置集的更多信息，请参阅 在您
+发送电子邮件时指定配置集 。
+•指定要用作身份的现有配置集 默认配置集 ，无论是在身份创建时，还是稍后在编辑经验证的身份时。
+请参阅 了解默认配置集 。
+内容
+•在 SES 中创建配置集
+•在 Amazon SES 中管理配置集
+•在您发送电子邮件时指定配置集
+•查看和导出声誉指标
+在 SES 中创建配置集
+您可以使用 SES 控制台、Amazon SES API v2 中的 CreateConfigurationSet  操作或 SES CLI 
+v2 中的 aws sesv2 create-configuration-set  命令来创建新的配置集。本节介绍如何使用 
+SES 控制台和 Amazon SES CLI v2 创建配置集。
+创建配置集 315Amazon Simple Email Service 开发人员指南
+创建配置集 (控制台)
+要使用 SES 控制台创建配置集，请执行以下步骤：
+1.登录 AWS Management Console 并打开 Amazon SES 控制台， 网址为 https://
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下，选择 配置集 。
+3.选择创建集 。
+4.在一般详细信息 部分中输入以下详细信息：
+•配置集名称  – 配置集的名称。名称最多可包含 64 个字母数字字符，仅包括字母、数字、连字符 
+(-) 和下划线 (_)。
+•发送 IP 池  – 当您使用此配置集发送电子邮件时，将从指定池中的专用 IP 地址发送消息。从列
+表中选择一个 IP 池。
+Note
+默认 (ses-default-dedicated-pool) 包含尚未分配给任何其他地址池的专用 IP 地址。要了
+解有关管理 IP 池详情，请参阅 分配 IP 池 。
+•跟踪选项  – 选中 使用自定义重定向域 复选框可使用自定义重定向域来处理此配置集的打开和单
+击跟踪，而不是使用其中一个 SES 域。
+•自定义重新导向域  – 使用自定义重新导向域，您可以在框中输入自定义子域（可选），或从
+列表中选择已验证的域。
+Note
+可以按如下方式指定自定义重新导向域：
+•在选择此选项之前，必须设置重新导向域。有关选择自定义域以处理打开和单击跟踪
+的说明，请参阅 配置自定义域以处理打开和单击跟踪 。
+•然后，若要选择使用自定义重新导向域，您必须在创建配置集时指定，或稍后通过编
+辑配置集的跟踪选项进行指定。
+•高级交付选项  – 选择左侧的箭头可展开高级交付选项部分。
+•传输层安全性协议（TLS） – 若要求 SES 与接收邮件服务器建立"
+Source: ses-dg.pdf</p></details>2024-06-27 20:55:49,262 [INFO] [base_model.py:619] 用户  的输入为: hi
+2024-06-27 20:55:49,263 [INFO] [base_model.py:498] 加载索引中……
+2024-06-27 20:55:49,294 [INFO] [index_func.py:128] Found cached index, loading...
+2024-06-27 20:55:49,298 [INFO] [base_model.py:506] 索引获取成功，生成回答中……
+
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 "      :param text: ...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 "      :param text: The text version of the email. 
+        :param html: The html version of the email. 
+        """ 
+        self.template_tags = set(re.findall(TEMPLATE_REGEX, subject + text + 
+ html)) 
+        logger.info("Extracted template tags: %s", self.template_tags) 
+    def get_template(self, name): 
+        """ 
+        Gets a previously created email template. 
+        :param name: The name of the template to retrieve. 
+        :return: The retrieved email template. 
+        """ 
+        try: 
+操作 611Amazon Simple Email Service 开发人员指南
+            response = self.ses_client.get_template(TemplateName=name) 
+            self.template = response["Template"] 
+            logger.info("Got template %s.", name) 
+            self._extract_tags( 
+                self.template["SubjectPart"], 
+                self.template["TextPart"], 
+                self.template["HtmlPart"], 
+            ) 
+        except ClientError: 
+            logger.exception("Couldn't get template %s.", name) 
+            raise 
+        else: 
+            return self.template
+•有关 API 的详细信息，请参阅适用 GetTemplate 于 Python 的AWS SDK (Boto3) API 参考 。
+有关 S AWS DK 开发者指南和代码示例的完整列表，请参阅 将 Amazon SES 与 AWS 软件开发工具包
+结合使用 。本主题还包括有关入门的信息以及有关先前的 SDK 版本的详细信息。
+ListIdentities 与 S AWS DK 或命令行工具配合使用
+以下代码示例显示了如何使用 ListIdentities 。
+操作示例是大型程序的代码摘录，必须在上下文中运行。您可以在以下代码示例中查看此操作的上下
+文：
+•跨区域复制电子邮件和域身份
+•验证电子邮件身份与发送消息
+.NET
+AWS SDK for .NET
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+操作 612Amazon Simple Email Service 开发人员指南
+    /// <summary> 
+    /// Get the identities of a specified type for the current account. 
+    /// </summary> 
+    /// <param name="identityType">IdentityType to list.</param> 
+    /// <returns>The list of identities.</returns> 
+    public async Task<List<string>> ListIdentitiesAsync(IdentityType 
+ identityType) 
+    { 
+        var result = new List<string>(); 
+        try 
+        { 
+            var response = await _amazonSimpleEmailService.ListIdentitiesAsync( 
+                new ListIdentitiesRequest 
+                { 
+                    IdentityType = identityType 
+                }); 
+            result = response.Identities; 
+        } 
+        catch (Exception ex) 
+        { 
+            Console.WriteLine("ListIdentitiesAsync failed with exception: " + 
+ ex.Message); 
+        } 
+        return result; 
+    }
+•有关 API 的详细信息，请参阅 AWS SDK for .NET API 参考 ListIdentities 中的。
+C++
+SDK for C++
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+操作 613Amazon Simple Email Service 开发人员指南
+//! List the identities associated with this account.
+/*! 
+  \param identityType: The identity type enum. "NOT_SET" is a valid option. 
+  \param identities; A vector to receive the retrieved identities. 
+  \param clientConfiguration: AWS client configuration. 
+  \return bool: Function succeeded. 
+ */
+bool AwsDoc::SES::listIdentities(Aws::SES::Model::IdentityType identityType, 
+                                 Aws::Vector<Aws::String> &identities, 
+                                 const Aws::Client::ClientConfiguration 
+ &clientConfiguration) { 
+    Aws::SES::SESClient sesClient(clientConfiguration); 
+    Aws::SES::Model::ListIdentitiesRequest listIdentitiesRequest; 
+    if (identityType != Aws::SES::Model::IdentityType::NOT_SET) { 
+        listIdentitiesRequest.SetIdentityType(identityType); 
+    } 
+    Aws::String nextToken; // Used for paginated results. 
+    do { 
+        if (!nextToken.empty()) { 
+            listIdentitiesRequest.SetNextToken(nextToken); 
+        } 
+        Aws::SES::Model::ListIdentitiesOutcome outcome = 
+ sesClient.ListIdentities( 
+                listIdentitiesRequest); 
+        if (outcome.IsSuccess()) { 
+            const auto &retrievedIdentities = 
+ outcome.GetResult().GetIdentities(); 
+            if (!retrievedIdentities.empty()) { 
+                identities.insert(identities.cend(), 
+ retrievedIdentities.cbegin(), 
+                                  retrievedIdentities.cend()); 
+            } 
+            nextToken = outcome.GetResult().GetNextToken(); 
+        } 
+        else { 
+            std::cout << "Error listing identities. " << 
+ outcome.GetError().GetMessage() 
+                      << std::endl; 
+            return false; 
+操作 614Amazon Simple Email Service 开发人员指南
+        } 
+    } while (!nextToken.empty()); 
+    return true;
+}
+•有关 API 的详细信息，请参阅 AWS SDK for C++ API 参考 ListIdentities 中的。
+CLI
+AWS CLI
+列出特定 AWS 账户的所有身份（电子邮件地址和域名）
+以下示例使用 list-identities  命令列出已提交到 Amazon SES 进行验证的所有身份：
+aws ses list-identities
+输出：
+{ 
+    "Identities": [ 
+      "user@example.com", 
+      "example.com" 
+    ]
+}
+返回的列表包含所有身份，无论验证状态如何（已验证、待验证、失败等）。
+在此示例中，由于未指定 identity-type 参数，因此返回了电子邮件地址 和 域。
+有关验证的更多信息，请参阅《Amazon Simple Email Service 开发人员指南》 中的“在 Amazon 
+SES 中验证电子邮件地址和域”。
+•有关 API 的详细信息，请参阅 AWS CLI 命令参考 ListIdentities 中的。
+操作 615Amazon Simple Email Service 开发人员指南
+Java
+适用于 Java 2.x 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了"
+Source: ses-dg.pdf</p></details><details><summary>[2]	 "   "Email template ...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 "   "Email template already exists, skipping creation." 
+                    )?; 
+                } 
+                e => return Err(anyhow!("Error creating email template: {}", e)), 
+            }, 
+        }
+•有关 API 的详细信息，请参阅适用 CreateEmailTemplate 于 Rust 的AWS SDK API 参考 。
+有关 S AWS DK 开发者指南和代码示例的完整列表，请参阅 将 Amazon SES 与 AWS 软件开发工具包
+结合使用 。本主题还包括有关入门的信息以及有关先前的 SDK 版本的详细信息。
+DeleteContactList 与 S AWS DK 或命令行工具配合使用
+以下代码示例显示了如何使用 DeleteContactList 。
+操作示例是大型程序的代码摘录，必须在上下文中运行。在以下代码示例中，您可以查看此操作的上下
+文：
+•时事通讯工作流程
+Java
+适用于 Java 2.x 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+    try { 
+      // Delete the contact list 
+      DeleteContactListRequest deleteContactListRequest = 
+ DeleteContactListRequest.builder() 
+          .contactListName(CONTACT_LIST_NAME) 
+          .build(); 
+操作 729Amazon Simple Email Service 开发人员指南
+      sesClient.deleteContactList(deleteContactListRequest); 
+      System.out.println("Contact list deleted: " + CONTACT_LIST_NAME); 
+    } catch (NotFoundException e) { 
+      // If the contact list does not exist, log the error and proceed 
+      System.out.println("Contact list not found. Skipping deletion..."); 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while deleting the contact list: " + 
+ e.getMessage()); 
+      e.printStackTrace(); 
+    }
+•有关 API 的详细信息，请参阅 AWS SDK for Java 2.x API 参考 DeleteContactList 中的。
+Python
+SDK for Python (Boto3)
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+def main(): 
+    """ 
+    The main function that orchestrates the execution of the workflow. 
+    """ 
+    print(INTRO) 
+    ses_client = boto3.client("sesv2") 
+    workflow = SESv2Workflow(ses_client) 
+    try: 
+        workflow.prepare_application() 
+        workflow.gather_subscriber_email_addresses() 
+        workflow.send_coupon_newsletter() 
+        workflow.monitor_and_review() 
+    except ClientError as e: 
+        print_error(e) 
+    workflow.clean_up()
+操作 730Amazon Simple Email Service 开发人员指南
+class SESv2Workflow: 
+    """ 
+    A class to manage the SES v2 Coupon Newsletter Workflow. 
+    """ 
+    def __init__(self, ses_client, sleep=True): 
+        self.ses_client = ses_client 
+        self.sleep = sleep 
+        try: 
+            
+ self.ses_client.delete_contact_list(ContactListName=CONTACT_LIST_NAME) 
+            print(f"Contact list '{CONTACT_LIST_NAME}' deleted successfully.") 
+        except ClientError as e: 
+            # If the contact list doesn't exist, skip and proceed 
+            if e.response["Error"]["Code"] == "NotFoundException": 
+                print(f"Contact list '{CONTACT_LIST_NAME}' does not exist.") 
+            else: 
+                print(e)
+•有关 API 的详细信息，请参阅适用 DeleteContactList 于 Python 的AWS SDK (Boto3) API 参
+考。
+Rust
+适用于 Rust 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+        match self 
+            .client 
+            .delete_contact_list() 
+            .contact_list_name(CONTACT_LIST_NAME) 
+操作 731Amazon Simple Email Service 开发人员指南
+            .send() 
+            .await 
+        { 
+            Ok(_) => writeln!(self.stdout, "Contact list deleted 
+ successfully.")?, 
+            Err(e) => return Err(anyhow!("Error deleting contact list: {e}")), 
+        }
+•有关 API 的详细信息，请参阅适用 DeleteContactList 于 Rust 的AWS SDK API 参考 。
+有关 S AWS DK 开发者指南和代码示例的完整列表，请参阅 将 Amazon SES 与 AWS 软件开发工具包
+结合使用 。本主题还包括有关入门的信息以及有关先前的 SDK 版本的详细信息。
+DeleteEmailIdentity 与 S AWS DK 或命令行工具配合使用
+以下代码示例显示了如何使用 DeleteEmailIdentity 。
+操作示例是大型程序的代码摘录，必须在上下文中运行。在以下代码示例中，您可以查看此操作的上下
+文：
+•时事通讯工作流程
+Java
+适用于 Java 2.x 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+      try { 
+        // Delete the email identity 
+        DeleteEmailIdentityRequest deleteIdentityRequest = 
+ DeleteEmailIdentityRequest.builder() 
+            .emailIdentity(this.verifiedEmail) 
+            .build(); 
+        sesClient.deleteEmailIdentity(deleteIdentityRequest); 
+操作 732Amazon Simple Email Service 开发人员指南
+        System.out.println("Email identity deleted: " + this.verifiedEmail); 
+      } catch (NotFoundException e) { 
+        // If the email identity does not exist, log the error and proceed 
+        System.out.println("Email identity not found. Skipping deletion..."); 
+      } catch (Exception e) { 
+        System.err.println("Error occurred while deleting the email identity: " + 
+ e.getMessage()); 
+        e.printStackTrace(); 
+      } 
+    } else { 
+      System.out.println("Skipping email identity deletion."); 
+    }
+•有关 API 的详细信息，请参阅 AWS SDK for Java 2.x API 参考 DeleteEmailIdentity 中的。
+Python
+SDK for Python (Boto3)
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+def main(): 
+    """ 
+    The main function that orchestrates the execution of the workflow. 
+    """ 
+    print(INTRO) 
+    ses_client = boto3.client("sesv2") 
+   "
+Source: ses-dg.pdf</p></details><details><summary>[3]	 " 加密，Amazon SES 还支持 ...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 " 加密，Amazon SES 还支持 DKIM 2048 以允
+许对电子邮件进行更安全的身份验证，因此当您从 API 或控制台配置 Easy DKIM 时，请将其用作原定
+设置的密钥长度。2048 位密钥也可以在自带 DKIM (BYODKIM) 中设置和使用，其中您的签名密钥长
+度必须至少为 1024 位，但不超过 2048 位。
+为了安全和电子邮件的送达率，当使用 Easy DKIM 配置时，您可以选择使用 1024 和 2048 位密钥长
+度，并且在任何 DNS 提供商仍不支持 2048 位导致问题时，可以灵活地返回到 1024 位。 创建新身份
+时，除非指定 1024 位，否则默认情况下将使用 DKIM 2048 创建身份。
+为了保持传输中电子邮件的送达率，您可以更改 DKIM 密钥长度的频率将受到限制。这些限制包括：
+•无法切换到与已配置的密钥长度相同的密钥长度。
+•无法在 24 小时内多次切换到不同的密钥长度（除非这是该时间段内第一次降级到 1024 位）。
+当您的电子邮件在传输过程中时，DNS 会使用您的公有密钥验证您的电子邮件；因此，如果您更改密
+钥过快或频繁，DNS 可能无法对您的电子邮件进行 DKIM 身份验证，因为前一个密钥可能已失效，因
+此，这些限制可防止出现这种情况。
+DKIM 注意事项
+当您使用 DKIM 对电子邮件进行身份验证时，以下规则适用：
+•您只需为在“发件人”地址中使用的域设置 DKIM。您无需为在“退回路径”或“回复对象”地址中使用的域
+设置 DKIM。
+•可以在多个 AWS 区域中使用 Amazon SES。如果您使用多个 AWS 区域发送电子邮件，则必须在每
+个区域中都完成 DKIM 设置过程才能确保您的所有电子邮件都进行 DKIM 签名。
+•由于从父域继承 DKIM 属性，当您通过 DKIM 身份验证验证域时：
+•DKIM 身份验证会应用到该域的全部子域。
+•如果您不希望子域使用 DKIM 身份验证，子域的 DKIM 设置可以通过禁用集成以及在未来重新
+启用的功能覆盖父域的设置。
+•DKIM 身份验证还将应用于由在其地址中引用 DKIM 已验证域的电子邮件身份发出的全部电子邮
+件。
+电子邮件身份验证方法 202Amazon Simple Email Service 开发人员指南
+•如果您想要发送电子邮件而不使用 DKIM 身份验证，电子邮件地址的 DKIM 设置可以通过禁用
+集成以及在未来重新启用的功能覆盖子域的设置（若适用）。
+了解继承的 DKIM 签名属性
+重要的是，首先要理解，如果域配置了 DKIM，无论使用的是 Easy DKIM 还是 BYODKIM，电子邮件
+地址标识都会从其父域继承其 DKIM 签名属性。因此，在电子邮件地址标识上禁用或启用 DKIM 签名
+实际上是基于以下关键事实覆盖域的 DKIM 签名属性：
+•如果您已为电子邮件地址所属于的域设置了 DKIM，则无需再为电子邮件地址设置 DKIM。
+•在为域设置 DKIM 时，Amazon SES 通过从父域继承的 DKIM 属性，自动认证来自该域上每个地
+址的每一封邮件。
+•特定电子邮件地址标识的 DKIM 设置 自动覆盖地址所属的父域或子域（如适用） 的设置。
+由于电子邮件地址身份的 DKIM 签名属性是从父域继承的，因此如果您计划覆盖这些属性，则必须记
+住覆盖的层次规则，如下表所述。
+父域未启用 DKIM 签名 父域已启用 DKIM 签名
+您可以禁用对电子邮件地址身份的 DKIM 签名。
+您无法在电子邮件地址身份上启用 DKIM 签名。您可以对电子邮件地址身份重新启用 DKIM 签
+名。
+通常不建议禁用您的 DKIM 签名，因为这有可能损害您的发件人声誉，并且会增加您发送的邮件转到
+垃圾邮件或垃圾邮件文件夹或域名被欺骗的风险。
+但是，对于任何特定的使用情形或外围业务决策，可以覆盖电子邮件地址标识上的域继承的 DKIM 签
+名属性，您可能必须永久或临时禁用 DKIM 签名，或者在以后重新将其启用。请参阅 the section called 
+“覆盖电子邮件地址上的 DKIM 签名” 。
+Amazon SES 中的 Easy DKIM
+为域身份设置 Easy DKIM 后，Amazon SES 会自动向您从该身份发送的每封电子邮件添加一个 2048 
+位的 DKIM 密钥。您可使用 Amazon SES 控制台或者使用 API "
+Source: ses-dg.pdf</p></details><details><summary>[4]	 "()                ...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "() 
+                .simple( 
+                    Message.builder() 
+                        .subject(Content.builder().data("Welcome to the Weekly 
+ Coupons Newsletter").build()) 
+                        .body(Body.builder() 
+                            .text(Content.builder().data(welcomeText).build()) 
+                            .html(Content.builder().data(welcomeHtml).build()) 
+                            .build()) 
+                        .build()) 
+                .build()) 
+            .build(); 
+        SendEmailResponse welcomeEmailResponse = 
+ sesClient.sendEmail(welcomeEmailRequest); 
+        System.out.println("Welcome email sent: " + 
+ welcomeEmailResponse.messageId()); 
+      } catch (AlreadyExistsException e) { 
+        // If the contact already exists, skip this step for that contact and 
+ proceed 
+        // with the next contact 
+        System.out.println("Contact already exists, skipping creation..."); 
+场景 754Amazon Simple Email Service 开发人员指南
+      } catch (Exception e) { 
+        System.err.println("Error occurred while processing email address " + 
+ emailAddress + ": " + e.getMessage()); 
+        throw e; 
+      } 
+    } 
+      ListContactsRequest contactListRequest = ListContactsRequest.builder() 
+          .contactListName(CONTACT_LIST_NAME) 
+          .build(); 
+      List<String> contactEmails; 
+      try { 
+        ListContactsResponse contactListResponse = 
+ sesClient.listContacts(contactListRequest); 
+        contactEmails = contactListResponse.contacts().stream() 
+            .map(Contact::emailAddress) 
+            .toList(); 
+      } catch (Exception e) { 
+        // TODO: Remove when listContacts's GET body issue is resolved. 
+        contactEmails = this.contacts; 
+      } 
+      String coupons = Files.readString(Paths.get("resources/coupon_newsletter/
+sample_coupons.json")); 
+      for (String emailAddress : contactEmails) { 
+        SendEmailRequest newsletterRequest = SendEmailRequest.builder() 
+            .destination(Destination.builder().toAddresses(emailAddress).build()) 
+            .content(EmailContent.builder() 
+                .template(Template.builder() 
+                    .templateName(TEMPLATE_NAME) 
+                    .templateData(coupons) 
+                    .build()) 
+                .build()) 
+            .fromEmailAddress(this.verifiedEmail) 
+            .listManagementOptions(ListManagementOptions.builder() 
+                .contactListName(CONTACT_LIST_NAME) 
+                .build()) 
+            .build(); 
+        SendEmailResponse newsletterResponse = 
+ sesClient.sendEmail(newsletterRequest); 
+场景 755Amazon Simple Email Service 开发人员指南
+        System.out.println("Newsletter sent to " + emailAddress + ": " + 
+ newsletterResponse.messageId()); 
+      } 
+    try { 
+      CreateEmailIdentityRequest createEmailIdentityRequest = 
+ CreateEmailIdentityRequest.builder() 
+          .emailIdentity(verifiedEmail) 
+          .build(); 
+      sesClient.createEmailIdentity(createEmailIdentityRequest); 
+      System.out.println("Email identity created: " + verifiedEmail); 
+    } catch (AlreadyExistsException e) { 
+      System.out.println("Email identity already exists, skipping creation: " + 
+ verifiedEmail); 
+    } catch (NotFoundException e) { 
+      System.err.println("The provided email address is not verified: " + 
+ verifiedEmail); 
+      throw e; 
+    } catch (LimitExceededException e) { 
+      System.err 
+          .println("You have reached the limit for email identities. Please 
+ remove some identities and try again."); 
+      throw e; 
+    } catch (SesV2Exception e) { 
+      System.err.println("Error creating email identity: " + e.getMessage()); 
+      throw e; 
+    } 
+    try { 
+      // Create an email template named "weekly-coupons" 
+      String newsletterHtml = loadFile("resources/coupon_newsletter/coupon-
+newsletter.html"); 
+      String newsletterText = loadFile("resources/coupon_newsletter/coupon-
+newsletter.txt"); 
+      CreateEmailTemplateRequest templateRequest = 
+ CreateEmailTemplateRequest.builder() 
+          .templateName(TEMPLATE_NAME) 
+          .templateContent(EmailTemplateContent.builder() 
+              .subject("Weekly Coupons Newsletter") 
+              .html(newsletterHtml) 
+              .text(newsletterText) 
+              .build()) 
+          .build(); 
+场景 756Amazon Simple Email Service 开发人员指南
+      sesClient.createEmailTemplate(templateRequest); 
+      System.out.println("Email template created: " + TEMPLATE_NAME); 
+    } catch (AlreadyExistsException e) { 
+      // If the template already exists, skip this step and proceed with the next 
+      // operation 
+      System.out.println("Email template already exists, skipping creation..."); 
+    } catch (LimitExceededException e) { 
+      // If the limit for email templates is exceeded, fail the workflow and 
+ inform 
+      // the user 
+      System.err.println("You have reached the limit for email templates. Please 
+ remove some templates and try again."); 
+      throw e; 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while creating email template: " + 
+ e.getMessage()); 
+      throw e; 
+    } 
+    try { 
+      // Delete the contact list 
+      DeleteContactListRequest deleteContactListRequest = 
+ DeleteContactListRequest.builder() 
+          .contactListName(CONTACT_LIST_NAME) 
+          .build(); 
+      sesClient.deleteContactList(deleteContactListRequest); 
+      System.out.println("Contact list deleted: " + CONTACT_LIST_NAME); 
+    } catch (NotFoundException e) { 
+      // If the contact list does not exist, log the error and proceed 
+      System.out.println("Contact list not found. Skipping deletion..."); 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while deleting the contact list: " + 
+ e.getMessage()); 
+      e.printStackTrace(); 
+    } 
+      try { 
+        // Delete the email identity 
+        DeleteEmailIdentityRequest deleteIdentityRequest = 
+ DeleteEmailIdentityRequest.builder() 
+场景 757Amazon Simple Email Service 开发人员指南
+            .emailIdentity(this.verifiedEmail) 
+            .build(); 
+        sesClient.deleteEmailIdentity(deleteIdentityRequest); 
+        System.out.println("Email identity deleted: " + this.verifiedEmail); 
+      } catch (NotFoundException e) { 
+        // If the email identity does not exist, log the error and proceed 
+        System.out.println("Email identity not found. Skipping deletion..."); 
+      } catch (Exception e) { 
+        System.err.println("Error occurred while deleting the email identity: " + 
+ e.getMessage()); 
+        e.printStackTrace(); 
+      } 
+    } else { 
+      System.out.println("Skipping email identity deletion."); 
+    } 
+    try { 
+      // Delete the template 
+      DeleteEmailTemplateRequest deleteTemplateRequest = 
+ DeleteEmailTemplateRequest.builder() 
+          .templateName(TEMPLATE_NAME) 
+          .build(); 
+      sesClient.deleteEmailTemplate(deleteTemplateRequest); 
+      System.out.println("Email template deleted: " + TEMPLATE_NAME); 
+    } catch (NotFoundException e) { 
+      // If the email template does not exist, log the error and proceed 
+      System.out.println("Email template not found. Skipping deletion..."); 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while deleting the email template: " + 
+ e.getMessage()); 
+      e.printStackTrace(); 
+    }
+•有关 API 详细信息，请参阅 AWS SDK for Java 2.x API "
+Source: ses-dg.pdf</p></details><details><summary>[5]	 "是否合法。这些内容筛选器会自动审核邮...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "是否合法。这些内容筛选器
+会自动审核邮件的内容，以识别常见的不受欢迎的邮件特征乃至恶意邮件。Amazon SES 使用内容筛
+选技术，协助在邮件发送之前检测和拦截包含恶意软件的邮件。
+如果您的电子邮件接收方的内容筛选器认定您的邮件包含垃圾邮件或恶意电子邮件的特性，您的邮件很
+可能被标记出来，并从收件人的收件箱中移出。
+在设计电子邮件时请记住以下几点：
+电子邮件最佳实践 29Amazon Simple Email Service 开发人员指南
+•现代内容筛选器非常智能，且不断调整和更改。它们不依赖于预定义的规则集。诸如 ReturnPath  或
+Litmus  等第三方服务可帮助识别您的电子邮件中可能触发内容筛选器的内容。
+•如果您的电子邮件中包含链接，请检查这些链接的 URL 是否在基于域名系统的黑名单（DNSBL）
+中，这些黑名单可在像 URIBL.com  和 SURBL.org  这样的网站中找到。
+•避免使用短地址。恶意发件人可能使用短地址来隐藏链接的实际目标。当 ISP 发现链接缩短服务
+（即使是信誉最好的服务）被用于不法目的时，他们会完全拒绝访问这些服务。如果您的电子邮件中
+包含被加入拒绝列表的链接缩短服务链接，它将不会送达客户的收件箱，而您的电子邮件营销活动的
+成功率也随之受到影响。
+•测试电子邮件中的每个链接，确保其指向预期的页面。
+•请确保您的网站包括隐私策略和使用条款文档，并且这些文档是最新的。最好在您发送的每封电子邮
+件中添加到这些文档的链接。提供指向这些文档的链接表明您对客户无所隐瞒，有助于建立信任关
+系。
+•如果您计划发送高频率内容 (如“每日交易”邮件)，请确保您的电子邮件内容每次都有所不同。在发送
+高频邮件时，您必须确保这些消息及时且有意义，而不是重复和令人厌烦。
+提示和最佳实践
+即使您以客户的最佳利益为出发点，您可能仍会遇到影响邮件送达率的情况。以下章节中提供的建议有
+助于确保您的电子邮件通信成功传送至目标受众手中。
+一般建议
+•想客户所想。您可以问问自己，您是否愿意在自己的收件箱中收到您发送的邮件。如果答案不是热情
+的“yes! (是的！)”，那么您可能不应该发送这封邮件。
+•有一些行业素来电子邮件质量低下，甚至包括恶意电子邮件。如果您涉及以下行业，您必须立即密切
+监控您的声誉并解决问题：
+•房屋抵押贷款
+•信用
+•药品和营养品
+•烟酒
+•成人娱乐
+•赌场和赌博
+•在家工作程序
+电子邮件最佳实践 30Amazon Simple Email Service 开发人员指南
+域和“发件人”地址注意事项
+•请仔细考虑您用于发送电子邮件的地址。“From”地址是收件人看到的第一条信息，因此可能会留下持
+久的第一印象。此外，一些 ISP 将您的声誉与您的“From”地址相联系。
+•请考虑为不同类型的通信使用不同的子域。例如，假定您从 example.com  域发送电子邮件，
+并且您打算同时发送营销邮件和事务性邮件。不要从 example.com  发送所有邮件，而是从像
+marketing.example.com  这样的子域发送营销邮件，从像 orders.example.com  这样的子域发送事务
+性邮件。独有的子域可建立它们自己的声誉。使用子域可降低声誉损坏的风险，例如，当您的营销通
+信落入垃圾邮件陷阱或触发内容筛选器时。
+•如果您计划发送大量邮件，请不要从 sender@hotmail.com  这样的基于 ISP 的地址发送这些邮件。
+如果 ISP 注意到有大量邮件来自 sender@hotmail.com ，该电子邮件的处理方式将与来自您拥有的出
+站电子邮件发送域的邮件有所不同。
+•请与您的域注册商沟通，确保您的域的 WHOIS 信息准确无误。维护真实且及时的 WHOIS 记录表明
+您重视透明度，并让用户能够快速识别您的域是否合法。
+•避免使用 no-reply  地址，例如 no-reply@example.com ，作为您的“From”地址或“Reply-to”地址。使
+用 no-reply@  电子邮件地址向您的收件人明确传达一个信"
+Source: ses-dg.pdf</p></details>2024-06-27 20:55:50,753 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+
+call bedrock get_answer_stream_iter 
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 "      :param text: ...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 "      :param text: The text version of the email. 
+        :param html: The html version of the email. 
+        """ 
+        self.template_tags = set(re.findall(TEMPLATE_REGEX, subject + text + 
+ html)) 
+        logger.info("Extracted template tags: %s", self.template_tags) 
+    def get_template(self, name): 
+        """ 
+        Gets a previously created email template. 
+        :param name: The name of the template to retrieve. 
+        :return: The retrieved email template. 
+        """ 
+        try: 
+操作 611Amazon Simple Email Service 开发人员指南
+            response = self.ses_client.get_template(TemplateName=name) 
+            self.template = response["Template"] 
+            logger.info("Got template %s.", name) 
+            self._extract_tags( 
+                self.template["SubjectPart"], 
+                self.template["TextPart"], 
+                self.template["HtmlPart"], 
+            ) 
+        except ClientError: 
+            logger.exception("Couldn't get template %s.", name) 
+            raise 
+        else: 
+            return self.template
+•有关 API 的详细信息，请参阅适用 GetTemplate 于 Python 的AWS SDK (Boto3) API 参考 。
+有关 S AWS DK 开发者指南和代码示例的完整列表，请参阅 将 Amazon SES 与 AWS 软件开发工具包
+结合使用 。本主题还包括有关入门的信息以及有关先前的 SDK 版本的详细信息。
+ListIdentities 与 S AWS DK 或命令行工具配合使用
+以下代码示例显示了如何使用 ListIdentities 。
+操作示例是大型程序的代码摘录，必须在上下文中运行。您可以在以下代码示例中查看此操作的上下
+文：
+•跨区域复制电子邮件和域身份
+•验证电子邮件身份与发送消息
+.NET
+AWS SDK for .NET
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+操作 612Amazon Simple Email Service 开发人员指南
+    /// <summary> 
+    /// Get the identities of a specified type for the current account. 
+    /// </summary> 
+    /// <param name="identityType">IdentityType to list.</param> 
+    /// <returns>The list of identities.</returns> 
+    public async Task<List<string>> ListIdentitiesAsync(IdentityType 
+ identityType) 
+    { 
+        var result = new List<string>(); 
+        try 
+        { 
+            var response = await _amazonSimpleEmailService.ListIdentitiesAsync( 
+                new ListIdentitiesRequest 
+                { 
+                    IdentityType = identityType 
+                }); 
+            result = response.Identities; 
+        } 
+        catch (Exception ex) 
+        { 
+            Console.WriteLine("ListIdentitiesAsync failed with exception: " + 
+ ex.Message); 
+        } 
+        return result; 
+    }
+•有关 API 的详细信息，请参阅 AWS SDK for .NET API 参考 ListIdentities 中的。
+C++
+SDK for C++
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+操作 613Amazon Simple Email Service 开发人员指南
+//! List the identities associated with this account.
+/*! 
+  \param identityType: The identity type enum. "NOT_SET" is a valid option. 
+  \param identities; A vector to receive the retrieved identities. 
+  \param clientConfiguration: AWS client configuration. 
+  \return bool: Function succeeded. 
+ */
+bool AwsDoc::SES::listIdentities(Aws::SES::Model::IdentityType identityType, 
+                                 Aws::Vector<Aws::String> &identities, 
+                                 const Aws::Client::ClientConfiguration 
+ &clientConfiguration) { 
+    Aws::SES::SESClient sesClient(clientConfiguration); 
+    Aws::SES::Model::ListIdentitiesRequest listIdentitiesRequest; 
+    if (identityType != Aws::SES::Model::IdentityType::NOT_SET) { 
+        listIdentitiesRequest.SetIdentityType(identityType); 
+    } 
+    Aws::String nextToken; // Used for paginated results. 
+    do { 
+        if (!nextToken.empty()) { 
+            listIdentitiesRequest.SetNextToken(nextToken); 
+        } 
+        Aws::SES::Model::ListIdentitiesOutcome outcome = 
+ sesClient.ListIdentities( 
+                listIdentitiesRequest); 
+        if (outcome.IsSuccess()) { 
+            const auto &retrievedIdentities = 
+ outcome.GetResult().GetIdentities(); 
+            if (!retrievedIdentities.empty()) { 
+                identities.insert(identities.cend(), 
+ retrievedIdentities.cbegin(), 
+                                  retrievedIdentities.cend()); 
+            } 
+            nextToken = outcome.GetResult().GetNextToken(); 
+        } 
+        else { 
+            std::cout << "Error listing identities. " << 
+ outcome.GetError().GetMessage() 
+                      << std::endl; 
+            return false; 
+操作 614Amazon Simple Email Service 开发人员指南
+        } 
+    } while (!nextToken.empty()); 
+    return true;
+}
+•有关 API 的详细信息，请参阅 AWS SDK for C++ API 参考 ListIdentities 中的。
+CLI
+AWS CLI
+列出特定 AWS 账户的所有身份（电子邮件地址和域名）
+以下示例使用 list-identities  命令列出已提交到 Amazon SES 进行验证的所有身份：
+aws ses list-identities
+输出：
+{ 
+    "Identities": [ 
+      "user@example.com", 
+      "example.com" 
+    ]
+}
+返回的列表包含所有身份，无论验证状态如何（已验证、待验证、失败等）。
+在此示例中，由于未指定 identity-type 参数，因此返回了电子邮件地址 和 域。
+有关验证的更多信息，请参阅《Amazon Simple Email Service 开发人员指南》 中的“在 Amazon 
+SES 中验证电子邮件地址和域”。
+•有关 API 的详细信息，请参阅 AWS CLI 命令参考 ListIdentities 中的。
+操作 615Amazon Simple Email Service 开发人员指南
+Java
+适用于 Java 2.x 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了"
+Source: ses-dg.pdf</p></details><details><summary>[2]	 "   "Email template ...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 "   "Email template already exists, skipping creation." 
+                    )?; 
+                } 
+                e => return Err(anyhow!("Error creating email template: {}", e)), 
+            }, 
+        }
+•有关 API 的详细信息，请参阅适用 CreateEmailTemplate 于 Rust 的AWS SDK API 参考 。
+有关 S AWS DK 开发者指南和代码示例的完整列表，请参阅 将 Amazon SES 与 AWS 软件开发工具包
+结合使用 。本主题还包括有关入门的信息以及有关先前的 SDK 版本的详细信息。
+DeleteContactList 与 S AWS DK 或命令行工具配合使用
+以下代码示例显示了如何使用 DeleteContactList 。
+操作示例是大型程序的代码摘录，必须在上下文中运行。在以下代码示例中，您可以查看此操作的上下
+文：
+•时事通讯工作流程
+Java
+适用于 Java 2.x 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+    try { 
+      // Delete the contact list 
+      DeleteContactListRequest deleteContactListRequest = 
+ DeleteContactListRequest.builder() 
+          .contactListName(CONTACT_LIST_NAME) 
+          .build(); 
+操作 729Amazon Simple Email Service 开发人员指南
+      sesClient.deleteContactList(deleteContactListRequest); 
+      System.out.println("Contact list deleted: " + CONTACT_LIST_NAME); 
+    } catch (NotFoundException e) { 
+      // If the contact list does not exist, log the error and proceed 
+      System.out.println("Contact list not found. Skipping deletion..."); 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while deleting the contact list: " + 
+ e.getMessage()); 
+      e.printStackTrace(); 
+    }
+•有关 API 的详细信息，请参阅 AWS SDK for Java 2.x API 参考 DeleteContactList 中的。
+Python
+SDK for Python (Boto3)
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+def main(): 
+    """ 
+    The main function that orchestrates the execution of the workflow. 
+    """ 
+    print(INTRO) 
+    ses_client = boto3.client("sesv2") 
+    workflow = SESv2Workflow(ses_client) 
+    try: 
+        workflow.prepare_application() 
+        workflow.gather_subscriber_email_addresses() 
+        workflow.send_coupon_newsletter() 
+        workflow.monitor_and_review() 
+    except ClientError as e: 
+        print_error(e) 
+    workflow.clean_up()
+操作 730Amazon Simple Email Service 开发人员指南
+class SESv2Workflow: 
+    """ 
+    A class to manage the SES v2 Coupon Newsletter Workflow. 
+    """ 
+    def __init__(self, ses_client, sleep=True): 
+        self.ses_client = ses_client 
+        self.sleep = sleep 
+        try: 
+            
+ self.ses_client.delete_contact_list(ContactListName=CONTACT_LIST_NAME) 
+            print(f"Contact list '{CONTACT_LIST_NAME}' deleted successfully.") 
+        except ClientError as e: 
+            # If the contact list doesn't exist, skip and proceed 
+            if e.response["Error"]["Code"] == "NotFoundException": 
+                print(f"Contact list '{CONTACT_LIST_NAME}' does not exist.") 
+            else: 
+                print(e)
+•有关 API 的详细信息，请参阅适用 DeleteContactList 于 Python 的AWS SDK (Boto3) API 参
+考。
+Rust
+适用于 Rust 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+        match self 
+            .client 
+            .delete_contact_list() 
+            .contact_list_name(CONTACT_LIST_NAME) 
+操作 731Amazon Simple Email Service 开发人员指南
+            .send() 
+            .await 
+        { 
+            Ok(_) => writeln!(self.stdout, "Contact list deleted 
+ successfully.")?, 
+            Err(e) => return Err(anyhow!("Error deleting contact list: {e}")), 
+        }
+•有关 API 的详细信息，请参阅适用 DeleteContactList 于 Rust 的AWS SDK API 参考 。
+有关 S AWS DK 开发者指南和代码示例的完整列表，请参阅 将 Amazon SES 与 AWS 软件开发工具包
+结合使用 。本主题还包括有关入门的信息以及有关先前的 SDK 版本的详细信息。
+DeleteEmailIdentity 与 S AWS DK 或命令行工具配合使用
+以下代码示例显示了如何使用 DeleteEmailIdentity 。
+操作示例是大型程序的代码摘录，必须在上下文中运行。在以下代码示例中，您可以查看此操作的上下
+文：
+•时事通讯工作流程
+Java
+适用于 Java 2.x 的 SDK
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+      try { 
+        // Delete the email identity 
+        DeleteEmailIdentityRequest deleteIdentityRequest = 
+ DeleteEmailIdentityRequest.builder() 
+            .emailIdentity(this.verifiedEmail) 
+            .build(); 
+        sesClient.deleteEmailIdentity(deleteIdentityRequest); 
+操作 732Amazon Simple Email Service 开发人员指南
+        System.out.println("Email identity deleted: " + this.verifiedEmail); 
+      } catch (NotFoundException e) { 
+        // If the email identity does not exist, log the error and proceed 
+        System.out.println("Email identity not found. Skipping deletion..."); 
+      } catch (Exception e) { 
+        System.err.println("Error occurred while deleting the email identity: " + 
+ e.getMessage()); 
+        e.printStackTrace(); 
+      } 
+    } else { 
+      System.out.println("Skipping email identity deletion."); 
+    }
+•有关 API 的详细信息，请参阅 AWS SDK for Java 2.x API 参考 DeleteEmailIdentity 中的。
+Python
+SDK for Python (Boto3)
+Note
+还有更多相关信息 GitHub。在 AWS 代码示例存储库 中查找完整示例，了解如何进行设
+置和运行。
+def main(): 
+    """ 
+    The main function that orchestrates the execution of the workflow. 
+    """ 
+    print(INTRO) 
+    ses_client = boto3.client("sesv2") 
+   "
+Source: ses-dg.pdf</p></details><details><summary>[3]	 " 加密，Amazon SES 还支持 ...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 " 加密，Amazon SES 还支持 DKIM 2048 以允
+许对电子邮件进行更安全的身份验证，因此当您从 API 或控制台配置 Easy DKIM 时，请将其用作原定
+设置的密钥长度。2048 位密钥也可以在自带 DKIM (BYODKIM) 中设置和使用，其中您的签名密钥长
+度必须至少为 1024 位，但不超过 2048 位。
+为了安全和电子邮件的送达率，当使用 Easy DKIM 配置时，您可以选择使用 1024 和 2048 位密钥长
+度，并且在任何 DNS 提供商仍不支持 2048 位导致问题时，可以灵活地返回到 1024 位。 创建新身份
+时，除非指定 1024 位，否则默认情况下将使用 DKIM 2048 创建身份。
+为了保持传输中电子邮件的送达率，您可以更改 DKIM 密钥长度的频率将受到限制。这些限制包括：
+•无法切换到与已配置的密钥长度相同的密钥长度。
+•无法在 24 小时内多次切换到不同的密钥长度（除非这是该时间段内第一次降级到 1024 位）。
+当您的电子邮件在传输过程中时，DNS 会使用您的公有密钥验证您的电子邮件；因此，如果您更改密
+钥过快或频繁，DNS 可能无法对您的电子邮件进行 DKIM 身份验证，因为前一个密钥可能已失效，因
+此，这些限制可防止出现这种情况。
+DKIM 注意事项
+当您使用 DKIM 对电子邮件进行身份验证时，以下规则适用：
+•您只需为在“发件人”地址中使用的域设置 DKIM。您无需为在“退回路径”或“回复对象”地址中使用的域
+设置 DKIM。
+•可以在多个 AWS 区域中使用 Amazon SES。如果您使用多个 AWS 区域发送电子邮件，则必须在每
+个区域中都完成 DKIM 设置过程才能确保您的所有电子邮件都进行 DKIM 签名。
+•由于从父域继承 DKIM 属性，当您通过 DKIM 身份验证验证域时：
+•DKIM 身份验证会应用到该域的全部子域。
+•如果您不希望子域使用 DKIM 身份验证，子域的 DKIM 设置可以通过禁用集成以及在未来重新
+启用的功能覆盖父域的设置。
+•DKIM 身份验证还将应用于由在其地址中引用 DKIM 已验证域的电子邮件身份发出的全部电子邮
+件。
+电子邮件身份验证方法 202Amazon Simple Email Service 开发人员指南
+•如果您想要发送电子邮件而不使用 DKIM 身份验证，电子邮件地址的 DKIM 设置可以通过禁用
+集成以及在未来重新启用的功能覆盖子域的设置（若适用）。
+了解继承的 DKIM 签名属性
+重要的是，首先要理解，如果域配置了 DKIM，无论使用的是 Easy DKIM 还是 BYODKIM，电子邮件
+地址标识都会从其父域继承其 DKIM 签名属性。因此，在电子邮件地址标识上禁用或启用 DKIM 签名
+实际上是基于以下关键事实覆盖域的 DKIM 签名属性：
+•如果您已为电子邮件地址所属于的域设置了 DKIM，则无需再为电子邮件地址设置 DKIM。
+•在为域设置 DKIM 时，Amazon SES 通过从父域继承的 DKIM 属性，自动认证来自该域上每个地
+址的每一封邮件。
+•特定电子邮件地址标识的 DKIM 设置 自动覆盖地址所属的父域或子域（如适用） 的设置。
+由于电子邮件地址身份的 DKIM 签名属性是从父域继承的，因此如果您计划覆盖这些属性，则必须记
+住覆盖的层次规则，如下表所述。
+父域未启用 DKIM 签名 父域已启用 DKIM 签名
+您可以禁用对电子邮件地址身份的 DKIM 签名。
+您无法在电子邮件地址身份上启用 DKIM 签名。您可以对电子邮件地址身份重新启用 DKIM 签
+名。
+通常不建议禁用您的 DKIM 签名，因为这有可能损害您的发件人声誉，并且会增加您发送的邮件转到
+垃圾邮件或垃圾邮件文件夹或域名被欺骗的风险。
+但是，对于任何特定的使用情形或外围业务决策，可以覆盖电子邮件地址标识上的域继承的 DKIM 签
+名属性，您可能必须永久或临时禁用 DKIM 签名，或者在以后重新将其启用。请参阅 the section called 
+“覆盖电子邮件地址上的 DKIM 签名” 。
+Amazon SES 中的 Easy DKIM
+为域身份设置 Easy DKIM 后，Amazon SES 会自动向您从该身份发送的每封电子邮件添加一个 2048 
+位的 DKIM 密钥。您可使用 Amazon SES 控制台或者使用 API "
+Source: ses-dg.pdf</p></details><details><summary>[4]	 "()                ...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "() 
+                .simple( 
+                    Message.builder() 
+                        .subject(Content.builder().data("Welcome to the Weekly 
+ Coupons Newsletter").build()) 
+                        .body(Body.builder() 
+                            .text(Content.builder().data(welcomeText).build()) 
+                            .html(Content.builder().data(welcomeHtml).build()) 
+                            .build()) 
+                        .build()) 
+                .build()) 
+            .build(); 
+        SendEmailResponse welcomeEmailResponse = 
+ sesClient.sendEmail(welcomeEmailRequest); 
+        System.out.println("Welcome email sent: " + 
+ welcomeEmailResponse.messageId()); 
+      } catch (AlreadyExistsException e) { 
+        // If the contact already exists, skip this step for that contact and 
+ proceed 
+        // with the next contact 
+        System.out.println("Contact already exists, skipping creation..."); 
+场景 754Amazon Simple Email Service 开发人员指南
+      } catch (Exception e) { 
+        System.err.println("Error occurred while processing email address " + 
+ emailAddress + ": " + e.getMessage()); 
+        throw e; 
+      } 
+    } 
+      ListContactsRequest contactListRequest = ListContactsRequest.builder() 
+          .contactListName(CONTACT_LIST_NAME) 
+          .build(); 
+      List<String> contactEmails; 
+      try { 
+        ListContactsResponse contactListResponse = 
+ sesClient.listContacts(contactListRequest); 
+        contactEmails = contactListResponse.contacts().stream() 
+            .map(Contact::emailAddress) 
+            .toList(); 
+      } catch (Exception e) { 
+        // TODO: Remove when listContacts's GET body issue is resolved. 
+        contactEmails = this.contacts; 
+      } 
+      String coupons = Files.readString(Paths.get("resources/coupon_newsletter/
+sample_coupons.json")); 
+      for (String emailAddress : contactEmails) { 
+        SendEmailRequest newsletterRequest = SendEmailRequest.builder() 
+            .destination(Destination.builder().toAddresses(emailAddress).build()) 
+            .content(EmailContent.builder() 
+                .template(Template.builder() 
+                    .templateName(TEMPLATE_NAME) 
+                    .templateData(coupons) 
+                    .build()) 
+                .build()) 
+            .fromEmailAddress(this.verifiedEmail) 
+            .listManagementOptions(ListManagementOptions.builder() 
+                .contactListName(CONTACT_LIST_NAME) 
+                .build()) 
+            .build(); 
+        SendEmailResponse newsletterResponse = 
+ sesClient.sendEmail(newsletterRequest); 
+场景 755Amazon Simple Email Service 开发人员指南
+        System.out.println("Newsletter sent to " + emailAddress + ": " + 
+ newsletterResponse.messageId()); 
+      } 
+    try { 
+      CreateEmailIdentityRequest createEmailIdentityRequest = 
+ CreateEmailIdentityRequest.builder() 
+          .emailIdentity(verifiedEmail) 
+          .build(); 
+      sesClient.createEmailIdentity(createEmailIdentityRequest); 
+      System.out.println("Email identity created: " + verifiedEmail); 
+    } catch (AlreadyExistsException e) { 
+      System.out.println("Email identity already exists, skipping creation: " + 
+ verifiedEmail); 
+    } catch (NotFoundException e) { 
+      System.err.println("The provided email address is not verified: " + 
+ verifiedEmail); 
+      throw e; 
+    } catch (LimitExceededException e) { 
+      System.err 
+          .println("You have reached the limit for email identities. Please 
+ remove some identities and try again."); 
+      throw e; 
+    } catch (SesV2Exception e) { 
+      System.err.println("Error creating email identity: " + e.getMessage()); 
+      throw e; 
+    } 
+    try { 
+      // Create an email template named "weekly-coupons" 
+      String newsletterHtml = loadFile("resources/coupon_newsletter/coupon-
+newsletter.html"); 
+      String newsletterText = loadFile("resources/coupon_newsletter/coupon-
+newsletter.txt"); 
+      CreateEmailTemplateRequest templateRequest = 
+ CreateEmailTemplateRequest.builder() 
+          .templateName(TEMPLATE_NAME) 
+          .templateContent(EmailTemplateContent.builder() 
+              .subject("Weekly Coupons Newsletter") 
+              .html(newsletterHtml) 
+              .text(newsletterText) 
+              .build()) 
+          .build(); 
+场景 756Amazon Simple Email Service 开发人员指南
+      sesClient.createEmailTemplate(templateRequest); 
+      System.out.println("Email template created: " + TEMPLATE_NAME); 
+    } catch (AlreadyExistsException e) { 
+      // If the template already exists, skip this step and proceed with the next 
+      // operation 
+      System.out.println("Email template already exists, skipping creation..."); 
+    } catch (LimitExceededException e) { 
+      // If the limit for email templates is exceeded, fail the workflow and 
+ inform 
+      // the user 
+      System.err.println("You have reached the limit for email templates. Please 
+ remove some templates and try again."); 
+      throw e; 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while creating email template: " + 
+ e.getMessage()); 
+      throw e; 
+    } 
+    try { 
+      // Delete the contact list 
+      DeleteContactListRequest deleteContactListRequest = 
+ DeleteContactListRequest.builder() 
+          .contactListName(CONTACT_LIST_NAME) 
+          .build(); 
+      sesClient.deleteContactList(deleteContactListRequest); 
+      System.out.println("Contact list deleted: " + CONTACT_LIST_NAME); 
+    } catch (NotFoundException e) { 
+      // If the contact list does not exist, log the error and proceed 
+      System.out.println("Contact list not found. Skipping deletion..."); 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while deleting the contact list: " + 
+ e.getMessage()); 
+      e.printStackTrace(); 
+    } 
+      try { 
+        // Delete the email identity 
+        DeleteEmailIdentityRequest deleteIdentityRequest = 
+ DeleteEmailIdentityRequest.builder() 
+场景 757Amazon Simple Email Service 开发人员指南
+            .emailIdentity(this.verifiedEmail) 
+            .build(); 
+        sesClient.deleteEmailIdentity(deleteIdentityRequest); 
+        System.out.println("Email identity deleted: " + this.verifiedEmail); 
+      } catch (NotFoundException e) { 
+        // If the email identity does not exist, log the error and proceed 
+        System.out.println("Email identity not found. Skipping deletion..."); 
+      } catch (Exception e) { 
+        System.err.println("Error occurred while deleting the email identity: " + 
+ e.getMessage()); 
+        e.printStackTrace(); 
+      } 
+    } else { 
+      System.out.println("Skipping email identity deletion."); 
+    } 
+    try { 
+      // Delete the template 
+      DeleteEmailTemplateRequest deleteTemplateRequest = 
+ DeleteEmailTemplateRequest.builder() 
+          .templateName(TEMPLATE_NAME) 
+          .build(); 
+      sesClient.deleteEmailTemplate(deleteTemplateRequest); 
+      System.out.println("Email template deleted: " + TEMPLATE_NAME); 
+    } catch (NotFoundException e) { 
+      // If the email template does not exist, log the error and proceed 
+      System.out.println("Email template not found. Skipping deletion..."); 
+    } catch (Exception e) { 
+      System.err.println("Error occurred while deleting the email template: " + 
+ e.getMessage()); 
+      e.printStackTrace(); 
+    }
+•有关 API 详细信息，请参阅 AWS SDK for Java 2.x API "
+Source: ses-dg.pdf</p></details><details><summary>[5]	 "是否合法。这些内容筛选器会自动审核邮...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "是否合法。这些内容筛选器
+会自动审核邮件的内容，以识别常见的不受欢迎的邮件特征乃至恶意邮件。Amazon SES 使用内容筛
+选技术，协助在邮件发送之前检测和拦截包含恶意软件的邮件。
+如果您的电子邮件接收方的内容筛选器认定您的邮件包含垃圾邮件或恶意电子邮件的特性，您的邮件很
+可能被标记出来，并从收件人的收件箱中移出。
+在设计电子邮件时请记住以下几点：
+电子邮件最佳实践 29Amazon Simple Email Service 开发人员指南
+•现代内容筛选器非常智能，且不断调整和更改。它们不依赖于预定义的规则集。诸如 ReturnPath  或
+Litmus  等第三方服务可帮助识别您的电子邮件中可能触发内容筛选器的内容。
+•如果您的电子邮件中包含链接，请检查这些链接的 URL 是否在基于域名系统的黑名单（DNSBL）
+中，这些黑名单可在像 URIBL.com  和 SURBL.org  这样的网站中找到。
+•避免使用短地址。恶意发件人可能使用短地址来隐藏链接的实际目标。当 ISP 发现链接缩短服务
+（即使是信誉最好的服务）被用于不法目的时，他们会完全拒绝访问这些服务。如果您的电子邮件中
+包含被加入拒绝列表的链接缩短服务链接，它将不会送达客户的收件箱，而您的电子邮件营销活动的
+成功率也随之受到影响。
+•测试电子邮件中的每个链接，确保其指向预期的页面。
+•请确保您的网站包括隐私策略和使用条款文档，并且这些文档是最新的。最好在您发送的每封电子邮
+件中添加到这些文档的链接。提供指向这些文档的链接表明您对客户无所隐瞒，有助于建立信任关
+系。
+•如果您计划发送高频率内容 (如“每日交易”邮件)，请确保您的电子邮件内容每次都有所不同。在发送
+高频邮件时，您必须确保这些消息及时且有意义，而不是重复和令人厌烦。
+提示和最佳实践
+即使您以客户的最佳利益为出发点，您可能仍会遇到影响邮件送达率的情况。以下章节中提供的建议有
+助于确保您的电子邮件通信成功传送至目标受众手中。
+一般建议
+•想客户所想。您可以问问自己，您是否愿意在自己的收件箱中收到您发送的邮件。如果答案不是热情
+的“yes! (是的！)”，那么您可能不应该发送这封邮件。
+•有一些行业素来电子邮件质量低下，甚至包括恶意电子邮件。如果您涉及以下行业，您必须立即密切
+监控您的声誉并解决问题：
+•房屋抵押贷款
+•信用
+•药品和营养品
+•烟酒
+•成人娱乐
+•赌场和赌博
+•在家工作程序
+电子邮件最佳实践 30Amazon Simple Email Service 开发人员指南
+域和“发件人”地址注意事项
+•请仔细考虑您用于发送电子邮件的地址。“From”地址是收件人看到的第一条信息，因此可能会留下持
+久的第一印象。此外，一些 ISP 将您的声誉与您的“From”地址相联系。
+•请考虑为不同类型的通信使用不同的子域。例如，假定您从 example.com  域发送电子邮件，
+并且您打算同时发送营销邮件和事务性邮件。不要从 example.com  发送所有邮件，而是从像
+marketing.example.com  这样的子域发送营销邮件，从像 orders.example.com  这样的子域发送事务
+性邮件。独有的子域可建立它们自己的声誉。使用子域可降低声誉损坏的风险，例如，当您的营销通
+信落入垃圾邮件陷阱或触发内容筛选器时。
+•如果您计划发送大量邮件，请不要从 sender@hotmail.com  这样的基于 ISP 的地址发送这些邮件。
+如果 ISP 注意到有大量邮件来自 sender@hotmail.com ，该电子邮件的处理方式将与来自您拥有的出
+站电子邮件发送域的邮件有所不同。
+•请与您的域注册商沟通，确保您的域的 WHOIS 信息准确无误。维护真实且及时的 WHOIS 记录表明
+您重视透明度，并让用户能够快速识别您的域是否合法。
+•避免使用 no-reply  地址，例如 no-reply@example.com ，作为您的“From”地址或“Reply-to”地址。使
+用 no-reply@  电子邮件地址向您的收件人明确传达一个信"
+Source: ses-dg.pdf</p></details>2024-06-27 20:56:12,720 [INFO] [base_model.py:619] 用户  的输入为: amazon最新的股价是？
+2024-06-27 20:56:12,720 [INFO] [base_model.py:498] 加载索引中……
+2024-06-27 20:56:12,762 [INFO] [index_func.py:128] Found cached index, loading...
+2024-06-27 20:56:12,767 [INFO] [base_model.py:506] 索引获取成功，生成回答中……
+
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 "件功能的事件的性质，我们可能需要其他信...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 "件功能的事件的性质，我们可能需要其他信息。有关应在请求中
+包含的信息的列表，请参阅与您遇到的问题关联的常见问题解答主题。
+问题 8：如果我的请求未被接受，该怎么办？
+我们会回复您的请求，并陈述我们不接受此请求的原因。在某些情况下，如果能够证明您已解决问题，
+并且您的更改可防止日后再次出现同一问题，则可以提交新的请求。
+问题 9：您能否帮助我诊断问题？
+一般情况下，我们只会为您提供问题的粗略概述 (例如，您具有退回邮件的问题)。您有责任解决该问
+题。
+问题 10：我如何知道我的账户是否已恢复发送电子邮件的功能？
+声誉指标包括有关您账户的当前状态的信息。有关更多信息，请参阅 使用声誉指标跟踪退回邮件率和投
+诉率。
+问题 11：我能否从我的 AWS 代表或 Premium Support 那里获得帮助？
+如果您已经在与 AWS 客户代表合作，如果我们暂停了您的账户发送电子邮件的权限，我们将自动与
+他或她联系。您的账户代表可能能够提供其他信息，帮助您更好地理解该问题。如果您使用 Premium 
+Support，您还应联系该团队以获取更多帮助。
+与退回邮件相关的常见问题
+问题 1：为什么您关心我的退回邮件？
+电子邮件提供商和反垃圾邮件组织等实体通常使用高退回率来检测参与恶意电子邮件发送行为的发件
+人。高退回率会导致电子邮件发送到垃圾邮件文件夹，而不是收件箱。
+退回 821Amazon Simple Email Service 开发人员指南
+问题 2：如果我收到通知，得知我的账户正在接受审核，或者我的账户的邮件退回率导
+致发送功能暂停，我该怎么办？
+确定问题原因，然后纠正问题。在您做出您认为可以解决问题的更改后，登录 AWS 控制台并前往 
+Support Center。回复我们代表您开立的问题。在您的邮件中，提供有关您为解决问题所采取的步骤的
+详细信息，并说明这些步骤将如何防止日后再次出现相同的问题。还包括以下信息：
+•您用于跟踪退回邮件的方法
+•在向新收件人发送电子邮件之前，您如何确保新收件人的电子邮件地址是有效的。例如，您遵循了 问
+题 11：我可以采取哪些措施来最大限度地减少退回邮件？ 中的哪些建议
+问题 3：哪些类型的退回邮件将计入我的退回邮件率？
+您的退回邮件率仅包含发送到您尚未验证的域的查无此人的邮件。查无此人的邮件是永久性送达失败 
+(如“地址不存在”)。因为 IP 地址受阻而出现的临时和间歇性故障 (如“邮箱已满”) 或退回邮件不会计入您
+的退回邮件率。
+问题 4：是否会公开可能导致账户审核或发送功能暂停的邮件退回率？
+为了获得最佳结果，您应将退回邮件率保持在 2% 以下。退回邮件率高会影响电子邮件的传送。
+如果邮件退回率为 5% 或更高，我们将对账户进行审核。如果邮件退回率为 10% 或更高，我们会暂停
+账户继续发送电子邮件的功能，直到您解决导致高邮件退回率的问题。
+问题 5：我的退回邮件率是在哪个时段内计算的？
+我们不会基于固定时间段计算退回邮件率，因为不同发件人的发送率不同。相反，我们考量的是 典型
+量，该电子邮件量代表您的典型发送实践。为了对发件量大和发件量小的发件人公平起见，每个用户的
+典型量都不同并且会随着用户的发送模式的变化而变化。
+问题 6：我能否使用来自 Amazon SES 控制台或 GetSendStatistics API 的信息来计算
+自己的跳出率？
+不能。邮件退回率是使用典型量计算得出的（请参阅 问题 5：我的退回邮件率是在哪个时段内计算
+的？）。根据发送率，邮件退回率可追溯的时间会比 Amazon SES 控制台或 GetSendStatistics
+可检索的时间更长。此外，在计算您的退回邮件率时，仅会考虑发送到未验证域的电子邮件。不过，如
+果使用这些方法定期监控邮件退回率，您"
+Source: ses-dg.pdf</p></details><details><summary>[2]	 "后选择 打开-你会看到文件的名称、大小...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 "后选择 打开-你会看到文件的名称、大小和
+日期显示在 选择文件 按钮下方。
+iii.扩展 Amazon S3 存储桶 ，然后选择 S3 存储桶。
+•要将文件上载到新存储桶，请选择 Create S3 bucket （创建 S3 存储桶），在
+Bucket name （存储桶）字段中输入名称，然后选择 Create bucket （创建存储
+桶）。
+iv.选择添加电子邮件地址 ，开始从文件中导入地址——将显示 批量操作 选项卡下的一个表。
+5.无论使用哪种导入方法，作业 ID 都将在 批量操作 以及导入类型、状态和日期列出-要查看作业详细
+信息，请选择作业 ID。
+6.选择黑名单 选项卡并显示所有成功导入的电子邮件地址并添加了它们的抑制原因和日期 - 可以使用
+以下选项：
+a.选择电子邮件地址，或者选中相应的复选框，然后选择 查看报告 以查看其详细信息。（如果由
+于退回或投诉而自动添加到您的黑名单中的地址，则将显示有关导致添加反馈事件的信息，包
+括产生触发事件的电子邮件的详细信息。）
+b.选中要从帐户黑名单中删除的一个或多个电子邮件地址的相应复选框，然后选择 移除。
+查看 Amazon SES 账户级黑名单中的地址列表
+您可以使用 Amazon SES API v2 中的 ListSuppressedDestinations  操作来查看您的账户的账户级黑名
+单中的所有电子邮件地址的列表。
+Note
+以下过程假定您已安装 AWS CLI。有关安装和配置 AWS CLI 的更多信息，请参阅 AWS 
+Command Line Interface 用户指南 。
+查看账户级黑名单中的所有电子邮件地址的列表
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations
+前一个命令返回您账户的账户级黑名单中的所有电子邮件地址。输出与以下内容类似：
+查看账户级黑名单中的地址列表 403Amazon Simple Email Service 开发人员指南
+{ 
+    "SuppressedDestinationSummaries": [ 
+        { 
+            "EmailAddress": "recipient2@example.com", 
+            "Reason": "COMPLAINT", 
+            "LastUpdateTime": "2020-04-10T21:03:05Z" 
+        }, 
+        { 
+            "EmailAddress": "recipient0@example.com", 
+            "Reason": "COMPLAINT", 
+            "LastUpdateTime": "2020-04-10T21:04:26Z" 
+        }, 
+        { 
+            "EmailAddress": "recipient1@example.com", 
+            "Reason": "BOUNCE", 
+            "LastUpdateTime": "2020-04-10T22:07:59Z" 
+        } 
+    ]
+}
+•注意 – 如果您的输出包含带有字符串值的“NextToken”字段，则表示您账户的黑名单中还有其他电
+子邮件地址。要查看其他黑名单中的地址，请向 ListSuppressedDestinations  发出另一个请
+求，并在 --next-token  参数中传递返回的字符串值，如下所示：
+aws sesv2 list-suppressed-destinations --next-token string
+在上述命令中，使用返回的 NextToken 值替换 string 。
+有关更多信息，请参阅 How to list over 1000 email addresses from account-level suppression list 。
+可以使用 StartDate  选项来只显示在特定日期 以后 添加到列表中的电子邮件地址。
+查看在特定日期以后添加到账户级黑名单中的地址列表
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations --start-date 1604394130
+在前一个命令中，使用开始日期的 Unix 时间戳替换 1604394130 。
+查看账户级黑名单中的地址列表 404Amazon Simple Email Service 开发人员指南
+您还可以使用 EndDate  选项来只显示在特定日期 之前 添加到列表中的电子邮件地址。
+查看在特定日期之前添加到账户级黑名单中的地址列表
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations --end-date 1611126000
+在前一个命令中，使用结束日期的 Unix 时间戳替换 1611126000 。
+在 Linux、macOS 或 Unix 命令行中，您也可以使用内置的 grep  实用程序来搜索特定地址或域。
+在账户级黑名单中搜索特定地址
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations | grep -A2 ' example.com '
+在上一个命令中，将 example.com  替换为要搜索的文本字符串（例如地址或域）。
+要使用 Amazon SES 控制台查看账户级黑名单中的所有电子邮件地址的列表，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在黑名单 窗格中，将显示账户级黑名单中的所有电子邮件地址，并添加了其抑制原因和日期 - 可以
+使用以下选项：
+a.选择电子邮件地址，或者选中相应的复选框，然后选择 查看报告 以查看其详细信息。（如果由"
+Source: ses-dg.pdf</p></details><details><summary>[3]	 "                 "S...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 "                 "SuppressionListImportAction": "DELETE" 
+                } 
+            }, 
+            "JobStatus": "COMPLETED", 
+            "JobId": "076683bd-a7ee-4a40-9754-4ad1161ba8b6" 
+        }, 
+        { 
+            "CreatedTimestamp": "2020-08-05T16:45:18Z", 
+            "ImportDestination": { 
+                "SuppressionListDestination": { 
+                    "SuppressionListImportAction": "PUT" 
+                } 
+            }, 
+            "JobStatus": "COMPLETED", 
+            "JobId": "6e261869-bd30-4b33-b1f2-9e035a83a395" 
+        } 
+    ]
+}
+查看账户的导入任务的列表 411Amazon Simple Email Service 开发人员指南
+要使用 Amazon SES 控制台来查看账户的所有导入任务的列表，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在禁止名单 窗格中，选择 批量操作 选项卡。
+4.所有导入作业都将列在 批量操作 表以及导入类型、状态和日期。
+5.要查看作业详细信息，请选择作业 ID，然后显示以下窗格：
+a.批量操作状态 ：显示作业的总体状态、完成的时间和日期、导入的记录数以及任何未能成功导
+入的记录的计数。
+b.批量操作详情 ：显示作业 ID、是用于添加还是删除地址、文件格式是 JSON 还是 CSV、存储
+批量文件的 Amazon S3 存储桶的 URI 以及批量操作的创建时间和日期。
+获取有关账户的导入任务的信息
+您可以使用 Amazon SES API v2 中的 GetImportJob  操作来获取有关账户的导入任务的信息。
+Note
+以下过程假定您已安装 AWS CLI。有关安装和配置 AWS CLI 的更多信息，请参阅 AWS 
+Command Line Interface 用户指南 。
+获取有关账户的导入任务的信息
+•在命令行输入以下命令：
+aws sesv2 get-import-job --job-id JobId
+前面的命令返回有关账户的导入任务的信息。输出与以下内容类似：
+{ 
+    "ImportDataSource": { 
+        "S3Url": "s3://bucket/object", 
+        "DataFormat": "CSV" 
+    }, 
+获取有关账户的导入任务的信息 412Amazon Simple Email Service 开发人员指南
+    "ProcessedRecordsCount": 2, 
+    "FailureInfo": { 
+        "FailedRecordsS3Url": "s3presignedurl" 
+    }, 
+    "JobStatus": "COMPLETED", 
+    "JobId": "jobid", 
+    "CreatedTimestamp": "2020-08-12T17:05:15Z", 
+    "FailedRecordsCount": 1, 
+    "ImportDestination": { 
+        "SuppressionListDestination": { 
+            "SuppressionListImportAction": "PUT" 
+        } 
+    }, 
+    "CompletedTimestamp": "2020-08-12T17:06:42Z"
+}
+要使用 Amazon SES 控制台获取有关账户导入任务的信息，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在禁止名单 窗格中，选择 批量操作 选项卡。
+4.所有导入作业都将列在 批量操作 表以及导入类型、状态和日期。
+5.要查看作业详细信息，请选择作业 ID，然后显示以下窗格：
+a.批量操作状态 ：显示作业的总体状态、完成的时间和日期、导入的记录数以及任何未能成功导
+入的记录的计数。
+b.批量操作详情 ：显示作业 ID、是用于添加还是删除地址、文件格式是 JSON 还是 CSV、存储
+批量文件的 Amazon S3 存储桶的 URI 以及批量操作的创建时间和日期。
+禁用 Amazon SES 账户级黑名单
+您可以使用 Amazon SES API v2 中的 PutAccountSuppressionAttributes  操作，通过删除
+suppressed-reasons  属性中的值来有效地禁用账户级黑名单。
+禁用账户级黑名单 413Amazon Simple Email Service 开发人员指南
+Note
+以下过程假定您已安装 AWS CLI。有关安装和配置 AWS CLI 的更多信息，请参阅 AWS 
+Command Line Interface 用户指南 。
+使用 AWS CLI 禁用账户级黑名单
+•在命令行输入以下命令：
+aws sesv2 put-account-suppression-attributes --suppressed-reasons
+要使用 Amazon SES 控制台禁用账户级黑名单，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在 Account-level settings （账户级别设置）窗格中，选择 Edit（编辑）。
+4.在黑名单设置 中，取消勾选 已启用 复选框。
+5.选择 Save changes （保存更改）。
+使用配置集级别的抑制来覆盖账户级别的黑名单
+在为整个账户设置账户级别的黑名单时，您可以通过使用配置集级别的抑制覆盖该名单，来为其他配置
+集单独自定义该名单。利用此更精细的粒度，您可以对分配给他们的配置集的不同电子邮件发送组使用
+自"
+Source: ses-dg.pdf</p></details><details><summary>[4]	 "部链接）Names.co.uk 更改...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "部链接）
+Names.co.uk 更改您的域的 DNS 设置 （外部链接）
+Wix 在您的 Wix 账户中添加或更新 CNAME 记
+录（外部链接）
+域验证故障排除
+如果您完成了上述步骤，但在 72 小时后域仍未通过验证，请检查以下各项：
+•请确保您在正确的字段中输入了 DNS 记录的值。某些 DNS 提供商将 Name/host (名称/主机)  字段称
+为 Host (主机)  或 Hostname (主机名) 。此外，一些提供商将 Record value (记录值)  字段称为 Points 
+to (指向)  或 Result (结果) 。
+•确保您的提供商没有自动将您的域名追加到您在 DNS 记录中输入的 Name/host (名称/主机)  值后
+面。有些提供商附加域名，而不指示已经执行了此操作。如果您的提供商将您的域名附加到 Name/
+host (名称/主机)  值，则从值的末尾删除域名。您也可以尝试添加句点到 DNS 记录中值的末尾。此
+句点向提供商指示域名是完全限定的。
+•每个 DNS 记录的 Name/host (名称/主机)  值中都需要下划线字符 (_)。如果您的提供商不允许 DNS 
+记录名称中的下划线，请联系提供商的客户支持部门以获取更多帮助。
+验证域身份 181Amazon Simple Email Service 开发人员指南
+•添加到您的域的 DNS 设置的验证记录对于每个 AWS 区域 是不同的。如果您想要使用域从多个 
+AWS 区域 发送电子邮件，您必须在其中的每个区域中创建和验证单独的域身份。
+创建电子邮件地址身份
+完成以下过程以使用 Amazon SES 控制台创建电子邮件地址身份。
+要创建电子邮件地址身份（控制台）
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 Configuration （配置）下，选择 Verified identities （已验证身份）。
+3.选择创建身份 。
+4.在身份详细信息 下，选择 电子邮件地址 作为要创建的身份类型。
+5.对于 Email address (电子邮件地址) ，输入您要使用的电子邮件地址。电子邮件地址必须是您能接
+收邮件并且有权访问的地址。
+6.
+（可选）如果要 分配默认配置集 ，请选中该复选框。
+1.对于默认配置集 ，选择要分配给身份的现有配置集。如果尚未创建任何配置集，请参阅 配置
+集。
+Note
+只有当发送时未指定其他配置集时，Amazon SES 才会按默认应用分配的配置集。如果
+指定了配置集，Amazon SES 将应用指定的配置集来代替默认的配置集。
+7.（可选）通过包含标签键和该键的可选值，向域身份添加一个或多个 标签：
+1.选择添加新标签 ，然后输入 键。您可以选择为标签添加 值。
+2.重复此操作，但附加的标签不超过 50 个，或选择 删除以删除标签。
+8.要创建您的电子邮件地址身份，请选择 创建身份 。创建后，您应在五分钟内收到验证电子邮件。下
+一个步骤是按照下一节中的验证程序验证您的电子邮件地址。
+创建电子邮件地址身份 182Amazon Simple Email Service 开发人员指南
+Note
+您可以自定义发送到您尝试验证的电子邮件地址的邮件。有关更多信息，请参阅 the 
+section called “使用自定义验证电子邮件模板” 。
+现在您已创建电子邮件地址身份，您必须完成验证过程 – 继续 the section called “验证电子邮件地址身
+份”。
+验证电子邮件地址身份
+在创建电子邮件地址身份后，您必须完成验证过程。
+如果您尚未创建电子邮件地址身份，请参阅 the section called “创建电子邮件地址身份” 。
+验证电子邮件地址身份
+1.检查用于创建您的身份的电子邮件地址的收件箱，并查看是否有来自 no-reply-aws@amazon.com 
+的电子邮件。
+2.打开电子邮件并单击链接即可完成电子邮件地址的验证过程。完成后， 身份状态 将更新为 已验证 。
+电子邮件地址验证问题排查
+如果您在创建身份后五分钟内没有收到验证电子邮件，请尝试以下问题排查步骤：
+•确保您正确地输入了电子邮件地址。
+•请确保您尝试验证的电子邮件地址能够接收电子邮件。您可以使用其他电子"
+Source: ses-dg.pdf</p></details><details><summary>[5]	 "不过，如果使用这些方法定期监控邮件退...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "不过，如
+果使用这些方法定期监控邮件退回率，您应该仍会获得有用的指示，可用于捕获问题以免问题达到导致
+我们对账户进行审核或暂停账户发送电子邮件的功能的程度。
+退回 822Amazon Simple Email Service 开发人员指南
+问题 7：我如何才能找出退回邮件的电子邮件地址？
+检查 Amazon SES 发送给您的退回邮件通知。Amazon SES 将通知转发到的电子邮件地址取决于您发
+送原始邮件的方式，如 通过电子邮件接收 Amazon SES 通知 中所述。您还可以通过 Amazon Simple 
+Notification Service（Amazon SNS）来设置退回邮件通知，如 为 Amazon SES 设置事件通知 中所
+述。请注意，仅从列表中删除退回邮件的地址而不进行任何调查可能解决不了根本问题。有关您可以
+采取哪些措施来减少退回邮件的信息，请参阅 问题 11：我可以采取哪些措施来最大限度地减少退回邮
+件？。
+问题 8：如果我尚未监控我的退回邮件，您能否为我提供已产生退回邮件的地址的列
+表？
+否，我们无法提供已退回地址的完整列表。您有责任监控和处理您的账户的退回邮件。
+问题 9：我应该如何处理退回邮件？
+您需要从邮件列表中删除退回邮件的地址并立即停止向它们发送邮件。如果您的发件量小，那么通过电
+子邮件监控退回邮件并从邮件列表中手动删除退回邮件的地址可能就足够了。如果您的发件量大，可能
+需要为此过程设置自动化，方法是通过以编程方式处理收到退回邮件的邮箱，或通过 Amazon SNS 设
+置退回邮件通知。有关更多信息，请参阅 为 Amazon SES 设置事件通知 。
+问题 10：我的电子邮件是否会因为我达到发送配额而退回？
+否。退回与发送配额无关。如果您尝试超出您的发送配额，则在您尝试发送电子邮件时，将会收到来自 
+Amazon SES API 或 SMTP 接口的错误。
+问题 11：我可以采取哪些措施来最大限度地减少退回邮件？
+首先，请确保您了解您的退回邮件 (请参阅 问题 7：我如何才能找出退回邮件的电子邮件地址？ )。然后
+遵循以下准则：
+•请勿购买、出租或共享电子邮件地址。只向明确要求从您那儿接收电子邮件的收件人发送电子邮件。
+•从列表中删除退回邮件的电子邮件地址。
+•在 Web 表单上，要求用户输入其电子邮件地址两次，并检查以确保这两个地址匹配，然后才能提交
+表单。
+•使用双向选择性加入来注册新用户。也就是说，当新用户注册时，向他们发送一封确认电子邮件，他
+们需要点击此电子邮件，然后才能接收任何其他邮件。这将防止用户注册成他人以及意外注册。
+退回 823Amazon Simple Email Service 开发人员指南
+•如果您必须将电子邮件发送到近来无邮件往来的地址 (因此您不确定地址是否仍然有效)，那么请仅发
+送一小部分邮件。有关更多信息，请参阅我们的博客文章 切记不要向旧地址发送邮件，但如果必须这
+样做，该怎么办？ 。
+•确保您未组织注册以鼓励用户使用虚构地址。例如，不提供任何附加值或优势，直到收件人验证他们
+的地址。
+•如果您有“向好友发送电子邮件”功能，请使用 CAPTCHA 或类似机制防止自动使用此功能，并且不要
+允许用户插入任意内容。
+•如果您使用 Amazon SES 来发送系统通知，请确保将通知发送到可收到邮件的真实地址。此外，考
+虑关闭不需要的通知。
+•如果您正在测试新系统，请确保发送到可收到电子邮件的真实地址，或者确保您使用 Amazon SES 
+邮箱模拟器。有关更多信息，请参阅 手动使用邮箱模拟器 。
+与投诉相关的常见问题
+问题 1：什么是投诉？
+当收件人报告他们不想接收某封电子邮件时就出现了投诉。他们可能单击了其电子邮件客户端中的 
+Report spam (报告垃圾邮件) 按钮，向其邮件提供商投诉，直接或通过某种其他方式通知 Amazon 
+SES。本主题包含有关投诉的一般信息。如果您的通知包含有关投诉来源的具体信"
+Source: ses-dg.pdf</p></details>2024-06-27 20:56:14,175 [INFO] [credentials.py:1278] Found credentials in shared credentials file: ~/.aws/credentials
+
+call bedrock get_answer_stream_iter 
+
+
+<hr class="append-display no-in-raw" />
+
+<details><summary>[1]	 "件功能的事件的性质，我们可能需要其他信...</summary><p style='max-height: 300px; overflow-y: auto;'>[1]	 "件功能的事件的性质，我们可能需要其他信息。有关应在请求中
+包含的信息的列表，请参阅与您遇到的问题关联的常见问题解答主题。
+问题 8：如果我的请求未被接受，该怎么办？
+我们会回复您的请求，并陈述我们不接受此请求的原因。在某些情况下，如果能够证明您已解决问题，
+并且您的更改可防止日后再次出现同一问题，则可以提交新的请求。
+问题 9：您能否帮助我诊断问题？
+一般情况下，我们只会为您提供问题的粗略概述 (例如，您具有退回邮件的问题)。您有责任解决该问
+题。
+问题 10：我如何知道我的账户是否已恢复发送电子邮件的功能？
+声誉指标包括有关您账户的当前状态的信息。有关更多信息，请参阅 使用声誉指标跟踪退回邮件率和投
+诉率。
+问题 11：我能否从我的 AWS 代表或 Premium Support 那里获得帮助？
+如果您已经在与 AWS 客户代表合作，如果我们暂停了您的账户发送电子邮件的权限，我们将自动与
+他或她联系。您的账户代表可能能够提供其他信息，帮助您更好地理解该问题。如果您使用 Premium 
+Support，您还应联系该团队以获取更多帮助。
+与退回邮件相关的常见问题
+问题 1：为什么您关心我的退回邮件？
+电子邮件提供商和反垃圾邮件组织等实体通常使用高退回率来检测参与恶意电子邮件发送行为的发件
+人。高退回率会导致电子邮件发送到垃圾邮件文件夹，而不是收件箱。
+退回 821Amazon Simple Email Service 开发人员指南
+问题 2：如果我收到通知，得知我的账户正在接受审核，或者我的账户的邮件退回率导
+致发送功能暂停，我该怎么办？
+确定问题原因，然后纠正问题。在您做出您认为可以解决问题的更改后，登录 AWS 控制台并前往 
+Support Center。回复我们代表您开立的问题。在您的邮件中，提供有关您为解决问题所采取的步骤的
+详细信息，并说明这些步骤将如何防止日后再次出现相同的问题。还包括以下信息：
+•您用于跟踪退回邮件的方法
+•在向新收件人发送电子邮件之前，您如何确保新收件人的电子邮件地址是有效的。例如，您遵循了 问
+题 11：我可以采取哪些措施来最大限度地减少退回邮件？ 中的哪些建议
+问题 3：哪些类型的退回邮件将计入我的退回邮件率？
+您的退回邮件率仅包含发送到您尚未验证的域的查无此人的邮件。查无此人的邮件是永久性送达失败 
+(如“地址不存在”)。因为 IP 地址受阻而出现的临时和间歇性故障 (如“邮箱已满”) 或退回邮件不会计入您
+的退回邮件率。
+问题 4：是否会公开可能导致账户审核或发送功能暂停的邮件退回率？
+为了获得最佳结果，您应将退回邮件率保持在 2% 以下。退回邮件率高会影响电子邮件的传送。
+如果邮件退回率为 5% 或更高，我们将对账户进行审核。如果邮件退回率为 10% 或更高，我们会暂停
+账户继续发送电子邮件的功能，直到您解决导致高邮件退回率的问题。
+问题 5：我的退回邮件率是在哪个时段内计算的？
+我们不会基于固定时间段计算退回邮件率，因为不同发件人的发送率不同。相反，我们考量的是 典型
+量，该电子邮件量代表您的典型发送实践。为了对发件量大和发件量小的发件人公平起见，每个用户的
+典型量都不同并且会随着用户的发送模式的变化而变化。
+问题 6：我能否使用来自 Amazon SES 控制台或 GetSendStatistics API 的信息来计算
+自己的跳出率？
+不能。邮件退回率是使用典型量计算得出的（请参阅 问题 5：我的退回邮件率是在哪个时段内计算
+的？）。根据发送率，邮件退回率可追溯的时间会比 Amazon SES 控制台或 GetSendStatistics
+可检索的时间更长。此外，在计算您的退回邮件率时，仅会考虑发送到未验证域的电子邮件。不过，如
+果使用这些方法定期监控邮件退回率，您"
+Source: ses-dg.pdf</p></details><details><summary>[2]	 "后选择 打开-你会看到文件的名称、大小...</summary><p style='max-height: 300px; overflow-y: auto;'>[2]	 "后选择 打开-你会看到文件的名称、大小和
+日期显示在 选择文件 按钮下方。
+iii.扩展 Amazon S3 存储桶 ，然后选择 S3 存储桶。
+•要将文件上载到新存储桶，请选择 Create S3 bucket （创建 S3 存储桶），在
+Bucket name （存储桶）字段中输入名称，然后选择 Create bucket （创建存储
+桶）。
+iv.选择添加电子邮件地址 ，开始从文件中导入地址——将显示 批量操作 选项卡下的一个表。
+5.无论使用哪种导入方法，作业 ID 都将在 批量操作 以及导入类型、状态和日期列出-要查看作业详细
+信息，请选择作业 ID。
+6.选择黑名单 选项卡并显示所有成功导入的电子邮件地址并添加了它们的抑制原因和日期 - 可以使用
+以下选项：
+a.选择电子邮件地址，或者选中相应的复选框，然后选择 查看报告 以查看其详细信息。（如果由
+于退回或投诉而自动添加到您的黑名单中的地址，则将显示有关导致添加反馈事件的信息，包
+括产生触发事件的电子邮件的详细信息。）
+b.选中要从帐户黑名单中删除的一个或多个电子邮件地址的相应复选框，然后选择 移除。
+查看 Amazon SES 账户级黑名单中的地址列表
+您可以使用 Amazon SES API v2 中的 ListSuppressedDestinations  操作来查看您的账户的账户级黑名
+单中的所有电子邮件地址的列表。
+Note
+以下过程假定您已安装 AWS CLI。有关安装和配置 AWS CLI 的更多信息，请参阅 AWS 
+Command Line Interface 用户指南 。
+查看账户级黑名单中的所有电子邮件地址的列表
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations
+前一个命令返回您账户的账户级黑名单中的所有电子邮件地址。输出与以下内容类似：
+查看账户级黑名单中的地址列表 403Amazon Simple Email Service 开发人员指南
+{ 
+    "SuppressedDestinationSummaries": [ 
+        { 
+            "EmailAddress": "recipient2@example.com", 
+            "Reason": "COMPLAINT", 
+            "LastUpdateTime": "2020-04-10T21:03:05Z" 
+        }, 
+        { 
+            "EmailAddress": "recipient0@example.com", 
+            "Reason": "COMPLAINT", 
+            "LastUpdateTime": "2020-04-10T21:04:26Z" 
+        }, 
+        { 
+            "EmailAddress": "recipient1@example.com", 
+            "Reason": "BOUNCE", 
+            "LastUpdateTime": "2020-04-10T22:07:59Z" 
+        } 
+    ]
+}
+•注意 – 如果您的输出包含带有字符串值的“NextToken”字段，则表示您账户的黑名单中还有其他电
+子邮件地址。要查看其他黑名单中的地址，请向 ListSuppressedDestinations  发出另一个请
+求，并在 --next-token  参数中传递返回的字符串值，如下所示：
+aws sesv2 list-suppressed-destinations --next-token string
+在上述命令中，使用返回的 NextToken 值替换 string 。
+有关更多信息，请参阅 How to list over 1000 email addresses from account-level suppression list 。
+可以使用 StartDate  选项来只显示在特定日期 以后 添加到列表中的电子邮件地址。
+查看在特定日期以后添加到账户级黑名单中的地址列表
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations --start-date 1604394130
+在前一个命令中，使用开始日期的 Unix 时间戳替换 1604394130 。
+查看账户级黑名单中的地址列表 404Amazon Simple Email Service 开发人员指南
+您还可以使用 EndDate  选项来只显示在特定日期 之前 添加到列表中的电子邮件地址。
+查看在特定日期之前添加到账户级黑名单中的地址列表
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations --end-date 1611126000
+在前一个命令中，使用结束日期的 Unix 时间戳替换 1611126000 。
+在 Linux、macOS 或 Unix 命令行中，您也可以使用内置的 grep  实用程序来搜索特定地址或域。
+在账户级黑名单中搜索特定地址
+•在命令行输入以下命令：
+aws sesv2 list-suppressed-destinations | grep -A2 ' example.com '
+在上一个命令中，将 example.com  替换为要搜索的文本字符串（例如地址或域）。
+要使用 Amazon SES 控制台查看账户级黑名单中的所有电子邮件地址的列表，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在黑名单 窗格中，将显示账户级黑名单中的所有电子邮件地址，并添加了其抑制原因和日期 - 可以
+使用以下选项：
+a.选择电子邮件地址，或者选中相应的复选框，然后选择 查看报告 以查看其详细信息。（如果由"
+Source: ses-dg.pdf</p></details><details><summary>[3]	 "                 "S...</summary><p style='max-height: 300px; overflow-y: auto;'>[3]	 "                 "SuppressionListImportAction": "DELETE" 
+                } 
+            }, 
+            "JobStatus": "COMPLETED", 
+            "JobId": "076683bd-a7ee-4a40-9754-4ad1161ba8b6" 
+        }, 
+        { 
+            "CreatedTimestamp": "2020-08-05T16:45:18Z", 
+            "ImportDestination": { 
+                "SuppressionListDestination": { 
+                    "SuppressionListImportAction": "PUT" 
+                } 
+            }, 
+            "JobStatus": "COMPLETED", 
+            "JobId": "6e261869-bd30-4b33-b1f2-9e035a83a395" 
+        } 
+    ]
+}
+查看账户的导入任务的列表 411Amazon Simple Email Service 开发人员指南
+要使用 Amazon SES 控制台来查看账户的所有导入任务的列表，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在禁止名单 窗格中，选择 批量操作 选项卡。
+4.所有导入作业都将列在 批量操作 表以及导入类型、状态和日期。
+5.要查看作业详细信息，请选择作业 ID，然后显示以下窗格：
+a.批量操作状态 ：显示作业的总体状态、完成的时间和日期、导入的记录数以及任何未能成功导
+入的记录的计数。
+b.批量操作详情 ：显示作业 ID、是用于添加还是删除地址、文件格式是 JSON 还是 CSV、存储
+批量文件的 Amazon S3 存储桶的 URI 以及批量操作的创建时间和日期。
+获取有关账户的导入任务的信息
+您可以使用 Amazon SES API v2 中的 GetImportJob  操作来获取有关账户的导入任务的信息。
+Note
+以下过程假定您已安装 AWS CLI。有关安装和配置 AWS CLI 的更多信息，请参阅 AWS 
+Command Line Interface 用户指南 。
+获取有关账户的导入任务的信息
+•在命令行输入以下命令：
+aws sesv2 get-import-job --job-id JobId
+前面的命令返回有关账户的导入任务的信息。输出与以下内容类似：
+{ 
+    "ImportDataSource": { 
+        "S3Url": "s3://bucket/object", 
+        "DataFormat": "CSV" 
+    }, 
+获取有关账户的导入任务的信息 412Amazon Simple Email Service 开发人员指南
+    "ProcessedRecordsCount": 2, 
+    "FailureInfo": { 
+        "FailedRecordsS3Url": "s3presignedurl" 
+    }, 
+    "JobStatus": "COMPLETED", 
+    "JobId": "jobid", 
+    "CreatedTimestamp": "2020-08-12T17:05:15Z", 
+    "FailedRecordsCount": 1, 
+    "ImportDestination": { 
+        "SuppressionListDestination": { 
+            "SuppressionListImportAction": "PUT" 
+        } 
+    }, 
+    "CompletedTimestamp": "2020-08-12T17:06:42Z"
+}
+要使用 Amazon SES 控制台获取有关账户导入任务的信息，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在禁止名单 窗格中，选择 批量操作 选项卡。
+4.所有导入作业都将列在 批量操作 表以及导入类型、状态和日期。
+5.要查看作业详细信息，请选择作业 ID，然后显示以下窗格：
+a.批量操作状态 ：显示作业的总体状态、完成的时间和日期、导入的记录数以及任何未能成功导
+入的记录的计数。
+b.批量操作详情 ：显示作业 ID、是用于添加还是删除地址、文件格式是 JSON 还是 CSV、存储
+批量文件的 Amazon S3 存储桶的 URI 以及批量操作的创建时间和日期。
+禁用 Amazon SES 账户级黑名单
+您可以使用 Amazon SES API v2 中的 PutAccountSuppressionAttributes  操作，通过删除
+suppressed-reasons  属性中的值来有效地禁用账户级黑名单。
+禁用账户级黑名单 413Amazon Simple Email Service 开发人员指南
+Note
+以下过程假定您已安装 AWS CLI。有关安装和配置 AWS CLI 的更多信息，请参阅 AWS 
+Command Line Interface 用户指南 。
+使用 AWS CLI 禁用账户级黑名单
+•在命令行输入以下命令：
+aws sesv2 put-account-suppression-attributes --suppressed-reasons
+要使用 Amazon SES 控制台禁用账户级黑名单，请执行以下操作：
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 配置下方，选择 黑名单 。
+3.在 Account-level settings （账户级别设置）窗格中，选择 Edit（编辑）。
+4.在黑名单设置 中，取消勾选 已启用 复选框。
+5.选择 Save changes （保存更改）。
+使用配置集级别的抑制来覆盖账户级别的黑名单
+在为整个账户设置账户级别的黑名单时，您可以通过使用配置集级别的抑制覆盖该名单，来为其他配置
+集单独自定义该名单。利用此更精细的粒度，您可以对分配给他们的配置集的不同电子邮件发送组使用
+自"
+Source: ses-dg.pdf</p></details><details><summary>[4]	 "部链接）Names.co.uk 更改...</summary><p style='max-height: 300px; overflow-y: auto;'>[4]	 "部链接）
+Names.co.uk 更改您的域的 DNS 设置 （外部链接）
+Wix 在您的 Wix 账户中添加或更新 CNAME 记
+录（外部链接）
+域验证故障排除
+如果您完成了上述步骤，但在 72 小时后域仍未通过验证，请检查以下各项：
+•请确保您在正确的字段中输入了 DNS 记录的值。某些 DNS 提供商将 Name/host (名称/主机)  字段称
+为 Host (主机)  或 Hostname (主机名) 。此外，一些提供商将 Record value (记录值)  字段称为 Points 
+to (指向)  或 Result (结果) 。
+•确保您的提供商没有自动将您的域名追加到您在 DNS 记录中输入的 Name/host (名称/主机)  值后
+面。有些提供商附加域名，而不指示已经执行了此操作。如果您的提供商将您的域名附加到 Name/
+host (名称/主机)  值，则从值的末尾删除域名。您也可以尝试添加句点到 DNS 记录中值的末尾。此
+句点向提供商指示域名是完全限定的。
+•每个 DNS 记录的 Name/host (名称/主机)  值中都需要下划线字符 (_)。如果您的提供商不允许 DNS 
+记录名称中的下划线，请联系提供商的客户支持部门以获取更多帮助。
+验证域身份 181Amazon Simple Email Service 开发人员指南
+•添加到您的域的 DNS 设置的验证记录对于每个 AWS 区域 是不同的。如果您想要使用域从多个 
+AWS 区域 发送电子邮件，您必须在其中的每个区域中创建和验证单独的域身份。
+创建电子邮件地址身份
+完成以下过程以使用 Amazon SES 控制台创建电子邮件地址身份。
+要创建电子邮件地址身份（控制台）
+1.登录AWS Management Console并打开 Amazon SES 控制台，网址为 https:// 
+console.aws.amazon.com/ses/ 。
+2.在导航窗格中的 Configuration （配置）下，选择 Verified identities （已验证身份）。
+3.选择创建身份 。
+4.在身份详细信息 下，选择 电子邮件地址 作为要创建的身份类型。
+5.对于 Email address (电子邮件地址) ，输入您要使用的电子邮件地址。电子邮件地址必须是您能接
+收邮件并且有权访问的地址。
+6.
+（可选）如果要 分配默认配置集 ，请选中该复选框。
+1.对于默认配置集 ，选择要分配给身份的现有配置集。如果尚未创建任何配置集，请参阅 配置
+集。
+Note
+只有当发送时未指定其他配置集时，Amazon SES 才会按默认应用分配的配置集。如果
+指定了配置集，Amazon SES 将应用指定的配置集来代替默认的配置集。
+7.（可选）通过包含标签键和该键的可选值，向域身份添加一个或多个 标签：
+1.选择添加新标签 ，然后输入 键。您可以选择为标签添加 值。
+2.重复此操作，但附加的标签不超过 50 个，或选择 删除以删除标签。
+8.要创建您的电子邮件地址身份，请选择 创建身份 。创建后，您应在五分钟内收到验证电子邮件。下
+一个步骤是按照下一节中的验证程序验证您的电子邮件地址。
+创建电子邮件地址身份 182Amazon Simple Email Service 开发人员指南
+Note
+您可以自定义发送到您尝试验证的电子邮件地址的邮件。有关更多信息，请参阅 the 
+section called “使用自定义验证电子邮件模板” 。
+现在您已创建电子邮件地址身份，您必须完成验证过程 – 继续 the section called “验证电子邮件地址身
+份”。
+验证电子邮件地址身份
+在创建电子邮件地址身份后，您必须完成验证过程。
+如果您尚未创建电子邮件地址身份，请参阅 the section called “创建电子邮件地址身份” 。
+验证电子邮件地址身份
+1.检查用于创建您的身份的电子邮件地址的收件箱，并查看是否有来自 no-reply-aws@amazon.com 
+的电子邮件。
+2.打开电子邮件并单击链接即可完成电子邮件地址的验证过程。完成后， 身份状态 将更新为 已验证 。
+电子邮件地址验证问题排查
+如果您在创建身份后五分钟内没有收到验证电子邮件，请尝试以下问题排查步骤：
+•确保您正确地输入了电子邮件地址。
+•请确保您尝试验证的电子邮件地址能够接收电子邮件。您可以使用其他电子"
+Source: ses-dg.pdf</p></details><details><summary>[5]	 "不过，如果使用这些方法定期监控邮件退...</summary><p style='max-height: 300px; overflow-y: auto;'>[5]	 "不过，如
+果使用这些方法定期监控邮件退回率，您应该仍会获得有用的指示，可用于捕获问题以免问题达到导致
+我们对账户进行审核或暂停账户发送电子邮件的功能的程度。
+退回 822Amazon Simple Email Service 开发人员指南
+问题 7：我如何才能找出退回邮件的电子邮件地址？
+检查 Amazon SES 发送给您的退回邮件通知。Amazon SES 将通知转发到的电子邮件地址取决于您发
+送原始邮件的方式，如 通过电子邮件接收 Amazon SES 通知 中所述。您还可以通过 Amazon Simple 
+Notification Service（Amazon SNS）来设置退回邮件通知，如 为 Amazon SES 设置事件通知 中所
+述。请注意，仅从列表中删除退回邮件的地址而不进行任何调查可能解决不了根本问题。有关您可以
+采取哪些措施来减少退回邮件的信息，请参阅 问题 11：我可以采取哪些措施来最大限度地减少退回邮
+件？。
+问题 8：如果我尚未监控我的退回邮件，您能否为我提供已产生退回邮件的地址的列
+表？
+否，我们无法提供已退回地址的完整列表。您有责任监控和处理您的账户的退回邮件。
+问题 9：我应该如何处理退回邮件？
+您需要从邮件列表中删除退回邮件的地址并立即停止向它们发送邮件。如果您的发件量小，那么通过电
+子邮件监控退回邮件并从邮件列表中手动删除退回邮件的地址可能就足够了。如果您的发件量大，可能
+需要为此过程设置自动化，方法是通过以编程方式处理收到退回邮件的邮箱，或通过 Amazon SNS 设
+置退回邮件通知。有关更多信息，请参阅 为 Amazon SES 设置事件通知 。
+问题 10：我的电子邮件是否会因为我达到发送配额而退回？
+否。退回与发送配额无关。如果您尝试超出您的发送配额，则在您尝试发送电子邮件时，将会收到来自 
+Amazon SES API 或 SMTP 接口的错误。
+问题 11：我可以采取哪些措施来最大限度地减少退回邮件？
+首先，请确保您了解您的退回邮件 (请参阅 问题 7：我如何才能找出退回邮件的电子邮件地址？ )。然后
+遵循以下准则：
+•请勿购买、出租或共享电子邮件地址。只向明确要求从您那儿接收电子邮件的收件人发送电子邮件。
+•从列表中删除退回邮件的电子邮件地址。
+•在 Web 表单上，要求用户输入其电子邮件地址两次，并检查以确保这两个地址匹配，然后才能提交
+表单。
+•使用双向选择性加入来注册新用户。也就是说，当新用户注册时，向他们发送一封确认电子邮件，他
+们需要点击此电子邮件，然后才能接收任何其他邮件。这将防止用户注册成他人以及意外注册。
+退回 823Amazon Simple Email Service 开发人员指南
+•如果您必须将电子邮件发送到近来无邮件往来的地址 (因此您不确定地址是否仍然有效)，那么请仅发
+送一小部分邮件。有关更多信息，请参阅我们的博客文章 切记不要向旧地址发送邮件，但如果必须这
+样做，该怎么办？ 。
+•确保您未组织注册以鼓励用户使用虚构地址。例如，不提供任何附加值或优势，直到收件人验证他们
+的地址。
+•如果您有“向好友发送电子邮件”功能，请使用 CAPTCHA 或类似机制防止自动使用此功能，并且不要
+允许用户插入任意内容。
+•如果您使用 Amazon SES 来发送系统通知，请确保将通知发送到可收到邮件的真实地址。此外，考
+虑关闭不需要的通知。
+•如果您正在测试新系统，请确保发送到可收到电子邮件的真实地址，或者确保您使用 Amazon SES 
+邮箱模拟器。有关更多信息，请参阅 手动使用邮箱模拟器 。
+与投诉相关的常见问题
+问题 1：什么是投诉？
+当收件人报告他们不想接收某封电子邮件时就出现了投诉。他们可能单击了其电子邮件客户端中的 
+Report spam (报告垃圾邮件) 按钮，向其邮件提供商投诉，直接或通过某种其他方式通知 Amazon 
+SES。本主题包含有关投诉的一般信息。如果您的通知包含有关投诉来源的具体信"
+Source: ses-dg.pdf</p></details>2024-06-27 20:56:37,435 [INFO] [base_model.py:619] 用户  的输入为: amazon最新的股价是多少？
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/duckduckgo_search/duckduckgo_search.py", line 104, in _get_url
+    resp = self.client.request(method, url, params=params, content=content, data=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Error in request: error sending request for url (https://lite.duckduckgo.com/lite/): operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/queueing.py", line 566, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 261, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/blocks.py", line 1786, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/blocks.py", line 1350, in call_function
+    prediction = await utils.async_iteration(iterator)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/utils.py", line 583, in async_iteration
+    return await iterator.__anext__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/utils.py", line 576, in __anext__
+    return await anyio.to_thread.run_sync(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2144, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 851, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/utils.py", line 559, in run_sync_iterator_async
+    return next(iterator)
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/utils.py", line 742, in gen_wrapper
+    response = next(iterator)
+               ^^^^^^^^^^^^^^
+  File "/Users/yanghaws/project/aws-bedrock-chatbot-ui/modules/utils.py", line 41, in predict
+    for i in iter:
+  File "/Users/yanghaws/project/aws-bedrock-chatbot-ui/modules/models/base_model.py", line 629, in predict
+    self.prepare_inputs(
+  File "/Users/yanghaws/project/aws-bedrock-chatbot-ui/modules/models/base_model.py", line 557, in prepare_inputs
+    ddgs_gen = ddgs.text(fake_inputs, backend="lite")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/duckduckgo_search/duckduckgo_search.py", line 200, in text
+    results = self._text_lite(keywords, region, timelimit, max_results)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/duckduckgo_search/duckduckgo_search.py", line 467, in _text_lite
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/duckduckgo_search/duckduckgo_search.py", line 464, in _text_lite
+    for r in self._executor.map(_text_lite_page, slist):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/duckduckgo_search/duckduckgo_search.py", line 419, in _text_lite_page
+    resp_content = self._get_url("POST", "https://lite.duckduckgo.com/lite/", data=payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/duckduckgo_search/duckduckgo_search.py", line 108, in _get_url
+    raise TimeoutException(f"{url} {type(ex).__name__}: {ex}") from ex
+duckduckgo_search.exceptions.TimeoutException: https://lite.duckduckgo.com/lite/ Exception: Error in request: error sending request for url (https://lite.duckduckgo.com/lite/): operation timed out
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 412, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/gradio/route_utils.py", line 689, in __call__
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 257, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/responses.py", line 254, in stream_response
+    |     await send({"type": "http.response.body", "body": b"", "more_body": False})
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 465, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+2024-06-27 20:57:53,239 [INFO] [models.py:156] Model is set to:  Claude 3 Haiku
+2024-06-27 20:57:53,240 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-57.json
+2024-06-27 20:57:53,539 [INFO] [base_model.py:1046] 没有找到对话历史记录 New Chat 06-27 20-57
+Traceback (most recent call last):
+  File "/Users/yanghaws/project/aws-bedrock-chatbot-ui/main.py", line 8, in <module>
+    from modules.models.models import get_model
+  File "/Users/yanghaws/project/aws-bedrock-chatbot-ui/modules/models/models.py", line 6, in <module>
+    import colorama
+ModuleNotFoundError: No module named 'colorama'

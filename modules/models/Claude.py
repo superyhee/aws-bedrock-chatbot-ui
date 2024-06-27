@@ -10,7 +10,7 @@ class Claude_Client(BaseLLMModel):
     def __init__(self, model_name, api_secret) -> None:
         super().__init__(model_name=model_name)
         print(model_name)
-        self.claude_client  = AnthropicBedrock(aws_region="us-west-2")
+        self.claude_client  = AnthropicBedrock()
 
     def _get_claude_style_history(self):
         history = []

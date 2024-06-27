@@ -7,7 +7,6 @@ from typing import List, Union
 from langchain_community.chat_models import ChatOpenAI
 from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
 from tqdm import tqdm
 from langchain.embeddings import BedrockEmbeddings
 from langchain.schema import Document

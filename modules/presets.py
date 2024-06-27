@@ -56,6 +56,7 @@ ONLINE_MODELS = [
     "Claude 3 Haiku",
     "Claude 3 Sonnet",
     "Claude 3 Opus",
+    "Claude 3.5 Sonnet"
 ]
 
 LOCAL_MODELS = [
@@ -137,6 +138,12 @@ MODEL_METADATA = {
     },
     "Claude 3 Opus": {
         "model_name": "claude-3-opus-20240229",
+        "token_limit": 200000,
+        "max_generation": 4096,
+        "multimodal": True
+    },
+    "Claude 3.5 Sonnet": {
+        "model_name": "anthropic.claude-3-5-sonnet-20240620-v1:0",
         "token_limit": 200000,
         "max_generation": 4096,
         "multimodal": True

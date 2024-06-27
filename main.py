@@ -6,7 +6,7 @@ logging.basicConfig(
 )
 
 from modules.models.models import get_model
-from modules.train_func import *
+
 from modules.repo import *
 from modules.webui import *
 from modules.overwrites import patch_gradio
@@ -132,7 +132,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     ), elem_id="chatbot-header-btn-bar")
                 with gr.Row():
                     chatbot = gr.Chatbot(
-                        label="Chuanhu Chat",
+                        label="Chat",
                         elem_id="chuanhu-chatbot",
                         latex_delimiters=latex_delimiters_set,
                         sanitize_html=False,
@@ -719,26 +719,6 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
         [user_name, historySearchTextbox],
         [historySelectList]
     )
-
-    # Train
-    dataset_selection.upload(handle_dataset_selection, dataset_selection, [
-                             dataset_previewjson, upload_to_openai_btn, openai_train_status])
-    dataset_selection.clear(handle_dataset_clear, [], [
-                            dataset_previewjson, upload_to_openai_btn])
-    upload_to_openai_btn.click(upload_to_openai, [dataset_selection], [
-                               openai_ft_file_id, openai_train_status], show_progress=True)
-
-    openai_ft_file_id.change(lambda x: gr.update(interactive=True) if len(
-        x) > 0 else gr.update(interactive=False), [openai_ft_file_id], [openai_start_train_btn])
-    openai_start_train_btn.click(start_training, [
-                                 openai_ft_file_id, openai_ft_suffix, openai_train_epoch_slider], [openai_train_status])
-
-    openai_status_refresh_btn.click(get_training_status, [], [
-                                    openai_train_status, add_to_models_btn])
-    add_to_models_btn.click(add_to_models, [], [
-                            model_select_dropdown, openai_train_status], show_progress=True)
-    openai_cancel_all_jobs_btn.click(
-        cancel_all_jobs, [], [openai_train_status], show_progress=True)
 
     # Advanced
     temperature_slider.input(
