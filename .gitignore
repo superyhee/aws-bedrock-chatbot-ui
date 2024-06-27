@@ -144,7 +144,7 @@ auth.json
 models/*
 lora/
 .idea
-templates/*
+
 files/
 tmp/
 
